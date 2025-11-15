@@ -21,7 +21,7 @@ export default function Hero() {
               font="bold"
               leading="tight"
               mb="6"
-              text="3xl sm:6xl lg:7xl gray-900 dark:white">
+              text="3xl sm:6xl center lg:7xl gray-900 dark:white">
               Iterative FMEA Generator
             </h1>
 
@@ -36,7 +36,7 @@ export default function Hero() {
 
             <div
               flex="~ items-center justify-center"
-              h="200px"
+              h="300px"
               inset="0"
               mt="8"
               pointerEvents="none"

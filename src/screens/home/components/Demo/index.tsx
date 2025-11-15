@@ -28,9 +28,9 @@ const Demo = () => {
     } catch (error: any) {}
   }
   return (
-    <div pb="5">
+    <div py="10">
       <Container>
-        <div gap="50px" grid="~ md:cols-6 cols-1" m="b-50px t-10px" py="50px">
+        <div gap="50px" grid="~ md:cols-6 cols-1" m="b-50px t-10px">
           <div
             bg="white"
             border="1 gray-200"

@@ -1,26 +1,14 @@
 import dynamic from 'next/dynamic'
 
-import { usePathname } from 'next/navigation'
 import { Header, Footer } from '~/components'
 const Aurora = dynamic(() => import('~/components/Aurora'), { ssr: false })
 
-export default function LayoutContent({
-  children
-}: {
-  children: React.ReactNode
-}) {
-  const pathname = usePathname()
-  const isGeneratorPage = pathname === '/generator'
-
-  if (isGeneratorPage) {
-    return <div>{children}</div>
-  }
-
+const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div flex="~ 1 col" h="full">
       <Header />
 
-      <div bg="black" flex="~ 1 col" overflow="hidden">
+      <div bg="black" flex="~ 1 col">
         <div flex="~ 1 col" p="t-[var(--header-height)]">
           {children}
         </div>
@@ -34,3 +22,5 @@ export default function LayoutContent({
     </div>
   )
 }
+
+export default Layout

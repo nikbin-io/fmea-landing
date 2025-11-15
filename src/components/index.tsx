@@ -6,7 +6,7 @@ import Footer from './Footer'
 import Header from './Header'
 import Input from './Input'
 import InputTooltip from './InputTooltip'
-import LayoutContent from './LayoutContent'
+import Layout from './Layout'
 import Logo from './Logo'
 import Navbar from './Navbar'
 import SelectBox from './SelectBox'
@@ -21,7 +21,7 @@ export {
   Header,
   Input,
   InputTooltip,
-  LayoutContent,
+  Layout,
   Logo,
   Navbar,
   SelectBox,

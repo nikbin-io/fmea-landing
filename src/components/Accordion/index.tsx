@@ -23,17 +23,13 @@ const Accordion = ({
           htmlFor={id}
           w="full">
           <div
-            border-b="2 solid gray-500"
+            border-b="2 solid gray-300"
             color="gray-600"
             flex="~ justify-between items-start"
             gap="15px"
-            py="sm:6 4"
+            py="sm:5 4"
             w="full">
-            <p
-              case="capital"
-              font="600"
-              line-height="tight"
-              text="sm:16px 15px ">
+            <p font="600" line-height="tight" text="sm:16px 15px ">
               {title}
             </p>
 
