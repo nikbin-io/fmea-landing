@@ -1,6 +1,6 @@
 import Hero from './Hero'
-import VideoSection from './VideoSection'
+import Features from './Features'
 import Faq from './Faq'
 import Demo from './Demo'
 
-export { Hero, VideoSection, Faq, Demo }
+export { Hero, Features, Faq, Demo }

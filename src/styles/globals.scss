@@ -18,7 +18,6 @@ body {
   overflow-x: clip;
 }
 
-
 body {
   color: var(--foreground);
   background: var(--background);
@@ -33,7 +32,6 @@ body {
   margin: 0;
 }
 
-
 a {
   color: inherit;
   text-decoration: none;
@@ -44,6 +42,9 @@ a {
     color-scheme: dark;
   }
 }
+
+
+// Custom Scrollbar
 
 .custom-scrollbar::-webkit-scrollbar {
   width: 6px;
@@ -57,4 +58,51 @@ a {
 }
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
   background: #a0aec0;
+}
+
+
+// Video Wrapper
+
+.glowing-box-shadow {
+  &.blue {
+    animation: glow-blue 1.5s infinite alternate;
+  }
+
+  &.green {
+    animation: glow-green 1.5s infinite alternate;
+  }
+}
+
+@keyframes glow-blue {
+  from {
+    box-shadow:
+      0 0 30px #00bbf9,
+      0 0 30px #00bbf9,
+      0 0 30px #00bbf9,
+      0 0 30px #00bbf9;
+  }
+  to {
+    box-shadow:
+      0 0 20px #64c2ec,
+      0 0 20px #64c2ec,
+      0 0 20px #64c2ec,
+      0 0 20px #64c2ec;
+  }
+}
+
+@keyframes glow-green {
+  from {
+    box-shadow:
+      0 0 30px #08ff00,
+      0 0 30px #08ff00,
+      0 0 30px #08ff00,
+      0 0 30px #08ff00;
+  }
+  to {
+    box-shadow:
+      0 0 20px #00f100,
+      0 0 20px #00f100,
+      0 0 20px #00f100,
+      0 0 20px #00f100;
+  }
 }

@@ -16,7 +16,7 @@ const Header = () => {
   }, [])
 
   return (
-    <header fixed="~" left="0" right="0" top="4" z="10" onScroll={changeNavBg}>
+    <header fixed="~" left="0" right="0" top="5" z="10" onScroll={changeNavBg}>
       <Container>
         <div
           b={navBg ? '1 solid black/10 ' : '1 md:transparent black/10'}

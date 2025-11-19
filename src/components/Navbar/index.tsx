@@ -16,11 +16,10 @@ const Navbar = () => {
       <div flex="~ items-center justify-between" h="16" mx="4">
         <div flex="~ items-center justify-between" h="60px" w="full">
           <Logo />
-
           <div
             className="hidden md:flex"
-            flex="items-center"
-            ml="8"
+            flex="1 items-center"
+            ml="10"
             space="x-4">
             {NAVIGATION_LINKS.map((link) => (
               <Link
@@ -30,13 +29,12 @@ const Navbar = () => {
                 href={link.href}
                 key={link.name}
                 p="x-10px y-8px"
-                text="gray-700 hover:indigo-500  1.1rem"
+                text="gray-700 hover:indigo-500  1.2rem"
                 transition="colors">
                 {link.name}
               </Link>
             ))}
           </div>
-
           <div className="md:flex hidden" gap="10px">
             <Link
               b="rounded-10px "
@@ -78,11 +76,11 @@ const Navbar = () => {
               flex="items-center justify-center"
               font="500"
               h="38px"
-              href="/signin"
+              href="/signup"
               p="x-10px y-5px"
               transition="all 300"
               w="120px">
-              Sign In
+              Sign Up
             </Link>
           </div>
 

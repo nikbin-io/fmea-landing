@@ -1,4 +1,4 @@
-import { Demo, Faq, Hero, VideoSection } from './components'
+import { Demo, Faq, Hero, Features } from './components'
 
 const Home = () => {
   return (
@@ -7,7 +7,7 @@ const Home = () => {
 
       <Demo />
 
-      <VideoSection />
+      <Features />
 
       <Faq />
     </div>
