@@ -43,7 +43,7 @@ const Navbar = () => {
               cursor="pointer"
               flex="~ items-center justify-center"
               h="38px"
-              href="/generator"
+              href="#"
               overflow="hidden"
               p=" y-5px"
               position="relative"
