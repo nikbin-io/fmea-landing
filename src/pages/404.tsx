@@ -6,7 +6,7 @@ const NotFoundPage = () => {
     <main
       flex="~ 1 col items-center justify-center"
       h="full"
-      p="y-40"
+      py="lg:30 30"
       text="center white"
       z="1">
       <Container>

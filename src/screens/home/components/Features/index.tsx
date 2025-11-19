@@ -3,7 +3,7 @@ import { Container, VideoWrapper } from '~/components'
 import { FEATURES } from '~/constants/features'
 const Features = () => {
   return (
-    <section bg="gray-100">
+    <section>
       <div h="full" py="50px" w="full">
         <Container>
           {FEATURES.map((feature, index) => (

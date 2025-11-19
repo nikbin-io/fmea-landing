@@ -7,7 +7,7 @@ const Wireframe = dynamic(() => import('~/components/Wireframe'), {
 
 export default function Hero() {
   return (
-    <section bg="gray-100" p="lg:t-50 t-36" position="relative">
+    <section p="lg:t-40 t-30" position="relative">
       <Container>
         <div
           flex="~ col items-center justify-center"

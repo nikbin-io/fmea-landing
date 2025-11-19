@@ -2,7 +2,7 @@ import { Container } from '~/components'
 
 const PrivacyPolicy = () => {
   return (
-    <div bg="gray-100" min-h="screen" py="lg:50 35">
+    <div py="lg:40 30">
       <Container>
         <div
           bg="gray-200"

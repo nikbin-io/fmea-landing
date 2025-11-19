@@ -1,8 +1,9 @@
 import Keypoints from './components/Keypoints'
 import { Container } from '~/components'
+
 const Guideline = () => {
   return (
-    <div bg="gray-100" py="lg:50 35">
+    <div py="lg:40 30">
       <Container>
         <div flex="~" gap="20px" h="full" position="relative" w="full">
           <div

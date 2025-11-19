@@ -2,7 +2,7 @@ import { Demo, Faq, Hero, Features } from './components'
 
 const Home = () => {
   return (
-    <div bg="gray-100">
+    <div>
       <Hero />
 
       <Demo />

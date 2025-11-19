@@ -5,11 +5,11 @@ const Aurora = dynamic(() => import('~/components/Aurora'), { ssr: false })
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div flex="~ 1 col" h="full">
+    <div bg="gray-100" flex="~  1 col justify-between">
       <Header />
 
-      <div bg="black" flex="~ 1 col">
-        <div flex="~ 1 col" p="t-[var(--header-height)]">
+      <div flex="~ 1 col">
+        <div flex="~ 1 col" p="t-10">
           {children}
         </div>
       </div>
