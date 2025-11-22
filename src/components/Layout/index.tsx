@@ -3,9 +3,15 @@ import dynamic from 'next/dynamic'
 import { Header, Footer } from '~/components'
 const Aurora = dynamic(() => import('~/components/Aurora'), { ssr: false })
 
-const Layout = ({ children, className }: { children: React.ReactNode; className?: string }) => {
+const Layout = ({
+  children,
+  className
+}: {
+  children: React.ReactNode
+  className?: string
+}) => {
   return (
-    <div className={className} bg="gray-100" flex="~  1 col justify-between">
+    <div bg="gray-100" className={className} flex="~  1 col justify-between">
       <Header />
 
       <div flex="~ 1 col">
