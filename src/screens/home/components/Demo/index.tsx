@@ -86,14 +86,16 @@ const Demo = () => {
               />
 
               <button
-                b="1 solid blue-500/40"
-                bg="blue-500/2 hover:blue-500/5"
-                color="blue-500"
+                b="1 solid blue"
+                bg="blue/2 hover:blue/5"
+                color="blue"
                 cursor="pointer"
+                font="500"
                 h="40px"
                 rounded="8px"
                 scale="active:97"
-                transition="all 200"
+                text=".9rem"
+                transition="duration-200"
                 type="submit">
                 Run FMEA Analysis
               </button>

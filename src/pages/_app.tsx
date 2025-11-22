@@ -1,14 +1,14 @@
 import type { AppProps } from 'next/app'
 import { Layout } from '~/components'
 import '../styles/globals.scss'
-import { Geist } from 'next/font/google'
-const geist = Geist({
-  subsets: ['latin']
+import { Plus_Jakarta_Sans } from 'next/font/google'
+const jakarta = Plus_Jakarta_Sans({
+  subsets: ['latin', 'latin-ext']
 })
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <Layout>
-      <Component className={geist.className} {...pageProps} />
+    <Layout className={jakarta.className}>
+      <Component {...pageProps} />
     </Layout>
   )
 }

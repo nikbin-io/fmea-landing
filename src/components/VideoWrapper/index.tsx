@@ -63,12 +63,12 @@ const VideoWrapper = ({ video, color = 'blue' }: VideoWrapperProps) => {
             fill="none"
             stroke={
               color === 'blue'
-                ? '#64c2ec'
+                ? '#374c9280'
                 : color === 'green'
-                  ? '#00f100'
-                  : '#64c2ec'
+                  ? '#25869180'
+                  : '#374c9280'
             }
-            strokeWidth="10"
+            strokeWidth="18"
           />
         </svg>
       </div>

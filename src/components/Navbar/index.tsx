@@ -37,8 +37,8 @@ const Navbar = () => {
           </div>
           <div className="md:flex hidden" gap="10px">
             <Link
-              b="rounded-10px "
-              bg="blue-500/90 hover:blue-light"
+              b="rounded-10px 1 solid blue hover:blue-800"
+              bg="blue hover:blue-800"
               color="white"
               cursor="pointer"
               flex="~ items-center justify-center"
@@ -48,7 +48,8 @@ const Navbar = () => {
               p=" y-5px"
               position="relative"
               scale="active:97"
-              transition="duration-300"
+              shadow="hover:sm"
+              transition="duration-200"
               w="120px">
               <motion.div
                 animate={{ x: '100%' }}
@@ -69,16 +70,18 @@ const Navbar = () => {
             </Link>
 
             <Link
-              b="1 solid rounded-10px blue/500"
-              bg="blue-500/5 hover:blue-500/10"
+              b="1 solid rounded-10px blue-800"
+              bg="white/20 hover:blue/2"
               className="md:flex hidden"
-              color="blue-500"
+              color="blue-800 hover:blue-800"
               flex="items-center justify-center"
               font="500"
               h="38px"
               href="/signup"
               p="x-10px y-5px"
-              transition="all 300"
+              scale="active:98"
+              shadow="hover:sm"
+              transition="duration-200"
               w="120px">
               Sign Up
             </Link>
