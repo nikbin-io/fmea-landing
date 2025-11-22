@@ -1,6 +1,7 @@
-import { Container, VideoWrapper } from '~/components'
+import { Container } from '~/components'
 
 import { FEATURES } from '~/constants/features'
+
 const Features = () => {
   return (
     <section>
@@ -32,8 +33,24 @@ const Features = () => {
                 </p>
               </div>
 
-              <div max-w="650px" mx="auto">
-                <VideoWrapper color={feature.color} video={feature.video} />
+              <div
+                b={`3 solid ${feature.color === 'blue' ? '#374c9280' : '#25869180'}`}
+                max-w="650px"
+                mx="auto"
+                overflow="hidden"
+                position="relative"
+                rounded="lg">
+                <video
+                  autoPlay
+                  h="full"
+                  loop
+                  muted
+                  overflow="hidden"
+                  playsInline
+                  style={{ objectFit: 'cover' }}
+                  w="full">
+                  <source src={feature.video} type="video/mp4" />
+                </video>
               </div>
             </div>
           ))}

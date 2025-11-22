@@ -10,7 +10,6 @@ import Layout from './Layout'
 import Logo from './Logo'
 import Navbar from './Navbar'
 import SelectBox from './SelectBox'
-import VideoWrapper from './VideoWrapper'
 import Wireframe from './Wireframe'
 
 export {
@@ -26,6 +25,5 @@ export {
   Logo,
   Navbar,
   SelectBox,
-  VideoWrapper,
   Wireframe
 }
