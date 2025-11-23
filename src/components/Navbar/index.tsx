@@ -14,7 +14,11 @@ const Navbar = () => {
   return (
     <nav w="full">
       <div flex="~ items-center justify-between" h="16" mx="4">
-        <div flex="~ items-center justify-between" h="60px" w="full">
+        <div
+          color="gray-600"
+          flex="~ items-center justify-between"
+          h="60px"
+          w="full">
           <Logo />
           <div className="hidden md:flex" flex="1 items-center" ml="10">
             {NAVIGATION_LINKS.map((link) => (

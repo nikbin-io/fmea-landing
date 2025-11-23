@@ -145,7 +145,12 @@ const Demo = () => {
                 </div>
               </div>
 
-              <div h="full" overflow="auto" position="relative" w="full">
+              <div
+                className="custom-scrollbar"
+                h="full"
+                overflow="auto"
+                position="relative"
+                w="full">
                 <table
                   font="300"
                   h="full"

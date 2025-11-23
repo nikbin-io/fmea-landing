@@ -1,5 +1,7 @@
 import Accordion from './Accordion'
 import Aurora from './Aurora'
+import Button from './Button'
+import Checkbox from './Checkbox'
 import Container from './Container'
 import FileUpload from './FileUpload'
 import Footer from './Footer'
@@ -15,6 +17,8 @@ import Wireframe from './Wireframe'
 export {
   Accordion,
   Aurora,
+  Button,
+  Checkbox,
   Container,
   FileUpload,
   Footer,

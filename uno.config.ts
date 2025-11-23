@@ -21,7 +21,7 @@ export default defineConfig({
   theme: {
     colors: {
       brand: {
-        DEFAULT: 'rgb(105,94,204)'
+        DEFAULT: '#695eccff'
       },
       blue: {
         DEFAULT: '#374c92',

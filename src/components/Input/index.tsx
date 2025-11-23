@@ -17,7 +17,6 @@ interface InputProps
   required?: boolean
   label?: string
   value?: string | number | null
-  touched?: boolean
   defaultValue?: string
   error?: string
   onChange?: (e: React.ChangeEvent<any>) => void
@@ -52,18 +51,20 @@ const Input = forwardRef<HTMLInputElement | HTMLTextAreaElement, InputProps>(
       <div position="relative" w="full">
         <label
           bg="transparent"
-          color="gray-500"
+          color={disabled ? 'gray-400' : 'gray-600'}
           flex="~ items-center justify-between"
           htmlFor={name}
           mb="5px"
           text="sm:14px 12px">
-          {label}
+          <span>
+            {label}
 
-          {required && (
-            <span color="red" op={disabled ? '40' : '100'}>
-              *
-            </span>
-          )}
+            {required && (
+              <span ml="2px" op={disabled ? '40' : '100'}>
+                *
+              </span>
+            )}
+          </span>
 
           {tooltipContent && (
             <div position="relative">
@@ -105,7 +106,7 @@ const Input = forwardRef<HTMLInputElement | HTMLTextAreaElement, InputProps>(
             ref={ref as any}
             resize="y"
             rows={8}
-            text={disabled ? 'gray-500 sm:14px 12px' : 'white sm:14px 12px'}
+            text={disabled ? 'gray-500 sm:14px 12px' : 'black sm:14px 12px'}
             transition="all 200"
             value={value ?? ''}
             w="full"
@@ -120,8 +121,8 @@ const Input = forwardRef<HTMLInputElement | HTMLTextAreaElement, InputProps>(
         ) : (
           <input
             appearance="none"
-            b={`1 solid rounded-8px ${disabled ? 'gray-700' : error ? 'red-500' : 'gray-200 focus:gray-300'}`}
-            bg="white"
+            b={`1 solid rounded-8px ${error ? 'red-500' : 'gray-200 focus:blue'}`}
+            bg="white disabled:gray-300"
             className="input appearance-none"
             color="gray-600"
             cursor={disabled ? 'not-allowed' : 'text'}
@@ -136,7 +137,8 @@ const Input = forwardRef<HTMLInputElement | HTMLTextAreaElement, InputProps>(
             p="x-15px"
             placeholder=" "
             ref={ref as any}
-            text={disabled ? 'gray-500 sm:14px 12px' : 'white sm:14px 12px'}
+            shadow="focus:sm"
+            text={disabled ? 'gray-500 sm:14px 12px' : 'gray-800 sm:14px 12px'}
             transition="all 200"
             type={type}
             value={value ?? ''}
@@ -151,18 +153,19 @@ const Input = forwardRef<HTMLInputElement | HTMLTextAreaElement, InputProps>(
         )}
 
         <AnimatePresence mode="wait">
-          {error && (
+          {error && type !== 'password' && (
             <motion.span
               animate={{ opacity: 1, y: 0 }}
               data-type="error"
               exit={{ opacity: 0, y: -10 }}
-              font="500"
+              font="300"
               initial={{ opacity: 0, y: -10 }}
               key="error-message"
-              left="5px"
+              left="0"
+              line-height="19px"
               m={type === 'textarea' ? 'l-5px' : ''}
               position={type === 'textarea' ? '' : 'absolute'}
-              text="12px red"
+              text="12px red-500"
               top={type === 'textarea' ? '120px' : '100%'}
               transition={{
                 duration: 0.2,
