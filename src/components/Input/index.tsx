@@ -91,8 +91,8 @@ const Input = forwardRef<HTMLInputElement | HTMLTextAreaElement, InputProps>(
 
         {type === 'textarea' ? (
           <textarea
-            b={`1 solid rounded-8px ${disabled ? 'gray-700' : error ? 'red-500' : 'gray-500 focus:white'}`}
-            bg="white"
+            b={`1 solid rounded-8px ${error ? 'red-500' : 'gray-200 focus:blue'}`}
+            bg="white disabled:gray-300"
             cursor={disabled ? 'not-allowed' : 'text'}
             data-field={name}
             disabled={disabled}
@@ -106,7 +106,8 @@ const Input = forwardRef<HTMLInputElement | HTMLTextAreaElement, InputProps>(
             ref={ref as any}
             resize="y"
             rows={8}
-            text={disabled ? 'gray-500 sm:14px 12px' : 'black sm:14px 12px'}
+            shadow="focus:sm"
+            text={disabled ? 'gray-500 sm:14px 12px' : 'gray-800 sm:14px 12px'}
             transition="all 200"
             value={value ?? ''}
             w="full"
@@ -161,12 +162,10 @@ const Input = forwardRef<HTMLInputElement | HTMLTextAreaElement, InputProps>(
               font="300"
               initial={{ opacity: 0, y: -10 }}
               key="error-message"
-              left="0"
-              line-height="19px"
-              m={type === 'textarea' ? 'l-5px' : ''}
-              position={type === 'textarea' ? '' : 'absolute'}
+              line-height="16px"
+              mt={type === 'textarea' ? '-3px' : '2px'}
+              position="absolute left-0 top-full"
               text="12px red-500"
-              top={type === 'textarea' ? '120px' : '100%'}
               transition={{
                 duration: 0.2,
                 ease: 'easeInOut'

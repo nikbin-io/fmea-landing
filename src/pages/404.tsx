@@ -30,13 +30,13 @@ const NotFoundPage = () => {
             bg="gray-700 hover:gray-800"
             cursor="pointer"
             flex="~ items-center justify-center"
-            font="500"
-            h="sm:46px 40px"
+            font="400"
+            h="40px"
             href="/"
             mt="sm:4 2"
             scale="active:98"
             shadow="hover:md"
-            text="sm:1.1rem white"
+            text="1rem white"
             transition="all 200"
             w="sm:170px 160px">
             Back to home
