@@ -16,20 +16,17 @@ const Navbar = () => {
       <div flex="~ items-center justify-between" h="16" mx="4">
         <div flex="~ items-center justify-between" h="60px" w="full">
           <Logo />
-          <div
-            className="hidden md:flex"
-            flex="1 items-center"
-            ml="10"
-            space="x-4">
+          <div className="hidden md:flex" flex="1 items-center" ml="10">
             {NAVIGATION_LINKS.map((link) => (
               <Link
                 b="1 solid transparent rounded-10px"
-                bg="hover:indigo-500/10"
+                bg="hover:blue/10"
                 font="500"
                 href={link.href}
                 key={link.name}
-                p="x-10px y-8px"
-                text="gray-700 hover:indigo-500  1.2rem"
+                p="x-15px y-8px"
+                text="gray-700 hover:blue"
+                tracking=".5px"
                 transition="colors">
                 {link.name}
               </Link>
@@ -70,10 +67,10 @@ const Navbar = () => {
             </Link>
 
             <Link
-              b="1 solid rounded-10px blue-800"
-              bg="white/20 hover:blue/2"
+              b="1 solid rounded-10px blue-300 hover:blue-800"
+              bg="transparent hover:blue-100/15"
               className="md:flex hidden"
-              color="blue-800 hover:blue-800"
+              color="blue-400 hover:blue-800"
               flex="items-center justify-center"
               font="500"
               h="38px"
@@ -131,11 +128,12 @@ const Navbar = () => {
         <div border="t black/10" flex="~ col" gap="2" p="y-4">
           {NAVIGATION_LINKS.map((link) => (
             <Link
+              b="1 solid transparent rounded-10px"
               href={link.href}
               key={link.name}
               min-h="10"
               p="y-2"
-              text="gray-600 hover:brand"
+              text="gray-700 hover:blue"
               transition="colors"
               onClick={() => setMobileMenuOpen(false)}>
               {link.name}
@@ -144,17 +142,52 @@ const Navbar = () => {
 
           <div border="t-1 0 solid black/10" flex="~ col" gap="3" p="t-4">
             <Link
-              b="rounded-10px"
-              bg="blue-500/90 hover:blue-500/100"
+              b="rounded-10px 1 solid blue hover:blue-800"
+              bg="blue hover:blue-800"
               color="white"
+              cursor="pointer"
               flex="~ items-center justify-center"
-              font="600"
-              h="42px"
-              href="/generator"
-              p="x-10px y-5px"
-              transition="all duration-300"
+              h="38px"
+              href="#"
+              overflow="hidden"
+              p="y-5px"
+              position="relative"
+              scale="active:97"
+              shadow="hover:sm"
+              transition="duration-200"
               w="full">
-              Try Demo
+              <motion.div
+                animate={{ x: '100%' }}
+                className="absolute inset-0"
+                initial={{ x: '-100%' }}
+                style={{
+                  background:
+                    'linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.2) 50%, transparent 100%)'
+                }}
+                transition={{
+                  duration: 1.2,
+                  repeat: Infinity,
+                  repeatDelay: 2.5,
+                  ease: 'linear'
+                }}
+              />
+              Generator
+            </Link>
+
+            <Link
+              b="1 solid rounded-10px blue-300 hover:blue-800"
+              bg="transparent hover:blue-100/15"
+              color="blue-400 hover:blue-800"
+              flex="~ items-center justify-center"
+              font="500"
+              h="38px"
+              href="/signup"
+              p="y-5px"
+              scale="active:98"
+              shadow="hover:sm"
+              transition="duration-200"
+              w="full">
+              Sign Up
             </Link>
           </div>
         </div>

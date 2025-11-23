@@ -86,14 +86,14 @@ const Demo = () => {
               />
 
               <button
-                b="1 solid blue"
-                bg="blue/2 hover:blue/5"
-                color="blue"
+                b="1 solid rounded-10px blue-100 "
+                bg="transparent hover:blue-100/10"
+                color="blue-400 hover:blue-700"
                 cursor="pointer"
                 font="500"
                 h="40px"
-                rounded="8px"
-                scale="active:97"
+                scale="active:98"
+                shadow="hover:sm"
                 text=".9rem"
                 transition="duration-200"
                 type="submit">

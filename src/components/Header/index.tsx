@@ -2,10 +2,10 @@ import { Container, Navbar } from '~/components'
 
 const Header = () => {
   return (
-    <header fixed="~" left="0" right="0" top="5" z="10">
+    <header position="fixed left-0 right-0 top-4" z="10">
       <Container>
         <div
-          b="1 solid blue/20 "
+          b="1 solid blue/10"
           backdrop="blur-50px"
           bg="white/25"
           rounded="2xl"

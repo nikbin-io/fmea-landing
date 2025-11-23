@@ -7,11 +7,7 @@ body {
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   min-height: 100dvh;
-
 }
 
 * {
@@ -45,48 +41,3 @@ a {
 }
 
 
-// Video Wrapper
-
-.glowing-box-shadow {
-  &.blue {
-    animation: glow-blue 1.5s infinite alternate;
-  }
-
-  &.green {
-    animation: glow-green 1.5s infinite alternate;
-  }
-}
-
-@keyframes glow-blue {
-  from {
-    box-shadow:
-      0 0 20px #374c92,
-      0 0 20px #374c92,
-      0 0 20px #374c92,
-      0 0 20px #374c92;
-  }
-  to {
-    box-shadow:
-      0 0 10px #5691cc,
-      0 0 10px #5691cc,
-      0 0 10px #5691cc,
-      0 0 10px #5691cc;
-  }
-}
-
-@keyframes glow-green {
-  from {
-    box-shadow:
-      0 0 20px #258691,
-      0 0 20px #258691,
-      0 0 20px #258691,
-      0 0 20px #258691;
-  }
-  to {
-    box-shadow:
-      0 0 10px #45d8c1,
-      0 0 10px #45d8c1,
-      0 0 10px #45d8c1,
-      0 0 10px #45d8c1;
-  }
-}

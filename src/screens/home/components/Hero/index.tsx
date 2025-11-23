@@ -21,14 +21,11 @@ export default function Hero() {
               font="bold"
               leading="tight"
               mb="6"
-              text="3xl sm:6xl center lg:7xl gray-900 dark:white">
+              text="3xl sm:6xl center lg:7xl gray-800">
               Iterative FMEA Generator
             </h1>
 
-            <p
-              leading="relaxed"
-              max-w="4xl"
-              text="lg:xl lg center gray-600 dark:gray-300">
+            <p leading="relaxed" max-w="4xl" text="lg:xl lg center gray-700">
               This tool uses a multi-stage AI process to generate, critique, and
               refine a Faliler Mode and Effect Analysis(FMEA) from technical
               documents
