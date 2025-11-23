@@ -8,17 +8,22 @@ const Footer = () => {
     <footer b="0 t-1 solid gray-200" bg="white" mx="auto" w="full">
       <Container>
         <div gap="sm:12 8">
-          <div flex="~ items-center justify-between" py="10">
+          <div
+            flex="~ lg:row col items-center justify-between"
+            gap="20px"
+            py="10">
             <div color="gray-500" flex="~">
               <Logo />
             </div>
 
-            <div flex="~ " gap="25px">
+            <div
+              flex="~ sm:row col sm:order-0 order-1 items-center justify-center"
+              gap="sm:25px 15px">
               {FOOTER_NAV_LINKS.map((link, index) => (
                 <Link
                   href={link.href}
                   key={index}
-                  text="gray-500 hover:blue-900 .9rem"
+                  text=" gray-500 hover:blue-900 .9rem nowrap"
                   transition="colors"
                   word-spacing="2px">
                   {link.name}
@@ -26,7 +31,7 @@ const Footer = () => {
               ))}
             </div>
 
-            <div flex="~ items-center">
+            <div flex="~  items-center">
               {SOCIAL_LINKS.map((item: any) => {
                 return (
                   <Link
@@ -51,8 +56,8 @@ const Footer = () => {
 
           <div
             b="0 t-1 solid gray-100"
-            flex="~ items-center justify-between"
-            font="italic"
+            flex="~ sm:row col items-center justify-between"
+            gap="10px"
             py="6"
             text="sm gray-600 ">
             <p>© 2024 Maudlin Works LLC. All rights reserved.</p>

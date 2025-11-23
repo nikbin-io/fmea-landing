@@ -34,9 +34,7 @@ const Contact = () => {
   })
 
   const onSubmit = async (values: ValidationSchema) => {
-    // Placeholder for submission logic
     console.log(values)
-    await new Promise((resolve) => setTimeout(resolve, 1000))
   }
 
   return (
