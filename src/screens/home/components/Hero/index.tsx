@@ -27,7 +27,7 @@ export default function Hero() {
 
             <p leading="relaxed" max-w="4xl" text="lg:xl lg center gray-700">
               This tool uses a multi-stage AI process to generate, critique, and
-              refine a Faliler Mode and Effect Analysis(FMEA) from technical
+              refine a Failer Mode and Effect Analysis(FMEA) from technical
               documents
             </p>
 

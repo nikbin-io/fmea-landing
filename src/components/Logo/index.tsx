@@ -11,9 +11,9 @@ const Logo = () => {
         xmlns="http://www.w3.org/2000/svg">
         <g
           stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2.8">
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2.8">
           <g transform="translate(22 32)">
             <circle fill="none" r="10" />
             <rect height="6" rx="1" width="4" x="-2" y="-18" />

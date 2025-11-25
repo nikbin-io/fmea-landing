@@ -237,10 +237,7 @@ export const XIcon = () => {
 
 export const YoutubeIcon = () => {
   return (
-    <svg
-      class="external-icon"
-      viewBox="0 0 28.57  20"
-      xmlns="http://www.w3.org/2000/svg">
+    <svg viewBox="0 0 28.57  20" xmlns="http://www.w3.org/2000/svg">
       <svg
         preserveAspectRatio="xMidYMid meet"
         viewBox="0 0 28.57 20"
