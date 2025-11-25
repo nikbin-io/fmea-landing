@@ -86,9 +86,9 @@ const Demo = () => {
               />
 
               <button
-                b="1 solid rounded-10px blue-100 "
-                bg="transparent hover:blue-100/10"
-                color="blue-400 hover:blue-700"
+                b="1 solid rounded-10px blue hover:blue-dark"
+                bg="transparent hover:blue/4"
+                color="blue hover:blue-dark"
                 cursor="pointer"
                 font="500"
                 h="40px"

@@ -38,8 +38,8 @@ const Navbar = () => {
           </div>
           <div className="md:flex hidden" gap="10px">
             <Link
-              b="rounded-10px 1 solid blue hover:blue-800"
-              bg="blue hover:blue-800"
+              b="rounded-10px 1 solid blue hover:blue-dark"
+              bg="blue hover:blue-dark"
               color="white"
               cursor="pointer"
               flex="~ items-center justify-center"
@@ -71,10 +71,10 @@ const Navbar = () => {
             </Link>
 
             <a
-              b="1 solid rounded-10px blue-300 hover:blue-800"
+              b="1 solid rounded-10px blue hover:blue-dark"
               bg="transparent hover:blue-100/15"
               className="md:flex hidden"
-              color="blue-400 hover:blue-800"
+              color="blue hover:blue-dark"
               flex="items-center justify-center"
               font="500"
               h="38px"
@@ -146,8 +146,8 @@ const Navbar = () => {
 
           <div border="t-1 0 solid black/10" flex="~ col" gap="3" p="t-4">
             <Link
-              b="rounded-10px 1 solid blue hover:blue-800"
-              bg="blue hover:blue-800"
+              b="rounded-10px 1 solid blue hover:blue-dark"
+              bg="blue hover:blue-dark"
               color="white"
               cursor="pointer"
               flex="~ items-center justify-center"
@@ -179,9 +179,9 @@ const Navbar = () => {
             </Link>
 
             <Link
-              b="1 solid rounded-10px blue-300 hover:blue-800"
+              b="1 solid rounded-10px blue hover:blue-dark"
               bg="transparent hover:blue-100/15"
-              color="blue-400 hover:blue-800"
+              color="blue hover:blue-dark "
               flex="~ items-center justify-center"
               font="500"
               h="38px"

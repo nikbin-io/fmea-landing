@@ -23,7 +23,7 @@ const Footer = () => {
                 <Link
                   href={link.href}
                   key={index}
-                  text="gray-500 hover:blue-900 sm nowrap"
+                  text="gray-500 hover:blue-dark sm nowrap"
                   transition="colors 200"
                   word-spacing="1px">
                   {link.name}
@@ -38,7 +38,7 @@ const Footer = () => {
                     b="rounded-lg"
                     bg="transparent hover:blue-100/15  "
                     className="[&>svg]:h-16px"
-                    color="gray-600 hover:blue-500"
+                    color="gray-600 hover:blue"
                     flex="~ items-center justify-center"
                     href={item.url}
                     key={item.title}

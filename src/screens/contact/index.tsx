@@ -142,7 +142,8 @@ const Contact = () => {
                         href="/privacy-policy"
                         rel="noopener noreferrer"
                         target="_blank"
-                        text="blue hover:blue-700">
+                        text="blue hover:blue-dark"
+                        transition="colors 200">
                         Privacy Policy
                       </Link>
                     </p>
