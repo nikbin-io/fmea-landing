@@ -68,11 +68,11 @@ const Keypoints = () => {
       {tocData.map((section) => (
         <li key={section.id} m="y-1">
           <button
+            b="none"
             bg="transparent"
-            border="0"
             cursor="pointer"
             p="y-1 x-1"
-            text="left 16px gray-900 hover:gray-900"
+            text="left base gray-900"
             w="full"
             onClick={() => scrollToId(section.id)}>
             {section.label}
@@ -87,7 +87,7 @@ const Keypoints = () => {
                       border="0"
                       cursor="pointer"
                       p="y-1 x-1"
-                      text="left 16px gray-700 hover:gray-900"
+                      text="left base gray-700 hover:gray-900"
                       w="full"
                       onClick={() => scrollToId(child.id)}>
                       {child.label}

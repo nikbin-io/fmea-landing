@@ -28,7 +28,7 @@ const Features = () => {
                   line-height="normal"
                   max-w="650px"
                   mx="lg:0 auto"
-                  text="lg:left center xl:1.1rem sm:1rem .9rem gray-700">
+                  text="lg:left center sm:base sm gray-700">
                   {feature.description}
                 </p>
               </div>

@@ -29,7 +29,7 @@ const Navbar = () => {
                 href={link.href}
                 key={link.name}
                 p="x-15px y-8px"
-                text="gray-700 hover:blue"
+                text="gray-700 hover:blue base"
                 tracking=".5px"
                 transition="colors">
                 {link.name}
@@ -137,7 +137,7 @@ const Navbar = () => {
               key={link.name}
               min-h="10"
               p="y-2"
-              text="gray-700 hover:blue"
+              text="gray-700 hover:blue base"
               transition="colors 200"
               onClick={() => setMobileMenuOpen(false)}>
               {link.name}

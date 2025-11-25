@@ -23,9 +23,9 @@ const Footer = () => {
                 <Link
                   href={link.href}
                   key={index}
-                  text=" gray-500 hover:blue-900 .9rem nowrap"
+                  text="gray-500 hover:blue-900 sm nowrap"
                   transition="colors 200"
-                  word-spacing="2px">
+                  word-spacing="1px">
                   {link.name}
                 </Link>
               ))}

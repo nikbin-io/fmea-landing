@@ -55,7 +55,7 @@ const Input = forwardRef<HTMLInputElement | HTMLTextAreaElement, InputProps>(
           flex="~ items-center justify-between"
           htmlFor={name}
           mb="5px"
-          text="sm:14px 12px">
+          text="sm:sm xs">
           <span>
             {label}
 
@@ -107,7 +107,7 @@ const Input = forwardRef<HTMLInputElement | HTMLTextAreaElement, InputProps>(
             resize="y"
             rows={8}
             shadow="focus:sm"
-            text={disabled ? 'gray-500 sm:14px 12px' : 'gray-800 sm:14px 12px'}
+            text={disabled ? 'gray-500 sm:sm xs' : 'gray-800 sm:sm xs'}
             transition="all 200"
             value={value ?? ''}
             w="full"
@@ -139,7 +139,7 @@ const Input = forwardRef<HTMLInputElement | HTMLTextAreaElement, InputProps>(
             placeholder=" "
             ref={ref as any}
             shadow="focus:sm"
-            text={disabled ? 'gray-500 sm:14px 12px' : 'gray-800 sm:14px 12px'}
+            text={disabled ? 'gray-500 sm:sm xs' : 'gray-800 sm:sm xs'}
             transition="all 200"
             type={type}
             value={value ?? ''}
@@ -165,7 +165,7 @@ const Input = forwardRef<HTMLInputElement | HTMLTextAreaElement, InputProps>(
               line-height="16px"
               mt={type === 'textarea' ? '-3px' : '2px'}
               position="absolute left-0 top-full"
-              text="12px red-500"
+              text="xs red-500"
               transition={{
                 duration: 0.2,
                 ease: 'easeInOut'

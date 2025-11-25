@@ -145,7 +145,7 @@ const SelectBox = forwardRef<HTMLInputElement, SelectBoxProps>(
           flex="~ items-center justify-between"
           font="500"
           mb="10px"
-          text="sm:14px 12px">
+          text="sm:sm xs">
           {placeholder}
 
           {required && (
@@ -201,7 +201,7 @@ const SelectBox = forwardRef<HTMLInputElement, SelectBoxProps>(
             <span
               color={disabled ? 'gray-500' : 'gray-800'}
               font="300"
-              text="sm:14px 12px"
+              text="sm:sm xs"
               transition="colors duration-300">
               {selectedLabels}
             </span>
@@ -245,7 +245,7 @@ const SelectBox = forwardRef<HTMLInputElement, SelectBoxProps>(
                 key="error-message"
                 left="15px"
                 position="absolute"
-                text="12px red"
+                text="xs red"
                 top="105%"
                 transition={{
                   duration: 0.2,
@@ -297,7 +297,7 @@ const SelectBox = forwardRef<HTMLInputElement, SelectBoxProps>(
                   p="5px"
                   pointerEvents={item.disabled ? 'none' : ''}
                   rounded="md"
-                  text="sm:14px 12px nowrap"
+                  text="sm:sm xs nowrap"
                   transition="colors 300"
                   z="4">
                   <span order="3">{item.label}</span>

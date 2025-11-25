@@ -19,12 +19,11 @@ const InputTooltip = ({ open, content }: InputTooltipProps) => {
       bg="gray-200"
       color="gray-800"
       initial="closed"
-      line-height="19px"
       max-w="600px"
       min-w="200px"
       p="x-15px y-5px"
       position="absolute bottom-full right-[-12px]"
-      text="12px"
+      text="xs"
       variants={tooltipVariants}
       w="auto"
       z="5">
