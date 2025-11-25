@@ -70,7 +70,7 @@ const Navbar = () => {
               Generator
             </Link>
 
-            <Link
+            <a
               b="1 solid rounded-10px blue-300 hover:blue-800"
               bg="transparent hover:blue-100/15"
               className="md:flex hidden"
@@ -78,14 +78,14 @@ const Navbar = () => {
               flex="items-center justify-center"
               font="500"
               h="38px"
-              href="/signup"
+              href="https://app.fmeatool.ai"
               p="x-10px y-5px"
               scale="active:98"
               shadow="hover:sm"
               transition="duration-200"
               w="120px">
               Sign Up
-            </Link>
+            </a>
           </div>
 
           <button
