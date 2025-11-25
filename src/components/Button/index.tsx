@@ -18,7 +18,7 @@ const Button = ({ children, type = 'button', ...rest }: ButtonProps) => {
       h="40px"
       scale="active:98"
       shadow="hover:sm"
-      text="1rem"
+      text="base"
       transition="duration-200"
       type={type}
       {...rest}>

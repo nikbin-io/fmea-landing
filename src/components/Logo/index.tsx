@@ -86,8 +86,8 @@ const Logo = () => {
           <path d="M38 44H49" />
         </g>
       </svg>
-      <p color="brand" font="500" m="t-2px" text="24px">
-        F<span color="blue-500">M</span>E<span color="blue-500">A</span>
+      <p color="blue" font="500" m="t-2px" text="24px">
+        F<span color="blue">M</span>E<span color="blue">A</span>
       </p>
     </Link>
   )

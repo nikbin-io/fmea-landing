@@ -40,9 +40,8 @@ const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
                 font="300"
                 initial={{ opacity: 0, y: -10 }}
                 key="error-message"
-                line-height="19px"
                 position="absolute"
-                text="12px red-500"
+                text="xs red-500"
                 top="full"
                 transition={{
                   duration: 0.2,

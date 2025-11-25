@@ -282,7 +282,7 @@ const SelectBox = forwardRef<HTMLInputElement, SelectBoxProps>(
                   color={
                     multiple
                       ? Array.isArray(value) && value.includes(item.value)
-                        ? 'brand'
+                        ? 'blue'
                         : 'gray-600 hover:white'
                       : value === item.value
                         ? 'gray-800'

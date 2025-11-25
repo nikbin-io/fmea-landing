@@ -153,7 +153,7 @@ const FileUpload = forwardRef<HTMLInputElement, FileUploadProps>(
           flex="~ items-center justify-between"
           htmlFor={name}
           mb="10px"
-          text="sm:14px 12px">
+          text="sm:base sm">
           {label}
 
           {required && (
@@ -232,7 +232,7 @@ const FileUpload = forwardRef<HTMLInputElement, FileUploadProps>(
               color={disabled ? 'gray-400' : 'gray-600'}
               font="400"
               m="b-10px"
-              text={value ? '12px' : 'center 16px'}>
+              text={value ? 'xs' : 'center base'}>
               {placeholder}
             </span>
 
@@ -240,7 +240,7 @@ const FileUpload = forwardRef<HTMLInputElement, FileUploadProps>(
               color="gray-400"
               font="300"
               m={value ? 'b-10px' : 'b-20px'}
-              text="center 12px">
+              text="center xs">
               Limit {maxSize}MB per file • {accept.toUpperCase()}
             </span>
 
@@ -253,7 +253,7 @@ const FileUpload = forwardRef<HTMLInputElement, FileUploadProps>(
               h={value ? '32px' : '40px'}
               outline="none"
               p="x-20px"
-              text={value ? '12px' : '14px'}
+              text={value ? 'xs' : 'bsm'}
               transition="all 200"
               type="button"
               onClick={handleBrowseClick}>
@@ -306,7 +306,7 @@ const FileUpload = forwardRef<HTMLInputElement, FileUploadProps>(
                 mt="10px"
                 p="x-15px y-5px"
                 w="full">
-                <div flex="~ col" gap="5px" mt="1px" text="truncate 12px">
+                <div flex="~ col" gap="5px" mt="1px" text="truncate xs">
                   <p color="gray-800" font="500" text="truncate">
                     {value.name}
                   </p>

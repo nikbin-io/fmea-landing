@@ -29,7 +29,7 @@ const Accordion = ({
             gap="15px"
             py="sm:5 4"
             w="full">
-            <p font="600" line-height="tight" text="sm:16px 15px ">
+            <p font="600" text="sm:base sm">
               {title}
             </p>
 
@@ -54,7 +54,7 @@ const Accordion = ({
         grid="~ rows-[0fr] peer-has-[:checked]:rows-[1fr]"
         transition="all duration-300">
         <div overflow="hidden">
-          <div color="gray-600" line-height="normal" py="5" text="sm:16px 14px">
+          <div color="gray-600" py="5" text="sm:base sm">
             {children}
           </div>
         </div>
