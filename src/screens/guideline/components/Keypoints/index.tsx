@@ -1,9 +1,8 @@
 import { useState } from 'react'
-import { ChevronLeft, ChevronRight } from '~/components/Icons'
-import Link from 'next/link'
+
 type TocNode = { id: string; label: string; children?: TocNode[] }
 const Keypoints = () => {
-  const [isCollapsed, setIsCollapsed] = useState(false)
+  const [isCollapsed, setIsCollapsed] = useState<boolean>(false)
 
   const tocData: TocNode[] = [
     {
@@ -110,7 +109,7 @@ const Keypoints = () => {
       p="x-4 y-8"
       position="sticky top-100px right-0"
       rounded="2xl"
-      transition="all duration-300"
+      transition="all duration-200"
       w="350px">
       <h2 mb="6">Keypoints</h2>
       {!isCollapsed && <div flex="~ 1 col">{renderToc()}</div>}

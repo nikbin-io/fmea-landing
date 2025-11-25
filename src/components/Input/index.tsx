@@ -79,7 +79,7 @@ const Input = forwardRef<HTMLInputElement | HTMLTextAreaElement, InputProps>(
                 h="18px"
                 outline="none"
                 ref={tooltipRef}
-                transition="colors 300"
+                transition="colors 200"
                 type="button"
                 w="18px"
                 onClick={() => setIsTooltipOpen(!isTooltipOpen)}>

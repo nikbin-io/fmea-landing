@@ -24,7 +24,7 @@ const Footer = () => {
                   href={link.href}
                   key={index}
                   text=" gray-500 hover:blue-900 .9rem nowrap"
-                  transition="colors"
+                  transition="colors 200"
                   word-spacing="2px">
                   {link.name}
                 </Link>
@@ -46,7 +46,7 @@ const Footer = () => {
                     rel="noreferrer"
                     target="_blank"
                     title={item.title}
-                    transition="colors 300">
+                    transition="colors 200">
                     {item.icon}
                   </Link>
                 )

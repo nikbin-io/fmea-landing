@@ -8,8 +8,7 @@ const Header = () => {
           b="1 solid blue/10"
           backdrop="blur-50px"
           bg="white/25"
-          rounded="2xl"
-          transition="colors">
+          rounded="2xl">
           <Navbar />
         </div>
       </Container>

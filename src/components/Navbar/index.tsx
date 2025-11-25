@@ -103,21 +103,21 @@ const Navbar = () => {
               className={mobileMenuOpen ? 'rotate-45 translate-y-2' : ''}
               h="0.5"
               rounded="full"
-              transition="all duration-300"
+              transition="all duration-200"
               w="full"></span>
             <span
               bg="gray-500"
               className={mobileMenuOpen ? 'opacity-0' : ''}
               h="0.5"
               rounded="full"
-              transition="all duration-300"
+              transition="all duration-200"
               w="full"></span>
             <span
               bg="gray-500"
               className={mobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}
               h="0.5"
               rounded="full"
-              transition="all duration-300"
+              transition="all duration-200"
               w="full"></span>
           </button>
         </div>
@@ -128,7 +128,7 @@ const Navbar = () => {
         className={`md:hidden ease-in-out ${mobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}
         mx="4"
         overflow="hidden"
-        transition="all 300">
+        transition="all 200">
         <div border="t black/10" flex="~ col" gap="2" p="y-4">
           {NAVIGATION_LINKS.map((link) => (
             <Link
@@ -138,7 +138,7 @@ const Navbar = () => {
               min-h="10"
               p="y-2"
               text="gray-700 hover:blue"
-              transition="colors"
+              transition="colors 200"
               onClick={() => setMobileMenuOpen(false)}>
               {link.name}
             </Link>
