@@ -14,7 +14,7 @@ export const FEATURES: FEATURES_TYPE[] = [
     video: '/videos/demo.mp4'
   },
   {
-    id: '01',
+    id: '02',
     title: 'Process Failure Mode and Effects Analysis',
 
     description:

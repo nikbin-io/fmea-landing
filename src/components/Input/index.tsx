@@ -47,13 +47,15 @@ const Input = forwardRef<HTMLInputElement | HTMLTextAreaElement, InputProps>(
           htmlFor={name}
           mb="10px"
           text="sm:base sm">
-          {label}
+          <span>
+            {label}
 
-          {required && (
-            <span ml="2px" op={disabled ? '40' : '100'}>
-              *
-            </span>
-          )}
+            {required && (
+              <span ml="2px" op={disabled ? '40' : '100'}>
+                *
+              </span>
+            )}
+          </span>
 
           {tooltipContent && <InputTooltip content={tooltipContent} />}
         </label>
