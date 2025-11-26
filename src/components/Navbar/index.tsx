@@ -143,7 +143,7 @@ const Navbar = () => {
 
           <div border="t-1 0 solid black/10" flex="~ col" gap="4" p="t-4">
             <Link
-              b="rounded-10px 1 solid blue-light hover:blue"
+              b="rounded-lg 1 solid blue-light hover:blue"
               bg="blue-light hover:blue"
               color="white"
               cursor="pointer"

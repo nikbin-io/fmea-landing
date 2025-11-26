@@ -218,7 +218,7 @@ const FileUpload = forwardRef<HTMLInputElement, FileUploadProps>(
             </span>
 
             <button
-              b="1 solid gray-300 rounded-8px"
+              b="1 solid gray-300 rounded-lg"
               bg="white hover:gray-50"
               color={disabled ? 'gray-400' : 'gray-700'}
               cursor={disabled ? 'not-allowed' : 'pointer'}

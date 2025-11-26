@@ -25,7 +25,7 @@ const InputTooltip = ({ content }: InputTooltipProps) => {
     <div position="relative">
       <motion.div
         animate={open ? 'open' : 'closed'}
-        b="1 solid gray-200 rounded-8px"
+        b="1 solid gray-200 rounded-lg"
         bg="gray-200"
         color="gray-900"
         initial="closed"
