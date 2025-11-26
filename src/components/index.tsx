@@ -11,7 +11,6 @@ import InputTooltip from './InputTooltip'
 import Layout from './Layout'
 import Logo from './Logo'
 import Navbar from './Navbar'
-import SelectBox from './SelectBox'
 import Wireframe from './Wireframe'
 
 export {
@@ -28,6 +27,5 @@ export {
   Layout,
   Logo,
   Navbar,
-  SelectBox,
   Wireframe
 }
