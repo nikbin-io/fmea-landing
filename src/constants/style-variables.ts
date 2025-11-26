@@ -52,15 +52,15 @@ export const FONT_SIZES = {
   },
   xl: {
     size: '20px',
-    line_height: '28px'
+    line_height: '32px'
   },
   '2xl': {
     size: '24px',
-    line_height: '32px'
+    line_height: '36px'
   },
   '3xl': {
     size: '30px',
-    line_height: '36px'
+    line_height: '40px'
   },
   '4xl': {
     size: '36px',

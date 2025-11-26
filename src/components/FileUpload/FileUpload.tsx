@@ -144,9 +144,10 @@ const FileUpload = forwardRef<HTMLInputElement, FileUploadProps>(
           bg="transparent"
           color={disabled ? 'gray-dark/50' : 'gray-dark'}
           flex="~ items-center justify-between"
+          font="400"
           htmlFor={name}
           mb="10px"
-          text="sm:base sm">
+          text="sm">
           {label}
 
           {required && (
@@ -178,16 +179,16 @@ const FileUpload = forwardRef<HTMLInputElement, FileUploadProps>(
         />
 
         <div
-          b={`2 ${isDragging ? 'solid' : 'dashed'} rounded-8px ${
+          b={`2 ${isDragging ? 'solid' : 'dashed'} rounded-lg ${
             disabled
               ? 'gray-dark'
               : error
                 ? 'red'
                 : value
-                  ? 'blue'
+                  ? ' blue-light'
                   : isDragging
                     ? 'gray-dark/50'
-                    : 'gray-lighter'
+                    : 'gray-light'
           }`}
           bg={isDragging ? 'gray-lighter' : 'white'}
           cursor={disabled ? 'not-allowed' : 'pointer'}
@@ -204,13 +205,13 @@ const FileUpload = forwardRef<HTMLInputElement, FileUploadProps>(
             <span
               color={disabled ? 'gray-dark/50' : 'gray-dark'}
               font="400"
-              m="b-10px"
+              m={value ? 'b-5px' : 'b-10px'}
               text={value ? 'xs' : 'center base'}>
               {placeholder}
             </span>
 
             <span
-              color="gray-dark/50"
+              color="gray"
               font="300"
               m={value ? 'b-10px' : 'b-20px'}
               text="center xs">
@@ -226,8 +227,9 @@ const FileUpload = forwardRef<HTMLInputElement, FileUploadProps>(
               h={value ? '32px' : '40px'}
               outline="none"
               p="x-20px"
-              text={value ? 'xs' : 'bsm'}
-              transition="all 200"
+              scale="hover:102"
+              text={value ? 'xs' : 'sm'}
+              transition="all duration-200"
               type="button"
               onClick={handleBrowseClick}>
               Browse files
@@ -282,6 +284,7 @@ const FileUpload = forwardRef<HTMLInputElement, FileUploadProps>(
                   <p color="gray-darker" font="500" text="truncate">
                     {value.name}
                   </p>
+
                   <span color="gray">
                     {(value.size / (1024 * 1024)).toFixed(2)} MB
                   </span>
@@ -289,15 +292,14 @@ const FileUpload = forwardRef<HTMLInputElement, FileUploadProps>(
 
                 {!disabled && !previewUrl && (
                   <button
-                    b="none"
+                    b="1 solid transparent rounded-sm"
                     bg="transparent hover:red-light"
                     className="[&>svg]:w-16px [&>svg]:h-16px"
                     color="red hover:red-dark"
                     cursor="pointer"
                     flex="~ shrink-0 items-center justify-center"
                     outline="none"
-                    rounded="4px"
-                    transition="colors 200"
+                    transition="colors duration-200"
                     type="button"
                     onClick={handleRemoveFile}>
                     <CrossIcon />

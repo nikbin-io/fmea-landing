@@ -44,17 +44,14 @@ const Input = forwardRef<HTMLInputElement | HTMLTextAreaElement, InputProps>(
           bg="transparent"
           color={disabled ? 'gray-dark/50' : 'gray-dark'}
           flex="~ items-center justify-between"
+          font="400"
           htmlFor={name}
           mb="10px"
-          text="sm:base sm">
+          text="sm">
           <span>
             {label}
 
-            {required && (
-              <span ml="2px" op={disabled ? '40' : '100'}>
-                *
-              </span>
-            )}
+            {required && <span ml="2px">*</span>}
           </span>
 
           {tooltipContent && <InputTooltip content={tooltipContent} />}
@@ -67,10 +64,8 @@ const Input = forwardRef<HTMLInputElement | HTMLTextAreaElement, InputProps>(
             cursor={disabled ? 'not-allowed' : 'text'}
             data-field={name}
             disabled={disabled}
-            focus={`border-${error ? 'red' : 'white'} bg-gray-darker`}
             font="300"
             id={name}
-            line-height="tight"
             outline="none"
             p="x-15px y-18px"
             placeholder=" "
@@ -100,7 +95,6 @@ const Input = forwardRef<HTMLInputElement | HTMLTextAreaElement, InputProps>(
             font="300"
             h="44px"
             id={name}
-            line-height="tight"
             max-h="44px"
             outline="none"
             p="x-15px"
