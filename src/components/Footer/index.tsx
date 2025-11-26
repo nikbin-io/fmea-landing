@@ -21,10 +21,12 @@ const Footer = () => {
               gap="sm:25px 15px">
               {FOOTER_NAV_LINKS.map((link, index) => (
                 <Link
+                  font="400"
                   href={link.href}
                   key={index}
-                  text="gray-500 hover:blue-dark sm nowrap"
-                  transition="colors 200"
+                  scale="hover:102"
+                  text="gray-700 hover:blue sm:base sm nowrap"
+                  transition="colors duration-200"
                   word-spacing="1px">
                   {link.name}
                 </Link>
@@ -36,14 +38,13 @@ const Footer = () => {
                 return (
                   <Link
                     b="rounded-lg"
-                    bg="transparent hover:blue-100/15  "
+                    bg="transparent hover:blue/10"
                     className="[&>svg]:h-16px"
-                    color="gray-600 hover:blue"
+                    color="gray-700 hover:blue-light"
                     flex="~ items-center justify-center"
                     href={item.url}
                     key={item.title}
                     p="2"
-                    rel="noreferrer"
                     target="_blank"
                     title={item.title}
                     transition="colors 200">
@@ -59,7 +60,7 @@ const Footer = () => {
             flex="~ sm:row col items-center justify-between"
             gap="10px"
             py="6"
-            text="sm gray-600 ">
+            text="sm gray-700 ">
             <p>© 2024 Maudlin Works LLC. All rights reserved.</p>
             <p>Developed by Nikbin.io.</p>
           </div>
