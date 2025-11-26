@@ -20,7 +20,7 @@ const Features = () => {
                 p={index % 2 === 0 ? 'lg:r-50px' : 'lg:l-50px'}>
                 <h3
                   line-height="normal"
-                  text="lg:left gray-700 center xl:2rem sm:1.5rem 1.3rem">
+                  text="lg:left gray-dark center xl:2rem sm:1.5rem 1.3rem">
                   {feature.title}
                 </h3>
 
@@ -28,7 +28,7 @@ const Features = () => {
                   line-height="normal"
                   max-w="650px"
                   mx="lg:0 auto"
-                  text="lg:left center sm:base sm gray-700">
+                  text="lg:left center sm:base sm gray-dark">
                   {feature.description}
                 </p>
               </div>

@@ -17,7 +17,7 @@ const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
           flex="~ items-start"
           gap="10px"
           position="relative"
-          text="gray-700 left sm">
+          text="gray-dark left sm">
           <input
             accent="blue"
             checked={checked}

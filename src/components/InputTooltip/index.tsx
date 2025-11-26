@@ -25,9 +25,8 @@ const InputTooltip = ({ content }: InputTooltipProps) => {
     <div position="relative">
       <motion.div
         animate={open ? 'open' : 'closed'}
-        b="1 solid gray-200 rounded-lg"
-        bg="gray-200"
-        color="gray-900"
+        b="1 solid gray-light rounded-lg"
+        bg="gray-light"
         initial="closed"
         max-w="600px"
         min-w="200px"
@@ -42,9 +41,9 @@ const InputTooltip = ({ content }: InputTooltipProps) => {
           position="absolute right-15px"
           style={{ transform: 'rotate(45deg)' }}>
           <div
-            b-b="1 solid gray-200 rounded-1px"
-            b-r="1 solid gray-200 rounded-1px"
-            bg="gray-200"
+            b-b="1 solid gray-light rounded-1px"
+            b-r="1 solid gray-light rounded-1px"
+            bg="gray-light"
             h="10px"
             w="10px"
           />
@@ -56,13 +55,13 @@ const InputTooltip = ({ content }: InputTooltipProps) => {
       <button
         b="none"
         bg="transparent"
-        color="gray-400 hover:gray-700"
+        color="gray hover:gray-darker"
         cursor="pointer"
         flex="~ items-center justify-center"
         h="18px"
         outline="none"
         ref={tooltipRef}
-        scale="hover:101"
+        scale="hover:102"
         transition="colors duration-200"
         type="button"
         w="18px"

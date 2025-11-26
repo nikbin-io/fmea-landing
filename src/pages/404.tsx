@@ -13,14 +13,14 @@ const NotFoundPage = () => {
         <div flex="~ col items-center" gap="5">
           <h1 font="bold" text="sm:2.5rem black/60">
             <span
-              className="text-stroke-gray-200 text-stroke-2px"
+              className="text-stroke-gray-light text-stroke-2px"
               text="sm:10rem 6rem black/15">
               404
             </span>
             <br /> Page not found
           </h1>
 
-          <p line-height="normal" max-w="550px" text="sm:1.2rem gray-700">
+          <p line-height="normal" max-w="550px" text="sm:1.2rem gray-dark">
             The page you are looking for might have been moved, deleted, or
             never existed.
           </p>

@@ -27,7 +27,7 @@ const Navbar = () => {
                 href={link.href}
                 key={link.name}
                 p="x-15px y-5px"
-                text="gray-800 hover:blue"
+                text="gray-darker hover:blue"
                 tracking=".5px"
                 transition="colors">
                 {link.name}
@@ -96,21 +96,21 @@ const Navbar = () => {
             w="6"
             onClick={toggleMobileMenu}>
             <span
-              bg="gray-700"
+              bg="gray-dark"
               className={mobileMenuOpen ? 'rotate-45 translate-y-2' : ''}
               h="0.5"
               rounded="full"
               transition="all duration-200"
               w="full"></span>
             <span
-              bg="gray-700"
+              bg="gray-dark"
               className={mobileMenuOpen ? 'opacity-0' : ''}
               h="0.5"
               rounded="full"
               transition="all duration-200"
               w="full"></span>
             <span
-              bg="gray-700"
+              bg="gray-dark"
               className={mobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}
               h="0.5"
               rounded="full"
@@ -134,7 +134,7 @@ const Navbar = () => {
               href={link.href}
               key={link.name}
               p="y-2"
-              text="gray-800 hover:blue base"
+              text="gray-darker hover:blue base"
               transition="colors 200"
               onClick={() => setMobileMenuOpen(false)}>
               {link.name}
@@ -177,7 +177,7 @@ const Navbar = () => {
             </Link>
 
             <Link
-              b="1 solid rounded-10px blue-light hover:blue"
+              b="1 solid rounded-lg blue-light hover:blue"
               bg="transparent hover:white/40"
               color="blue-light hover:blue"
               flex="~ items-center justify-center"

@@ -5,7 +5,7 @@ const PrivacyPolicy = () => {
     <div py="lg:40 30">
       <Container>
         <div
-          bg="gray-200"
+          bg="gray-light"
           leading="relaxed"
           max-w="5xl"
           mx="auto"
@@ -15,7 +15,7 @@ const PrivacyPolicy = () => {
           text="sm:base sm">
           <div mb="12" text="center">
             <h1
-              color="gray-900 "
+              color="gray-darker "
               font="bold"
               mb="4"
               text="3xl sm:5xl"
@@ -23,14 +23,14 @@ const PrivacyPolicy = () => {
               Privacy Policy
             </h1>
 
-            <p color="gray-700 " text="sm:lg md">
+            <p color="gray-dark " text="sm:lg md">
               Last updated: November 8, 2024
             </p>
           </div>
 
-          <div color="gray-700 " space-y="8">
+          <div color="gray-dark " space-y="8">
             <section>
-              <h2 color="gray-900 " font="semibold" mb="4" text="xl sm:3xl">
+              <h2 color="gray-darker " font="semibold" mb="4" text="xl sm:3xl">
                 Introduction
               </h2>
 
@@ -43,7 +43,7 @@ const PrivacyPolicy = () => {
             </section>
 
             <section>
-              <h2 color="gray-900 " font="semibold" mb="4" text="xl sm:3xl">
+              <h2 color="gray-darker " font="semibold" mb="4" text="xl sm:3xl">
                 Information We Collect
               </h2>
 
@@ -74,7 +74,7 @@ const PrivacyPolicy = () => {
             </section>
 
             <section>
-              <h2 color="gray-900 " font="semibold" mb="4" text="xl sm:3xl">
+              <h2 color="gray-darker " font="semibold" mb="4" text="xl sm:3xl">
                 How We Use Your Information
               </h2>
 
@@ -101,7 +101,7 @@ const PrivacyPolicy = () => {
             </section>
 
             <section>
-              <h2 color="gray-900 " font="semibold" mb="4" text="xl sm:3xl">
+              <h2 color="gray-darker " font="semibold" mb="4" text="xl sm:3xl">
                 Data Security
               </h2>
 
@@ -115,7 +115,7 @@ const PrivacyPolicy = () => {
             </section>
 
             <section>
-              <h2 color="gray-900 " font="semibold" mb="4" text="xl sm:3xl">
+              <h2 color="gray-darker " font="semibold" mb="4" text="xl sm:3xl">
                 Third-Party Services
               </h2>
 
@@ -130,7 +130,7 @@ const PrivacyPolicy = () => {
             </section>
 
             <section>
-              <h2 color="gray-900 " font="semibold" mb="4" text="xl sm:3xl">
+              <h2 color="gray-darker " font="semibold" mb="4" text="xl sm:3xl">
                 Your Rights
               </h2>
 
@@ -168,7 +168,7 @@ const PrivacyPolicy = () => {
             </section>
 
             <section>
-              <h2 color="gray-900 " font="semibold" mb="4" text="xl sm:3xl">
+              <h2 color="gray-darker " font="semibold" mb="4" text="xl sm:3xl">
                 Children&apos;s Privacy
               </h2>
 
@@ -182,7 +182,7 @@ const PrivacyPolicy = () => {
             </section>
 
             <section>
-              <h2 color="gray-900 " font="semibold" mb="4" text="xl sm:3xl">
+              <h2 color="gray-darker " font="semibold" mb="4" text="xl sm:3xl">
                 Changes to This Privacy Policy
               </h2>
 
@@ -195,7 +195,7 @@ const PrivacyPolicy = () => {
             </section>
 
             <section>
-              <h2 color="gray-900 " font="semibold" mb="4" text="xl sm:3xl">
+              <h2 color="gray-darker " font="semibold" mb="4" text="xl sm:3xl">
                 Contact Us
               </h2>
 

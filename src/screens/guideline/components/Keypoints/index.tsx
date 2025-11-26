@@ -72,7 +72,7 @@ const Keypoints = () => {
             bg="transparent"
             cursor="pointer"
             p="y-1 x-1"
-            text="left base gray-900"
+            text="left base gray-darker"
             w="full"
             onClick={() => scrollToId(section.id)}>
             {section.label}
@@ -87,7 +87,7 @@ const Keypoints = () => {
                       border="0"
                       cursor="pointer"
                       p="y-1 x-1"
-                      text="left base gray-700 hover:gray-900"
+                      text="left base gray-dark hover:gray-darker"
                       w="full"
                       onClick={() => scrollToId(child.id)}>
                       {child.label}
@@ -104,7 +104,7 @@ const Keypoints = () => {
 
   return (
     <aside
-      bg="gray-200"
+      bg="gray-light"
       flex="~ col shrink-0"
       p="x-4 y-8"
       position="sticky top-100px right-0"

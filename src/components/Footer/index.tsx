@@ -5,14 +5,14 @@ import { Container, Logo } from '~/components'
 
 const Footer = () => {
   return (
-    <footer b="0 t-1 solid gray-200" bg="white" mx="auto" w="full">
+    <footer b="0 t-1 solid gray-light" bg="white" mx="auto" w="full">
       <Container>
         <div gap="sm:12 8">
           <div
             flex="~ lg:row col items-center justify-between"
             gap="20px"
             py="10">
-            <div color="gray-500" flex="~">
+            <div color="gray" flex="~">
               <Logo />
             </div>
 
@@ -25,7 +25,7 @@ const Footer = () => {
                   href={link.href}
                   key={index}
                   scale="hover:102"
-                  text="gray-700 hover:blue sm:base sm nowrap"
+                  text="gray-dark hover:blue sm:base sm nowrap"
                   transition="colors duration-200"
                   word-spacing="1px">
                   {link.name}
@@ -40,7 +40,7 @@ const Footer = () => {
                     b="rounded-lg"
                     bg="transparent hover:blue/10"
                     className="[&>svg]:h-16px"
-                    color="gray-700 hover:blue-light"
+                    color="gray-dark hover:blue-light"
                     flex="~ items-center justify-center"
                     href={item.url}
                     key={item.title}
@@ -56,11 +56,11 @@ const Footer = () => {
           </div>
 
           <div
-            b="0 t-1 solid gray-100"
+            b="0 t-1 solid gray-lighter"
             flex="~ sm:row col items-center justify-between"
             gap="10px"
             py="6"
-            text="sm gray-700 ">
+            text="sm gray-dark ">
             <p>© 2024 Maudlin Works LLC. All rights reserved.</p>
             <p>Developed by Nikbin.io.</p>
           </div>

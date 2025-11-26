@@ -23,6 +23,13 @@ export default defineConfig({
       blue: {
         DEFAULT: '#003f9a',
         light: '	#0059b3'
+      },
+      gray: {
+        darker: '#1f2937',
+        dark: '#374151',
+        DEFAULT: '#6b7280',
+        light: '#e5e7eb',
+        lighter: '#f3f4f6'
       }
     },
     breakpoints: {

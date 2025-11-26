@@ -41,7 +41,7 @@ const Contact = () => {
     <div py="lg:40 30" z="1">
       <Container>
         <div
-          bg="gray-200"
+          bg="gray-light"
           max-w="700px"
           mx="auto"
           p="y-10 sm:x-10 x-4"
@@ -54,11 +54,11 @@ const Contact = () => {
               font="600"
               line-height="sm:40px 32px"
               mb="6"
-              text="sm:36px gray-700 24px">
+              text="sm:36px gray-dark 24px">
               Contact Us
             </h1>
 
-            <p px="2" text=".9rem gray-700">
+            <p px="2" text=".9rem gray-dark">
               We&apos;d love to hear from you. Send us a message and we&apos;ll
               get back to you as soon as possible.
             </p>

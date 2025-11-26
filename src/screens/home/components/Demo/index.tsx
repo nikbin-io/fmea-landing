@@ -33,17 +33,17 @@ const Demo = () => {
         <div gap="50px" grid="~ md:cols-6 cols-1" m="b-50px t-10px">
           <div
             bg="white"
-            border="1 gray-200"
+            border="1 gray-light"
             className="lg:col-span-2 md:col-span-3"
             overflow="visible"
             position="relative"
             rounded="2xl"
             shadow="lg">
             <div overflow="hidden" rounded="2xl">
-              <div bg-gradient="radial from-gray-500 to-gray-800" h="8px"></div>
+              <div bg-gradient="radial from-gray to-gray-darker" h="8px"></div>
 
-              <div b="0 b-1 solid gray-200" gap="2" mb="2" p="6">
-                <h2 font="bold" text="2xl center gray-700">
+              <div b="0 b-1 solid gray-light" gap="2" mb="2" p="6">
+                <h2 font="bold" text="2xl center gray-darker">
                   Configuration
                 </h2>
               </div>
@@ -91,7 +91,7 @@ const Demo = () => {
             <div
               bg="white"
               className="[&>svg]:w-auto [&>svg]:h-18px"
-              color="gray-800"
+              color="gray-darker"
               flex="~ justify-center items-center"
               h="50px"
               position="absolute md:top-24px top-full md:left-full left-1/2"
@@ -113,7 +113,7 @@ const Demo = () => {
           </div>
 
           <div
-            border="1 gray-200"
+            border="1 gray-light"
             className="lg:col-span-4 md:col-span-3"
             h="full"
             overflow="hidden"
@@ -122,11 +122,11 @@ const Demo = () => {
             <div bg="white" flex="~ col" h="full" overflow="hidden">
               <div>
                 <div
-                  bg-gradient="radial from-gray-500 to-gray-800"
+                  bg-gradient="radial from-gray to-gray-darker"
                   h="8px"></div>
 
                 <div p="6">
-                  <h2 font="bold" text="2xl center gray-900">
+                  <h2 font="bold" text="2xl center gray-darker">
                     Final Refined FMEA Results
                   </h2>
                 </div>
@@ -148,10 +148,10 @@ const Demo = () => {
                   whitespace="nowrap">
                   <thead w="full">
                     <tr
-                      className="all-[th]:py-7px all-[th]:px-10px all-[th]:b-solid all-[th]:b-1 all-[th]:text-center all-[th]:border-gray-100 all-[th]:bg-[#f0f0f0]"
+                      className="all-[th]:py-7px all-[th]:px-10px all-[th]:b-solid all-[th]:b-1 all-[th]:text-center all-[th]:border-gray-lighter all-[th]:bg-[#f0f0f0]"
                       line-height="22px"
-                      text="12px gray-700">
-                      <th bg="gray-100" z="1"></th>
+                      text="12px gray-dark">
+                      <th bg="gray-lighter" z="1"></th>
                       <th>item_function_or_interface</th>
                       <th>potential_failure_mode</th>
                       <th>local_effect</th>
@@ -164,7 +164,7 @@ const Demo = () => {
                   </thead>
 
                   <tbody
-                    className="all-[td]:p-5px all-[td]:b-solid all-[td]:b-1 all-[td]:text-center all-[td]:border-gray-100"
+                    className="all-[td]:p-5px all-[td]:b-solid all-[td]:b-1 all-[td]:text-center all-[td]:border-gray-lighter"
                     text="gray-text 14px"
                     w="full">
                     {true ? (

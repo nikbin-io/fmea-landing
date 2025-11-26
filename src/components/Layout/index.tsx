@@ -12,7 +12,7 @@ const Layout = ({
 }) => {
   return (
     <div
-      bg="gray-100"
+      bg="gray-lighter"
       className={className}
       flex="~ col justify-between"
       min-h="screen">

@@ -142,7 +142,7 @@ const FileUpload = forwardRef<HTMLInputElement, FileUploadProps>(
       <div position="relative" w="full">
         <label
           bg="transparent"
-          color={disabled ? 'gray-400' : 'gray-700'}
+          color={disabled ? 'gray-dark/50' : 'gray-dark'}
           flex="~ items-center justify-between"
           htmlFor={name}
           mb="10px"
@@ -180,16 +180,16 @@ const FileUpload = forwardRef<HTMLInputElement, FileUploadProps>(
         <div
           b={`2 ${isDragging ? 'solid' : 'dashed'} rounded-8px ${
             disabled
-              ? 'gray-700'
+              ? 'gray-dark'
               : error
                 ? 'red-500'
                 : value
                   ? 'blue'
                   : isDragging
-                    ? 'gray-400'
-                    : 'gray-200'
+                    ? 'gray-dark/50'
+                    : 'gray-lighter'
           }`}
-          bg={isDragging ? 'gray-50' : 'white'}
+          bg={isDragging ? 'gray-lighter' : 'white'}
           cursor={disabled ? 'not-allowed' : 'pointer'}
           flex="~ col items-center justify-center"
           min-h="180px"
@@ -202,7 +202,7 @@ const FileUpload = forwardRef<HTMLInputElement, FileUploadProps>(
           onDrop={handleDrop}>
           <>
             <span
-              color={disabled ? 'gray-400' : 'gray-700'}
+              color={disabled ? 'gray-dark/50' : 'gray-dark'}
               font="400"
               m="b-10px"
               text={value ? 'xs' : 'center base'}>
@@ -210,7 +210,7 @@ const FileUpload = forwardRef<HTMLInputElement, FileUploadProps>(
             </span>
 
             <span
-              color="gray-400"
+              color="gray-dark/50"
               font="300"
               m={value ? 'b-10px' : 'b-20px'}
               text="center xs">
@@ -218,9 +218,9 @@ const FileUpload = forwardRef<HTMLInputElement, FileUploadProps>(
             </span>
 
             <button
-              b="1 solid gray-300 rounded-lg"
-              bg="white hover:gray-50"
-              color={disabled ? 'gray-400' : 'gray-700'}
+              b="1 solid gray-dark/50 rounded-lg"
+              bg="white hover:gray-lighter"
+              color={disabled ? 'gray-dark/50' : 'gray-dark'}
               cursor={disabled ? 'not-allowed' : 'pointer'}
               font="400"
               h={value ? '32px' : '40px'}
@@ -240,7 +240,7 @@ const FileUpload = forwardRef<HTMLInputElement, FileUploadProps>(
                 <div position="relative" w="full">
                   <Image
                     alt="Preview"
-                    b="1 solid gray-200 rounded-8px"
+                    b="1 solid gray-light rounded-lg"
                     max-h="200px"
                     object="contain"
                     src={previewUrl}
@@ -271,18 +271,18 @@ const FileUpload = forwardRef<HTMLInputElement, FileUploadProps>(
 
               {/* File Info */}
               <div
-                b="1 solid gray-200 rounded-8px"
-                bg="gray-50"
+                b="1 solid gray-lighter rounded-lg"
+                bg="gray-lighter"
                 flex="~ items-start justify-between nowrap"
                 gap="10px"
                 mt="10px"
                 p="x-15px y-5px"
                 w="full">
                 <div flex="~ col" gap="5px" mt="1px" text="truncate xs">
-                  <p color="gray-800" font="500" text="truncate">
+                  <p color="gray-darker" font="500" text="truncate">
                     {value.name}
                   </p>
-                  <span color="gray-500">
+                  <span color="gray">
                     {(value.size / (1024 * 1024)).toFixed(2)} MB
                   </span>
                 </div>
