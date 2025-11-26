@@ -6,6 +6,9 @@ const Guideline = () => {
     <div py="lg:40 30">
       <Container>
         <div flex="~" gap="20px" h="full" position="relative" w="full">
+          <div>
+            <Keypoints />
+          </div>
           <div
             bg="gray-lighter"
             color="gray-dark"
@@ -230,9 +233,6 @@ const Guideline = () => {
                 readability while handling richer requirements.
               </p>
             </div>
-          </div>
-          <div>
-            <Keypoints />
           </div>
         </div>
       </Container>
