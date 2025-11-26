@@ -1,6 +1,5 @@
 import { forwardRef, JSX, useRef, useState } from 'react'
-import { useClickAway } from 'react-use'
-import { InfoIcon, CrossIcon } from '~/components/Icons'
+import { CrossIcon } from '~/components/Icons'
 import { AnimatePresence, motion } from 'framer-motion'
 import { InputTooltip } from '~/components'
 import Image from 'next/image'
@@ -38,14 +37,8 @@ const FileUpload = forwardRef<HTMLInputElement, FileUploadProps>(
     },
     ref
   ) => {
-    const tooltipRef = useRef<HTMLButtonElement>(null)
-    const [isTooltipOpen, setIsTooltipOpen] = useState<boolean>(false)
     const [isDragging, setIsDragging] = useState<boolean>(false)
     const fileInputRef = useRef<HTMLInputElement>(null)
-
-    useClickAway(tooltipRef, () => {
-      setIsTooltipOpen(false)
-    })
 
     const [previewUrl, setPreviewUrl] = useState<string | null>(null)
 
@@ -149,7 +142,7 @@ const FileUpload = forwardRef<HTMLInputElement, FileUploadProps>(
       <div position="relative" w="full">
         <label
           bg="transparent"
-          color="gray-500"
+          color={disabled ? 'gray-400' : 'gray-700'}
           flex="~ items-center justify-between"
           htmlFor={name}
           mb="10px"
@@ -162,27 +155,7 @@ const FileUpload = forwardRef<HTMLInputElement, FileUploadProps>(
             </span>
           )}
 
-          {tooltipContent && (
-            <div position="relative">
-              <InputTooltip content={tooltipContent} open={isTooltipOpen} />
-
-              <button
-                b="none"
-                bg="transparent"
-                color="gray-400 hover:black"
-                cursor="pointer"
-                flex="~ items-center justify-center"
-                h="18px"
-                outline="none"
-                ref={tooltipRef}
-                transition="colors 300"
-                type="button"
-                w="18px"
-                onClick={() => setIsTooltipOpen(!isTooltipOpen)}>
-                <InfoIcon />
-              </button>
-            </div>
-          )}
+          {tooltipContent && <InputTooltip content={tooltipContent} />}
         </label>
 
         <input
@@ -263,7 +236,6 @@ const FileUpload = forwardRef<HTMLInputElement, FileUploadProps>(
 
           {value && (
             <div flex="~ col items-center" gap="15px" w="full">
-              {/* Image Preview */}
               {previewUrl && accept === 'image' && (
                 <div position="relative" w="full">
                   <Image

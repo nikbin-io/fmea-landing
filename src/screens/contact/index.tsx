@@ -143,7 +143,7 @@ const Contact = () => {
                         rel="noopener noreferrer"
                         target="_blank"
                         text="blue-light hover:blue"
-                        transition="colors 200">
+                        transition="colors duration-200">
                         Privacy Policy
                       </Link>
                     </p>

@@ -129,25 +129,26 @@ const Navbar = () => {
         <div border="t black/10" flex="~ col" gap="2" p="y-4">
           {NAVIGATION_LINKS.map((link) => (
             <Link
-              b="1 solid transparent rounded-10px"
+              font="400"
+              h="38px"
               href={link.href}
               key={link.name}
-              min-h="10"
               p="y-2"
-              text="gray-700 hover:blue base"
+              text="gray-800 hover:blue base"
               transition="colors 200"
               onClick={() => setMobileMenuOpen(false)}>
               {link.name}
             </Link>
           ))}
 
-          <div border="t-1 0 solid black/10" flex="~ col" gap="3" p="t-4">
+          <div border="t-1 0 solid black/10" flex="~ col" gap="4" p="t-4">
             <Link
               b="rounded-10px 1 solid blue-light hover:blue"
               bg="blue-light hover:blue"
               color="white"
               cursor="pointer"
               flex="~ items-center justify-center"
+              font="400"
               h="38px"
               href="#"
               overflow="hidden"
@@ -180,7 +181,7 @@ const Navbar = () => {
               bg="transparent hover:white/40"
               color="blue-light hover:blue"
               flex="~ items-center justify-center"
-              font="500"
+              font="400"
               h="38px"
               href="/signup"
               p="y-5px"

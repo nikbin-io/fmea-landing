@@ -1,6 +1,4 @@
-import { forwardRef, InputHTMLAttributes, JSX, useRef, useState } from 'react'
-import { useClickAway } from 'react-use'
-import { InfoIcon } from '~/components/Icons'
+import { forwardRef, InputHTMLAttributes, JSX } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { InputTooltip } from '~/components'
 
@@ -40,13 +38,6 @@ const Input = forwardRef<HTMLInputElement | HTMLTextAreaElement, InputProps>(
     },
     ref
   ) => {
-    const tooltipRef = useRef<HTMLButtonElement>(null)
-    const [isTooltipOpen, setIsTooltipOpen] = useState<boolean>(false)
-
-    useClickAway(tooltipRef, () => {
-      setIsTooltipOpen(false)
-    })
-
     return (
       <div position="relative" w="full">
         <label
@@ -54,39 +45,17 @@ const Input = forwardRef<HTMLInputElement | HTMLTextAreaElement, InputProps>(
           color={disabled ? 'gray-400' : 'gray-700'}
           flex="~ items-center justify-between"
           htmlFor={name}
-          mb="5px"
-          text="sm:base xs">
-          <span>
-            {label}
+          mb="10px"
+          text="sm:base sm">
+          {label}
 
-            {required && (
-              <span ml="2px" op={disabled ? '40' : '100'}>
-                *
-              </span>
-            )}
-          </span>
-
-          {tooltipContent && (
-            <div position="relative">
-              <InputTooltip content={tooltipContent} open={isTooltipOpen} />
-
-              <button
-                b="none"
-                bg="transparent"
-                color="gray-400 hover:black"
-                cursor="pointer"
-                flex="~ items-center justify-center"
-                h="18px"
-                outline="none"
-                ref={tooltipRef}
-                transition="colors 200"
-                type="button"
-                w="18px"
-                onClick={() => setIsTooltipOpen(!isTooltipOpen)}>
-                <InfoIcon />
-              </button>
-            </div>
+          {required && (
+            <span ml="2px" op={disabled ? '40' : '100'}>
+              *
+            </span>
           )}
+
+          {tooltipContent && <InputTooltip content={tooltipContent} />}
         </label>
 
         {type === 'textarea' ? (
@@ -112,11 +81,9 @@ const Input = forwardRef<HTMLInputElement | HTMLTextAreaElement, InputProps>(
             value={value ?? ''}
             w="full"
             onBlur={(e) => {
-              setIsTooltipOpen(false)
               onBlur?.(e)
             }}
             onChange={onChange}
-            onFocus={() => tooltipContent && setIsTooltipOpen(true)}
             {...rest}
           />
         ) : (
@@ -144,7 +111,6 @@ const Input = forwardRef<HTMLInputElement | HTMLTextAreaElement, InputProps>(
             value={value ?? ''}
             w="full"
             onBlur={(e) => {
-              setIsTooltipOpen(false)
               onBlur?.(e)
             }}
             onChange={onChange}

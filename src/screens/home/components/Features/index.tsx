@@ -34,12 +34,11 @@ const Features = () => {
               </div>
 
               <div
-                b={`3 solid ${feature.color === 'blue' ? '#374c9280' : '#25869180'}`}
+                b="3 solid blue/70 rounded-xl"
                 max-w="650px"
                 mx="auto"
                 overflow="hidden"
-                position="relative"
-                rounded="lg">
+                position="relative">
                 <video
                   autoPlay
                   h="full"
