@@ -35,14 +35,14 @@ const Navbar = () => {
             ))}
           </div>
           <div className="md:flex hidden" gap="10px">
-            <Link
+            <a
               b="rounded-lg 1 solid blue-light hover:blue"
               bg="blue-light hover:blue"
               color="white"
               cursor="pointer"
               flex="~ items-center justify-center"
               h="38px"
-              href="#"
+              href="https://app.fmeatool.ai"
               overflow="hidden"
               position="relative"
               scale="active:98 hover:101"
@@ -65,7 +65,7 @@ const Navbar = () => {
                 }}
               />
               Generator
-            </Link>
+            </a>
 
             <a
               b="1 solid rounded-lg blue-light hover:blue"
@@ -142,7 +142,7 @@ const Navbar = () => {
           ))}
 
           <div border="t-1 0 solid black/10" flex="~ col" gap="4" p="t-4">
-            <Link
+            <a
               b="rounded-lg 1 solid blue-light hover:blue"
               bg="blue-light hover:blue"
               color="white"
@@ -150,7 +150,7 @@ const Navbar = () => {
               flex="~ items-center justify-center"
               font="400"
               h="38px"
-              href="#"
+              href="https://app.fmeatool.ai"
               overflow="hidden"
               p="y-5px"
               position="relative"
@@ -174,23 +174,23 @@ const Navbar = () => {
                 }}
               />
               Generator
-            </Link>
+            </a>
 
-            <Link
+            <a
               b="1 solid rounded-lg blue-light hover:blue"
               bg="transparent hover:white/40"
               color="blue-light hover:blue"
               flex="~ items-center justify-center"
               font="400"
               h="38px"
-              href="/signup"
+              href="https://app.fmeatool.ai"
               p="y-5px"
               scale="active:98"
               shadow="hover:sm"
               transition="duration-200"
               w="full">
               Sign Up
-            </Link>
+            </a>
           </div>
         </div>
       </div>
