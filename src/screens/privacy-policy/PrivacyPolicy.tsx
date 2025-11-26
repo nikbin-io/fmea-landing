@@ -23,16 +23,15 @@ const PrivacyPolicy = () => {
               Privacy Policy
             </h1>
 
-            <p color="gray-dark " text="sm:lg md">
-              Last updated: November 8, 2024
-            </p>
+            <p text="base gray-dark">Last updated: November 8, 2024</p>
           </div>
 
-          <div color="gray-dark " space-y="8">
-            <section>
-              <h2 color="gray-darker " font="semibold" mb="4" text="xl sm:3xl">
-                Introduction
-              </h2>
+          <div
+            className="[&_h2]:color-gray-darker [&_h2]:font-semibold [&_h2]:mb-4 [&_h2]:text-xl sm:3xl "
+            color="gray-dark"
+            space-y="8">
+            <div>
+              <h2>Introduction</h2>
 
               <p>
                 Welcome to our Privacy Policy. Your privacy is critically
@@ -40,19 +39,17 @@ const PrivacyPolicy = () => {
                 information that is collected and recorded by our website and
                 how we use it.
               </p>
-            </section>
+            </div>
 
-            <section>
-              <h2 color="gray-darker " font="semibold" mb="4" text="xl sm:3xl">
-                Information We Collect
-              </h2>
+            <div>
+              <h2>Information We Collect</h2>
 
               <p>
                 We collect several different types of information for various
                 purposes to provide and improve our service to you.
               </p>
 
-              <ul list="disc" mt="2" pl="4" space-y="2">
+              <ul list="disc" mt="2" pl="6" space-y="2">
                 <li>
                   <strong font="semibold">Personal Data:</strong> While using
                   our service, we may ask you to provide us with certain
@@ -71,16 +68,14 @@ const PrivacyPolicy = () => {
                   our service.
                 </li>
               </ul>
-            </section>
+            </div>
 
-            <section>
-              <h2 color="gray-darker " font="semibold" mb="4" text="xl sm:3xl">
-                How We Use Your Information
-              </h2>
+            <div>
+              <h2>How We Use Your Information</h2>
 
               <p mb="4">We use the collected data for various purposes:</p>
 
-              <ul list="disc" mt="2" pl="4" space-y="2">
+              <ul list="disc" mt="2" pl="6" space-y="2">
                 <li>To provide and maintain our service</li>
 
                 <li>To notify you about changes to our service</li>
@@ -98,12 +93,10 @@ const PrivacyPolicy = () => {
 
                 <li>To detect, prevent and address technical issues</li>
               </ul>
-            </section>
+            </div>
 
-            <section>
-              <h2 color="gray-darker " font="semibold" mb="4" text="xl sm:3xl">
-                Data Security
-              </h2>
+            <div>
+              <h2>Data Security</h2>
 
               <p>
                 The security of your data is important to us, but remember that
@@ -112,12 +105,10 @@ const PrivacyPolicy = () => {
                 commercially acceptable means to protect your Personal Data, we
                 cannot guarantee its absolute security.
               </p>
-            </section>
+            </div>
 
-            <section>
-              <h2 color="gray-darker " font="semibold" mb="4" text="xl sm:3xl">
-                Third-Party Services
-              </h2>
+            <div>
+              <h2>Third-Party Services</h2>
 
               <p>
                 We may employ third-party companies and individuals to
@@ -127,18 +118,16 @@ const PrivacyPolicy = () => {
                 Personal Data only to perform these tasks on our behalf and are
                 obligated not to disclose or use it for any other purpose.
               </p>
-            </section>
+            </div>
 
-            <section>
-              <h2 color="gray-darker " font="semibold" mb="4" text="xl sm:3xl">
-                Your Rights
-              </h2>
+            <div>
+              <h2>Your Rights</h2>
 
               <p mb="4">
                 You have certain rights regarding your personal information:
               </p>
 
-              <ul list="disc" mt="2" pl="4" space-y="2">
+              <ul list="disc" mt="2" pl="6" space-y="2">
                 <li>
                   The right to access – You have the right to request copies of
                   your personal data
@@ -165,12 +154,10 @@ const PrivacyPolicy = () => {
                   organization, or directly to you
                 </li>
               </ul>
-            </section>
+            </div>
 
-            <section>
-              <h2 color="gray-darker " font="semibold" mb="4" text="xl sm:3xl">
-                Children&apos;s Privacy
-              </h2>
+            <div>
+              <h2>Children&apos;s Privacy</h2>
 
               <p>
                 Our service does not address anyone under the age of 13. We do
@@ -179,12 +166,10 @@ const PrivacyPolicy = () => {
                 aware that your child has provided us with Personal Data, please
                 contact us.
               </p>
-            </section>
+            </div>
 
-            <section>
-              <h2 color="gray-darker " font="semibold" mb="4" text="xl sm:3xl">
-                Changes to This Privacy Policy
-              </h2>
+            <div>
+              <h2>Changes to This Privacy Policy</h2>
 
               <p>
                 We may update our Privacy Policy from time to time. We will
@@ -192,26 +177,24 @@ const PrivacyPolicy = () => {
                 this page and updating the &quotLast updated&quot date at the
                 top of this Privacy Policy.
               </p>
-            </section>
+            </div>
 
-            <section>
-              <h2 color="gray-darker " font="semibold" mb="4" text="xl sm:3xl">
-                Contact Us
-              </h2>
+            <div>
+              <h2>Contact Us</h2>
 
               <p>
                 If you have any questions about this Privacy Policy, please
                 contact us:
               </p>
 
-              <ul list="disc" mt="4" pl="4" space-y="2">
+              <ul list="disc" mt="4" pl="6" space-y="2">
                 <li>By email: privacy@example.com</li>
 
                 <li>
                   By visiting this page on our website: www.example.com/contact
                 </li>
               </ul>
-            </section>
+            </div>
           </div>
         </div>
       </Container>
