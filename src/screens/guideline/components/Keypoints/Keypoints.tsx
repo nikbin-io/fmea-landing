@@ -1,9 +1,5 @@
-import { useState } from 'react'
-
 type TocNode = { id: string; label: string; children?: TocNode[] }
 const Keypoints = () => {
-  const [isCollapsed, setIsCollapsed] = useState<boolean>(false)
-
   const tocData: TocNode[] = [
     {
       id: 'introduction',
@@ -13,46 +9,13 @@ const Keypoints = () => {
         { id: 'scope', label: 'Scope' }
       ]
     },
-    {
-      id: 'getting-started',
-      label: 'Getting Started',
-      children: [
-        { id: 'prerequisites', label: 'Prerequisites' },
-        { id: 'installation', label: 'Installation' },
-        { id: 'first-run', label: 'First Run' }
-      ]
-    },
+
     {
       id: 'core-concepts',
       label: 'Core Concepts',
       children: [
         { id: 'data-model', label: 'Data Model' },
         { id: 'risk-scoring', label: 'Risk Scoring' }
-      ]
-    },
-    {
-      id: 'workflow',
-      label: 'Workflow',
-      children: [
-        { id: 'create-a-project', label: 'Create a Project' },
-        { id: 'define-functions', label: 'Define Functions' },
-        { id: 'analyze-failure-modes', label: 'Analyze Failure Modes' }
-      ]
-    },
-    {
-      id: 'best-practices',
-      label: 'Best Practices',
-      children: [
-        { id: 'naming-and-structure', label: 'Naming and Structure' },
-        { id: 'reviews-and-audits', label: 'Reviews and Audits' }
-      ]
-    },
-    {
-      id: 'examples',
-      label: 'Examples',
-      children: [
-        { id: 'simple-example', label: 'Simple Example' },
-        { id: 'advanced-example', label: 'Advanced Example' }
       ]
     }
   ]
@@ -112,7 +75,7 @@ const Keypoints = () => {
       transition="all duration-200"
       w="350px">
       <h2 mb="6">Keypoints</h2>
-      {!isCollapsed && <div flex="~ 1 col">{renderToc()}</div>}
+      <div flex="~ 1 col">{renderToc()}</div>
     </aside>
   )
 }
