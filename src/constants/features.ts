@@ -3,7 +3,6 @@ export interface FEATURES_TYPE {
   title: string
   description: string
   video: string
-  color: 'blue' | 'green'
 }
 
 export const FEATURES: FEATURES_TYPE[] = [
@@ -12,8 +11,7 @@ export const FEATURES: FEATURES_TYPE[] = [
     title: 'Process Failure Mode and Effects Analysis',
     description:
       'Manufacturing and Process Engineers envision a process is free of errors. Unfortunately, errors and especially errors propagated when people are present can be quite catastrophic. Process Failure Mode and Effects Analysis (PFMEA) looks at each process step to identify risks and possible errors from many different sources.',
-    video: '/videos/demo.mp4',
-    color: 'blue'
+    video: '/videos/demo.mp4'
   },
   {
     id: '01',
@@ -21,7 +19,6 @@ export const FEATURES: FEATURES_TYPE[] = [
 
     description:
       'Manufacturing and Process Engineers envision a process is free of errors. Unfortunately, errors and especially errors propagated when people are present can be quite catastrophic. Process Failure Mode and Effects Analysis (PFMEA) looks at each process step to identify risks and possible errors from many different sources.',
-    video: '/videos/demo.mp4',
-    color: 'green'
+    video: '/videos/demo.mp4'
   }
 ]

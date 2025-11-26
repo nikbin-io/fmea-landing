@@ -182,7 +182,7 @@ const FileUpload = forwardRef<HTMLInputElement, FileUploadProps>(
             disabled
               ? 'gray-dark'
               : error
-                ? 'red-500'
+                ? 'red'
                 : value
                   ? 'blue'
                   : isDragging
@@ -249,9 +249,9 @@ const FileUpload = forwardRef<HTMLInputElement, FileUploadProps>(
                   {!disabled && (
                     <button
                       b="none"
-                      bg="white hover:red-50"
+                      bg="white hover:red-light"
                       className="[&>svg]:w-16px [&>svg]:h-16px"
-                      color="red-500 hover:red-600"
+                      color="red hover:red-dark"
                       cursor="pointer"
                       flex="~ items-center justify-center"
                       h="32px"
@@ -290,9 +290,9 @@ const FileUpload = forwardRef<HTMLInputElement, FileUploadProps>(
                 {!disabled && !previewUrl && (
                   <button
                     b="none"
-                    bg="transparent hover:red-100"
+                    bg="transparent hover:red-light"
                     className="[&>svg]:w-16px [&>svg]:h-16px"
-                    color="red-500 hover:red-600"
+                    color="red hover:red-dark"
                     cursor="pointer"
                     flex="~ shrink-0 items-center justify-center"
                     outline="none"

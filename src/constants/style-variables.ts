@@ -65,6 +65,18 @@ export const FONT_SIZES = {
   '4xl': {
     size: '36px',
     line_height: '44px'
+  },
+  '5xl:': {
+    size: '48px',
+    line_height: '56px'
+  },
+  '6xl': {
+    size: '60px',
+    line_height: '70px'
+  },
+  '7xl': {
+    size: '72px',
+    line_height: '86px'
   }
 }
 

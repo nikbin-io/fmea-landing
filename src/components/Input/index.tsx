@@ -60,12 +60,12 @@ const Input = forwardRef<HTMLInputElement | HTMLTextAreaElement, InputProps>(
 
         {type === 'textarea' ? (
           <textarea
-            b={`1 solid rounded-lg ${error ? 'red-500' : 'gray-light focus:blue'}`}
+            b={`1 solid rounded-lg ${error ? 'red' : 'gray-light focus:blue'}`}
             bg="white disabled:gray-dark/50"
             cursor={disabled ? 'not-allowed' : 'text'}
             data-field={name}
             disabled={disabled}
-            focus={`border-${error ? 'red-500' : 'white'} bg-gray-darker`}
+            focus={`border-${error ? 'red' : 'white'} bg-gray-darker`}
             font="300"
             id={name}
             line-height="tight"
@@ -89,7 +89,7 @@ const Input = forwardRef<HTMLInputElement | HTMLTextAreaElement, InputProps>(
         ) : (
           <input
             appearance="none"
-            b={`1 solid rounded-lg ${error ? 'red-500' : 'gray-light focus:blue'}`}
+            b={`1 solid rounded-lg ${error ? 'red' : 'gray-light focus:blue'}`}
             bg="white disabled:gray-70/50"
             className="input appearance-none"
             cursor={disabled ? 'not-allowed' : 'text'}
@@ -130,7 +130,7 @@ const Input = forwardRef<HTMLInputElement | HTMLTextAreaElement, InputProps>(
               line-height="16px"
               mt={type === 'textarea' ? '-3px' : '2px'}
               position="absolute left-0 top-full"
-              text="xs red-500"
+              text="xs red"
               transition={{
                 duration: 0.2,
                 ease: 'easeInOut'
