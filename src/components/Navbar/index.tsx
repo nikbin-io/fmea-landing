@@ -14,22 +14,20 @@ const Navbar = () => {
   return (
     <nav w="full">
       <div flex="~ items-center justify-between" h="16" mx="4">
-        <div
-          color="gray-600"
-          flex="~ items-center justify-between"
-          h="60px"
-          w="full">
+        <div flex="~ items-center justify-between" h="60px" w="full">
           <Logo />
           <div className="hidden md:flex" flex="1 items-center" ml="10">
             {NAVIGATION_LINKS.map((link) => (
               <Link
-                b="1 solid transparent rounded-10px"
-                bg="hover:blue/10"
-                font="500"
+                b="1 solid transparent rounded-lg"
+                bg="hover:blue/7"
+                flex="~ items-center justify-center"
+                font="400"
+                h="38px"
                 href={link.href}
                 key={link.name}
-                p="x-15px y-8px"
-                text="gray-700 hover:blue base"
+                p="x-15px y-5px"
+                text="gray-800 hover:blue"
                 tracking=".5px"
                 transition="colors">
                 {link.name}
@@ -38,17 +36,16 @@ const Navbar = () => {
           </div>
           <div className="md:flex hidden" gap="10px">
             <Link
-              b="rounded-10px 1 solid blue hover:blue-dark"
-              bg="blue hover:blue-dark"
+              b="rounded-lg 1 solid blue-light hover:blue"
+              bg="blue-light hover:blue"
               color="white"
               cursor="pointer"
               flex="~ items-center justify-center"
               h="38px"
               href="#"
               overflow="hidden"
-              p=" y-5px"
               position="relative"
-              scale="active:97"
+              scale="active:98 hover:101"
               shadow="hover:sm"
               transition="duration-200"
               w="120px">
@@ -71,16 +68,16 @@ const Navbar = () => {
             </Link>
 
             <a
-              b="1 solid rounded-10px blue hover:blue-dark"
-              bg="transparent hover:blue-100/15"
+              b="1 solid rounded-lg blue-light hover:blue"
+              bg="transparent hover:white/40"
               className="md:flex hidden"
-              color="blue hover:blue-dark"
+              color="blue-light hover:blue"
               flex="items-center justify-center"
               font="500"
               h="38px"
               href="https://app.fmeatool.ai"
-              p="x-10px y-5px"
-              scale="active:98"
+              p="x-10px"
+              scale="active:98 hover:101"
               shadow="hover:sm"
               transition="duration-200"
               w="120px">
@@ -99,21 +96,21 @@ const Navbar = () => {
             w="6"
             onClick={toggleMobileMenu}>
             <span
-              bg="gray-500"
+              bg="gray-700"
               className={mobileMenuOpen ? 'rotate-45 translate-y-2' : ''}
               h="0.5"
               rounded="full"
               transition="all duration-200"
               w="full"></span>
             <span
-              bg="gray-500"
+              bg="gray-700"
               className={mobileMenuOpen ? 'opacity-0' : ''}
               h="0.5"
               rounded="full"
               transition="all duration-200"
               w="full"></span>
             <span
-              bg="gray-500"
+              bg="gray-700"
               className={mobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}
               h="0.5"
               rounded="full"
@@ -146,8 +143,8 @@ const Navbar = () => {
 
           <div border="t-1 0 solid black/10" flex="~ col" gap="3" p="t-4">
             <Link
-              b="rounded-10px 1 solid blue hover:blue-dark"
-              bg="blue hover:blue-dark"
+              b="rounded-10px 1 solid blue-light hover:blue"
+              bg="blue-light hover:blue"
               color="white"
               cursor="pointer"
               flex="~ items-center justify-center"
@@ -179,9 +176,9 @@ const Navbar = () => {
             </Link>
 
             <Link
-              b="1 solid rounded-10px blue hover:blue-dark"
-              bg="transparent hover:blue-100/15"
-              color="blue hover:blue-dark "
+              b="1 solid rounded-10px blue-light hover:blue"
+              bg="transparent hover:white/40"
+              color="blue-light hover:blue"
               flex="~ items-center justify-center"
               font="500"
               h="38px"

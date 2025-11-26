@@ -229,7 +229,7 @@ const FileUpload = forwardRef<HTMLInputElement, FileUploadProps>(
           onDrop={handleDrop}>
           <>
             <span
-              color={disabled ? 'gray-400' : 'gray-600'}
+              color={disabled ? 'gray-400' : 'gray-700'}
               font="400"
               m="b-10px"
               text={value ? 'xs' : 'center base'}>

@@ -21,9 +21,8 @@ export default defineConfig({
   theme: {
     colors: {
       blue: {
-        DEFAULT: '#374c92',
-        dark: '#263566',
-        '100': '#8793bd'
+        DEFAULT: '#003f9a',
+        light: '	#0059b3'
       }
     },
     breakpoints: {

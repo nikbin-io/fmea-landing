@@ -51,11 +51,11 @@ const Input = forwardRef<HTMLInputElement | HTMLTextAreaElement, InputProps>(
       <div position="relative" w="full">
         <label
           bg="transparent"
-          color={disabled ? 'gray-400' : 'gray-600'}
+          color={disabled ? 'gray-400' : 'gray-700'}
           flex="~ items-center justify-between"
           htmlFor={name}
           mb="5px"
-          text="sm:sm xs">
+          text="sm:base xs">
           <span>
             {label}
 
@@ -91,7 +91,7 @@ const Input = forwardRef<HTMLInputElement | HTMLTextAreaElement, InputProps>(
 
         {type === 'textarea' ? (
           <textarea
-            b={`1 solid rounded-8px ${error ? 'red-500' : 'gray-200 focus:blue'}`}
+            b={`1 solid rounded-lg ${error ? 'red-500' : 'gray-200 focus:blue'}`}
             bg="white disabled:gray-300"
             cursor={disabled ? 'not-allowed' : 'text'}
             data-field={name}
@@ -107,7 +107,7 @@ const Input = forwardRef<HTMLInputElement | HTMLTextAreaElement, InputProps>(
             resize="y"
             rows={8}
             shadow="focus:sm"
-            text={disabled ? 'gray-500 sm:sm xs' : 'gray-800 sm:sm xs'}
+            text={disabled ? 'gray-500 sm:sm xs' : 'gray-700 sm:sm xs'}
             transition="all 200"
             value={value ?? ''}
             w="full"
@@ -122,24 +122,23 @@ const Input = forwardRef<HTMLInputElement | HTMLTextAreaElement, InputProps>(
         ) : (
           <input
             appearance="none"
-            b={`1 solid rounded-8px ${error ? 'red-500' : 'gray-200 focus:blue'}`}
+            b={`1 solid rounded-lg ${error ? 'red-500' : 'gray-200 focus:blue'}`}
             bg="white disabled:gray-300"
             className="input appearance-none"
-            color="gray-600"
             cursor={disabled ? 'not-allowed' : 'text'}
             data-field={name}
             disabled={disabled}
             font="300"
-            h="40px"
+            h="44px"
             id={name}
             line-height="tight"
-            max-h="40px"
+            max-h="44px"
             outline="none"
             p="x-15px"
             placeholder=" "
             ref={ref as any}
             shadow="focus:sm"
-            text={disabled ? 'gray-500 sm:sm xs' : 'gray-800 sm:sm xs'}
+            text={disabled ? 'gray-500 sm:sm xs' : 'gray-700 sm:sm xs'}
             transition="all 200"
             type={type}
             value={value ?? ''}

@@ -58,7 +58,7 @@ const Contact = () => {
               Contact Us
             </h1>
 
-            <p px="2" text=".9rem gray-600">
+            <p px="2" text=".9rem gray-700">
               We&apos;d love to hear from you. Send us a message and we&apos;ll
               get back to you as soon as possible.
             </p>
@@ -142,7 +142,7 @@ const Contact = () => {
                         href="/privacy-policy"
                         rel="noopener noreferrer"
                         target="_blank"
-                        text="blue hover:blue-dark"
+                        text="blue-light hover:blue"
                         transition="colors 200">
                         Privacy Policy
                       </Link>

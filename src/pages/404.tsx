@@ -6,8 +6,8 @@ const NotFoundPage = () => {
     <main
       flex="~ 1 col items-center justify-center"
       h="full"
-      py="lg:30 30"
-      text="center white"
+      py="30"
+      text="center "
       z="1">
       <Container>
         <div flex="~ col items-center" gap="5">
@@ -20,23 +20,23 @@ const NotFoundPage = () => {
             <br /> Page not found
           </h1>
 
-          <p line-height="normal" max-w="550px" text="sm:1.2rem gray-600">
+          <p line-height="normal" max-w="550px" text="sm:1.2rem gray-700">
             The page you are looking for might have been moved, deleted, or
             never existed.
           </p>
 
           <Link
-            b="1 solid rounded-10px transparent"
-            bg="gray-700 hover:gray-800"
+            b="1 solid rounded-lg blue-light hover:blue"
+            bg="blue-light hover:blue"
+            color="white"
             cursor="pointer"
             flex="~ items-center justify-center"
             font="400"
-            h="40px"
+            h="44px"
             href="/"
             mt="sm:4 2"
-            scale="active:98"
-            shadow="hover:md"
-            text="1rem white"
+            scale="active:98 hover:101"
+            shadow="hover:sm"
             transition="all 200"
             w="sm:170px 160px">
             Back to home

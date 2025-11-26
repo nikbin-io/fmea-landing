@@ -7,7 +7,7 @@ const Header = () => {
         <div
           b="1 solid blue/10"
           backdrop="blur-50px"
-          bg="white/25"
+          bg="white/30"
           rounded="2xl">
           <Navbar />
         </div>

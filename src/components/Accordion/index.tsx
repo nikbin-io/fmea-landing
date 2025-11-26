@@ -24,7 +24,7 @@ const Accordion = ({
           w="full">
           <div
             border-b="2 solid gray-300"
-            color="gray-600"
+            color="gray-700"
             flex="~ justify-between items-start"
             gap="15px"
             py="sm:5 4"
@@ -54,7 +54,7 @@ const Accordion = ({
         grid="~ rows-[0fr] peer-has-[:checked]:rows-[1fr]"
         transition="all duration-300">
         <div overflow="hidden">
-          <div color="gray-600" py="5" text="sm:base sm">
+          <div color="gray-700" py="5" text="sm:base sm">
             {children}
           </div>
         </div>

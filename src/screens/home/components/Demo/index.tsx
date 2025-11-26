@@ -2,7 +2,7 @@ import { useForm, Controller } from 'react-hook-form'
 import * as z from 'zod'
 import { ChevronRight, ChevronDown } from '~/components/Icons'
 import { zodResolver } from '@hookform/resolvers/zod'
-import { Input, FileUpload, Container } from '~/components'
+import { Input, FileUpload, Container, Button } from '~/components'
 
 const validationSchema = z.object({
   failure_models: z.number(),
@@ -85,20 +85,7 @@ const Demo = () => {
                 )}
               />
 
-              <button
-                b="1 solid rounded-10px blue hover:blue-dark"
-                bg="transparent hover:blue/4"
-                color="blue hover:blue-dark"
-                cursor="pointer"
-                font="500"
-                h="40px"
-                scale="active:98"
-                shadow="hover:sm"
-                text=".9rem"
-                transition="duration-200"
-                type="submit">
-                Run FMEA Analysis
-              </button>
+              <Button type="submit">Run FMEA Analysis</Button>
             </form>
 
             <div
@@ -163,7 +150,7 @@ const Demo = () => {
                     <tr
                       className="all-[th]:py-7px all-[th]:px-10px all-[th]:b-solid all-[th]:b-1 all-[th]:text-center all-[th]:border-gray-100 all-[th]:bg-[#f0f0f0]"
                       line-height="22px"
-                      text="12px gray-600">
+                      text="12px gray-700">
                       <th bg="gray-100" z="1"></th>
                       <th>item_function_or_interface</th>
                       <th>potential_failure_mode</th>

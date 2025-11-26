@@ -14,14 +14,14 @@ const Guideline = () => {
             p="y-10 sm:x-10 x-4"
             rounded="2xl"
             shadow="xl">
-            <h1 id="hello-world" text="4xl center font-bold gray-800">
+            <h1 id="hello-world" text="4xl center font-bold gray-700">
               Guideline
             </h1>
             <div>
               <h2
                 id="introduction"
                 m="t-8 b-2"
-                text="2xl font-semibold gray-800">
+                text="2xl font-semibold gray-700">
                 Introduction
               </h2>
 
@@ -33,7 +33,7 @@ const Guideline = () => {
                 across the content.
               </p>
 
-              <h3 id="purpose" m="t-6 b-2" text="xl font-semibold gray-800">
+              <h3 id="purpose" m="t-6 b-2" text="xl font-semibold gray-700">
                 Purpose
               </h3>
 
@@ -44,7 +44,7 @@ const Guideline = () => {
                 grouping for clarity.
               </p>
 
-              <h3 id="scope" m="t-6 b-2" text="xl font-semibold gray-800">
+              <h3 id="scope" m="t-6 b-2" text="xl font-semibold gray-700">
                 Scope
               </h3>
 
@@ -57,7 +57,7 @@ const Guideline = () => {
               <h2
                 id="getting-started"
                 m="t-8 b-2"
-                text="2xl font-semibold gray-800">
+                text="2xl font-semibold gray-700">
                 Getting Started
               </h2>
 
@@ -70,7 +70,7 @@ const Guideline = () => {
               <h3
                 id="prerequisites"
                 m="t-6 b-2"
-                text="xl font-semibold gray-800">
+                text="xl font-semibold gray-700">
                 Prerequisites
               </h3>
 
@@ -83,7 +83,7 @@ const Guideline = () => {
               <h3
                 id="installation"
                 m="t-6 b-2"
-                text="xl font-semibold gray-800">
+                text="xl font-semibold gray-700">
                 Installation
               </h3>
 
@@ -94,7 +94,7 @@ const Guideline = () => {
                 correctly.
               </p>
 
-              <h3 id="first-run" m="t-6 b-2" text="xl font-semibold gray-800">
+              <h3 id="first-run" m="t-6 b-2" text="xl font-semibold gray-700">
                 First Run
               </h3>
               <p m="b-4" text="gray-700">
@@ -106,7 +106,7 @@ const Guideline = () => {
               <h2
                 id="core-concepts"
                 m="t-8 b-2"
-                text="2xl font-semibold gray-800">
+                text="2xl font-semibold gray-700">
                 Core Concepts
               </h2>
               <p m="b-4" text="gray-700">
@@ -115,7 +115,7 @@ const Guideline = () => {
                 features with intended outcomes.
               </p>
 
-              <h3 id="data-model" m="t-6 b-2" text="xl font-semibold gray-800">
+              <h3 id="data-model" m="t-6 b-2" text="xl font-semibold gray-700">
                 Data Model
               </h3>
               <p m="b-4" text="gray-700">
@@ -124,7 +124,7 @@ const Guideline = () => {
                 simple patterns that can evolve over time.
               </p>
 
-              <h4 id="entities" m="t-4 b-2" text="lg font-semibold gray-800">
+              <h4 id="entities" m="t-4 b-2" text="lg font-semibold gray-700">
                 Entities
               </h4>
               <p m="b-4" text="gray-700">
@@ -136,7 +136,7 @@ const Guideline = () => {
               <h4
                 id="relationships"
                 m="t-4 b-2"
-                text="lg font-semibold gray-800">
+                text="lg font-semibold gray-700">
                 Relationships
               </h4>
               <p m="b-4" text="gray-700">
@@ -148,7 +148,7 @@ const Guideline = () => {
               <h3
                 id="risk-scoring"
                 m="t-6 b-2"
-                text="xl font-semibold gray-800">
+                text="xl font-semibold gray-700">
                 Risk Scoring
               </h3>
               <p m="b-4" text="gray-700">
@@ -157,7 +157,7 @@ const Guideline = () => {
                 to prioritize attention based on potential impact.
               </p>
 
-              <h2 id="workflow" m="t-8 b-2" text="2xl font-semibold gray-800">
+              <h2 id="workflow" m="t-8 b-2" text="2xl font-semibold gray-700">
                 Workflow
               </h2>
               <p m="b-4" text="gray-700">
@@ -169,7 +169,7 @@ const Guideline = () => {
               <h3
                 id="create-a-project"
                 m="t-6 b-2"
-                text="xl font-semibold gray-800">
+                text="xl font-semibold gray-700">
                 Create a Project
               </h3>
               <p m="b-4" text="gray-700">
@@ -181,7 +181,7 @@ const Guideline = () => {
               <h3
                 id="define-functions"
                 m="t-6 b-2"
-                text="xl font-semibold gray-800">
+                text="xl font-semibold gray-700">
                 Define Functions
               </h3>
               <p m="b-4" text="gray-700">
@@ -193,7 +193,7 @@ const Guideline = () => {
               <h3
                 id="analyze-failure-modes"
                 m="t-6 b-2"
-                text="xl font-semibold gray-800">
+                text="xl font-semibold gray-700">
                 Analyze Failure Modes
               </h3>
               <p m="b-4" text="gray-700">
@@ -205,7 +205,7 @@ const Guideline = () => {
               <h2
                 id="best-practices"
                 m="t-8 b-2"
-                text="2xl font-semibold gray-800">
+                text="2xl font-semibold gray-700">
                 Best Practices
               </h2>
               <p m="b-4" text="gray-700">
@@ -217,7 +217,7 @@ const Guideline = () => {
               <h3
                 id="naming-and-structure"
                 m="t-6 b-2"
-                text="xl font-semibold gray-800">
+                text="xl font-semibold gray-700">
                 Naming and Structure
               </h3>
               <p m="b-4" text="gray-700">
@@ -229,7 +229,7 @@ const Guideline = () => {
               <h3
                 id="reviews-and-audits"
                 m="t-6 b-2"
-                text="xl font-semibold gray-800">
+                text="xl font-semibold gray-700">
                 Reviews and Audits
               </h3>
               <p m="b-4" text="gray-700">
@@ -238,7 +238,7 @@ const Guideline = () => {
                 iterative improvement.
               </p>
 
-              <h2 id="examples" m="t-8 b-2" text="2xl font-semibold gray-800">
+              <h2 id="examples" m="t-8 b-2" text="2xl font-semibold gray-700">
                 Examples
               </h2>
               <p m="b-4" text="gray-700">
@@ -250,7 +250,7 @@ const Guideline = () => {
               <h3
                 id="simple-example"
                 m="t-6 b-2"
-                text="xl font-semibold gray-800">
+                text="xl font-semibold gray-700">
                 Simple Example
               </h3>
               <p m="b-4" text="gray-700">
@@ -262,7 +262,7 @@ const Guideline = () => {
               <h3
                 id="advanced-example"
                 m="t-6 b-2"
-                text="xl font-semibold gray-800">
+                text="xl font-semibold gray-700">
                 Advanced Example
               </h3>
               <p m="b-4" text="gray-700">
