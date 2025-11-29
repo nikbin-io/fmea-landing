@@ -38,7 +38,7 @@ const Contact = () => {
   }
 
   return (
-    <div py="lg:40 30" z="1">
+    <div py="30" z="1">
       <Container>
         <div
           bg="gray-light"

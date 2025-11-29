@@ -22,7 +22,6 @@ a {
   text-decoration: none;
 }
 
-
 // Scrollbar
 
 ::-webkit-scrollbar {
@@ -31,6 +30,8 @@ a {
 }
 ::-webkit-scrollbar-track {
   background: white;
+  border-radius: 6px;
+
 }
 ::-webkit-scrollbar-thumb {
   background: rgba(107, 114, 128, .5);

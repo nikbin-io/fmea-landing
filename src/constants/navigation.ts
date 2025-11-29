@@ -1,5 +1,5 @@
 export const NAVIGATION_LINKS = [
   { name: 'Pricing', href: '#pricing' },
-  { name: 'Guideline', href: '/guideline' },
+  { name: 'Guidelines', href: '/guidelines' },
   { name: 'Contact', href: '/contact' }
 ]

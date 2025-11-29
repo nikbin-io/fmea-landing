@@ -209,17 +209,7 @@ const Aurora = (props: AuroraProps) => {
     }
   }, [amplitude])
 
-  return (
-    <div
-      ref={ctnDom}
-      style={{
-        width: '100%',
-        height: '100%',
-        position: 'absolute',
-        inset: 0
-      }}
-    />
-  )
+  return <div h="full" ref={ctnDom} w="full" />
 }
 
 export default Aurora
