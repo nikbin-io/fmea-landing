@@ -5,7 +5,7 @@ import { Container, Logo } from '~/components'
 
 const Footer = () => {
   return (
-    <footer b="0 t-1 solid gray-light" bg="white" mx="auto" w="full">
+    <footer b="0 t-1 solid gray-light" bg="white" mx="auto" w="full" z="1">
       <Container>
         <div gap="sm:12 8">
           <div
