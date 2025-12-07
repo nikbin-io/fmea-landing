@@ -34,7 +34,7 @@ const Features = () => {
               </div>
 
               <div
-                b="3 solid blue/70 rounded-xl"
+                b="3 solid brand/70 rounded-xl"
                 max-w="650px"
                 mx="auto"
                 overflow="hidden"

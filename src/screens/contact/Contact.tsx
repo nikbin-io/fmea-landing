@@ -41,7 +41,7 @@ const Contact = () => {
     <div py="30" z="1">
       <Container>
         <div
-          bg="gray-light"
+          bg="gray-lighter"
           max-w="700px"
           mx="auto"
           p="y-10 sm:x-10 x-4"
@@ -142,7 +142,7 @@ const Contact = () => {
                         href="/privacy-policy"
                         rel="noopener noreferrer"
                         target="_blank"
-                        text="blue-light hover:blue"
+                        text="brand hover:black"
                         transition="colors duration-200">
                         Privacy Policy
                       </Link>

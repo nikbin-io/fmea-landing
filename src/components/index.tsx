@@ -1,6 +1,6 @@
 import Accordion from './Accordion'
 import Aurora from './Aurora'
-import Button from './Button'
+import Button from './Buttons/Button'
 import Checkbox from './Checkbox'
 import Container from './Container'
 import FileUpload from './FileUpload'
@@ -9,6 +9,7 @@ import Header from './Header'
 import Input from './Input'
 import InputTooltip from './InputTooltip'
 import Layout from './Layout'
+import LinkButton from './Buttons/LinkButton'
 import Logo from './Logo'
 import Navbar from './Navbar'
 import Wireframe from './Wireframe'
@@ -25,6 +26,7 @@ export {
   Input,
   InputTooltip,
   Layout,
+  LinkButton,
   Logo,
   Navbar,
   Wireframe

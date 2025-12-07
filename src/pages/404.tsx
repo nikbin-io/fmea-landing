@@ -26,8 +26,8 @@ const NotFoundPage = () => {
           </p>
 
           <Link
-            b="1 solid rounded-lg blue-light hover:blue"
-            bg="blue-light hover:blue"
+            b="1 solid rounded-lg brand hover:black"
+            bg="brand hover:black"
             color="white"
             cursor="pointer"
             flex="~ items-center justify-center"

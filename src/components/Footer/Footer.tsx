@@ -25,7 +25,7 @@ const Footer = () => {
                   href={link.href}
                   key={index}
                   scale="hover:102"
-                  text="gray-dark hover:blue sm:base sm nowrap "
+                  text="gray-dark hover:black sm:base sm nowrap "
                   transition="colors duration-200"
                   word="spacing-1px">
                   {link.name}
@@ -38,9 +38,9 @@ const Footer = () => {
                 return (
                   <Link
                     b="rounded-lg"
-                    bg="transparent hover:blue/10"
+                    bg="transparent hover:brand/7"
                     className="[&>svg]:h-16px"
-                    color="gray-dark hover:blue-light"
+                    color="gray-dark hover:brand"
                     flex="~ items-center justify-center"
                     href={item.url}
                     key={item.title}

@@ -32,7 +32,7 @@ const Demo = () => {
       <Container>
         <div gap="50px" grid="~ md:cols-6 cols-1" m="b-50px t-10px">
           <div
-            bg="white"
+            bg="gray-lighter"
             border="1 gray-light"
             className="lg:col-span-2 md:col-span-3"
             overflow="visible"
@@ -89,7 +89,7 @@ const Demo = () => {
             </form>
 
             <div
-              bg="white"
+              bg="gray-lighter"
               className="[&>svg]:w-auto [&>svg]:h-18px"
               color="gray-darker"
               flex="~ justify-center items-center"
@@ -119,7 +119,7 @@ const Demo = () => {
             overflow="hidden"
             rounded="2xl"
             shadow="lg">
-            <div bg="white" flex="~ col" h="full" overflow="hidden">
+            <div bg="gray-lighter" flex="~ col" h="full" overflow="hidden">
               <div>
                 <div
                   bg-gradient="radial from-gray to-gray-darker"
@@ -148,7 +148,7 @@ const Demo = () => {
                   whitespace="nowrap">
                   <thead w="full">
                     <tr
-                      className="all-[th]:py-7px all-[th]:px-10px all-[th]:b-solid all-[th]:b-1 all-[th]:text-center all-[th]:border-gray-lighter all-[th]:bg-[#f0f0f0]"
+                      className="all-[th]:py-7px all-[th]:px-10px all-[th]:b-solid all-[th]:b-1 all-[th]:text-center all-[th]:border-gray-light all-[th]:bg-[#f0f0f0]"
                       line-height="22px"
                       text="12px gray-dark">
                       <th bg="gray-lighter" z="1"></th>
@@ -164,7 +164,7 @@ const Demo = () => {
                   </thead>
 
                   <tbody
-                    className="all-[td]:p-5px all-[td]:b-solid all-[td]:b-1 all-[td]:text-center all-[td]:border-gray-lighter"
+                    className="all-[td]:p-5px all-[td]:b-solid all-[td]:b-1 all-[td]:text-center all-[td]:border-gray-light"
                     text="gray-text 14px"
                     w="full">
                     {true ? (

@@ -59,7 +59,7 @@ const Input = forwardRef<HTMLInputElement | HTMLTextAreaElement, InputProps>(
 
         {type === 'textarea' ? (
           <textarea
-            b={`1 solid rounded-lg ${error ? 'red' : 'gray-light focus:blue'}`}
+            b={`1 solid rounded-lg ${error ? 'red' : 'gray-light focus:brand'}`}
             bg="white disabled:gray-dark/50"
             cursor={disabled ? 'not-allowed' : 'text'}
             data-field={name}
@@ -86,7 +86,7 @@ const Input = forwardRef<HTMLInputElement | HTMLTextAreaElement, InputProps>(
         ) : (
           <input
             appearance="none"
-            b={`1 solid rounded-lg ${error ? 'red' : 'gray-light focus:blue'}`}
+            b={`1 solid rounded-lg ${error ? 'red' : 'gray-light focus:brand'}`}
             bg="white disabled:gray-70/50"
             className="input appearance-none"
             cursor={disabled ? 'not-allowed' : 'text'}

@@ -10,16 +10,15 @@ export const COLORS = {
     light: '#fee2e2',
     dark: '#dc2626'
   },
-  blue: {
-    default: '#003f9a',
-    light: '	#0059b3'
-  },
   gray: {
     default: '#6b7280',
     darker: '#1f2937',
     dark: '#374151',
     lighter: '#e5e7eb',
     light: '#f3f4f6'
+  },
+  brand: {
+    default: '#232b32'
   }
 }
 

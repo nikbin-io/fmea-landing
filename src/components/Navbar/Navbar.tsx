@@ -1,8 +1,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { NAVIGATION_LINKS } from '~/constants/navigation'
-import { Logo } from '~/components'
-import { motion } from 'framer-motion'
+import { Logo, LinkButton } from '~/components'
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false)
@@ -16,18 +15,19 @@ const Navbar = () => {
       <div flex="~ items-center justify-between" h="16" mx="4">
         <div flex="~ items-center justify-between" h="60px" w="full">
           <Logo />
-          <div className="hidden md:flex" flex="1 items-center" ml="10">
+
+          <div className="hidden md:flex" flex="1 items-center" ml="5">
             {NAVIGATION_LINKS.map((link) => (
               <Link
                 b="1 solid transparent rounded-lg"
-                bg="hover:blue/7"
+                bg="hover:brand/7"
                 flex="~ items-center justify-center"
-                font="400"
+                font="500"
                 h="38px"
                 href={link.href}
                 key={link.name}
                 p="x-15px y-5px"
-                text="gray-darker hover:blue"
+                text="brand hover:black"
                 tracking=".5px"
                 transition="colors">
                 {link.name}
@@ -35,54 +35,13 @@ const Navbar = () => {
             ))}
           </div>
           <div className="md:flex hidden" gap="10px">
-            <a
-              b="rounded-lg 1 solid blue-light hover:blue"
-              bg="blue-light hover:blue"
-              color="white"
-              cursor="pointer"
-              flex="~ items-center justify-center"
-              h="38px"
+            <LinkButton
+              hasEffect
               href="https://app.fmeatool.ai"
-              overflow="hidden"
-              position="relative"
-              scale="active:98 hover:101"
-              shadow="hover:sm"
-              transition="duration-200"
-              w="120px">
-              <motion.div
-                animate={{ x: '100%' }}
-                className="absolute inset-0"
-                initial={{ x: '-100%' }}
-                style={{
-                  background:
-                    'linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.2) 50%, transparent 100%)'
-                }}
-                transition={{
-                  duration: 1.2,
-                  repeat: Infinity,
-                  repeatDelay: 2.5,
-                  ease: 'linear'
-                }}
-              />
-              Generator
-            </a>
+              label="Generator"
+            />
 
-            <a
-              b="1 solid rounded-lg blue-light hover:blue"
-              bg="transparent hover:white/40"
-              className="md:flex hidden"
-              color="blue-light hover:blue"
-              flex="items-center justify-center"
-              font="500"
-              h="38px"
-              href="https://app.fmeatool.ai"
-              p="x-10px"
-              scale="active:98 hover:101"
-              shadow="hover:sm"
-              transition="duration-200"
-              w="120px">
-              Sign Up
-            </a>
+            <LinkButton href="https://app.fmeatool.ai" label="Sign Up" />
           </div>
 
           <button
@@ -123,8 +82,8 @@ const Navbar = () => {
       <div
         border="t-1 0 solid black/10"
         className={`md:hidden ease-in-out ${mobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}
-        mx="4"
         overflow="hidden"
+        px="4"
         transition="all 200">
         <div border="t black/10" flex="~ col" gap="2" p="y-4">
           {NAVIGATION_LINKS.map((link) => (
@@ -134,7 +93,7 @@ const Navbar = () => {
               href={link.href}
               key={link.name}
               p="y-2"
-              text="gray-darker hover:blue base"
+              text="brand hover:black base"
               transition="colors 200"
               onClick={() => setMobileMenuOpen(false)}>
               {link.name}
@@ -142,55 +101,13 @@ const Navbar = () => {
           ))}
 
           <div border="t-1 0 solid black/10" flex="~ col" gap="4" p="t-4">
-            <a
-              b="rounded-lg 1 solid blue-light hover:blue"
-              bg="blue-light hover:blue"
-              color="white"
-              cursor="pointer"
-              flex="~ items-center justify-center"
-              font="400"
-              h="38px"
+            <LinkButton
+              hasEffect
               href="https://app.fmeatool.ai"
-              overflow="hidden"
-              p="y-5px"
-              position="relative"
-              scale="active:97"
-              shadow="hover:sm"
-              transition="duration-200"
-              w="full">
-              <motion.div
-                animate={{ x: '100%' }}
-                className="absolute inset-0"
-                initial={{ x: '-100%' }}
-                style={{
-                  background:
-                    'linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.2) 50%, transparent 100%)'
-                }}
-                transition={{
-                  duration: 1.2,
-                  repeat: Infinity,
-                  repeatDelay: 2.5,
-                  ease: 'linear'
-                }}
-              />
-              Generator
-            </a>
+              label="Generator"
+            />
 
-            <a
-              b="1 solid rounded-lg blue-light hover:blue"
-              bg="transparent hover:white/40"
-              color="blue-light hover:blue"
-              flex="~ items-center justify-center"
-              font="400"
-              h="38px"
-              href="https://app.fmeatool.ai"
-              p="y-5px"
-              scale="active:98"
-              shadow="hover:sm"
-              transition="duration-200"
-              w="full">
-              Sign Up
-            </a>
+            <LinkButton href="https://app.fmeatool.ai" label="Sign Up" />
           </div>
         </div>
       </div>

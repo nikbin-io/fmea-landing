@@ -23,12 +23,12 @@ const Layout = ({
         {children}
       </div>
       <div
-        className="absolute right-0 bottom-0 left-0 top-0 opacity-20"
+        className="absolute right-0 bottom-0 left-0 top-0 opacity-15"
         h="full"
         overflow="hidden"
         style={{ pointerEvents: 'none' }}
         w="full">
-        <Aurora amplitude={1.0} blend={0.5} speed={0.5} />
+        <Aurora speed={0.5} />
       </div>
       <Footer />
     </div>

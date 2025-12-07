@@ -8,15 +8,15 @@ interface ButtonProps
 const Button = ({ children, type = 'button', ...rest }: ButtonProps) => {
   return (
     <button
-      b="1 solid rounded-lg blue-light hover:blue"
-      bg="transparent hover:blue/5"
-      color="blue-light hover:blue"
+      b="1 solid rounded-lg brand hover:black"
+      bg="transparent hover:white"
+      color="brand hover:black"
       cursor="pointer"
       flex="~ items-center justify-center"
       font="500"
       gap="10px"
       h="44px"
-      scale="active:98 hover:101"
+      scale="active:99 hover:101"
       shadow="hover:sm"
       text="base"
       transition="duration-200"

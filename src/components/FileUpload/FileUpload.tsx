@@ -185,7 +185,7 @@ const FileUpload = forwardRef<HTMLInputElement, FileUploadProps>(
               : error
                 ? 'red'
                 : value
-                  ? ' blue-light'
+                  ? 'brand'
                   : isDragging
                     ? 'gray-dark/50'
                     : 'gray-light'

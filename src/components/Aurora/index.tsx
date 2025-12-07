@@ -119,7 +119,7 @@ const Aurora = (props: AuroraProps) => {
   const {
     colorStops = ['#6B7FED', '#4B3AB3', '#6B7FED'],
     amplitude = 1.0,
-    blend = 0.5
+    blend = 0.2
   } = props
   const propsRef = useRef<AuroraProps>(props)
   propsRef.current = props

@@ -19,7 +19,7 @@ const Wireframe = () => {
 
     const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true })
     renderer.setPixelRatio(2)
-    renderer.setClearColor(0x000000, 0)
+    renderer.setClearColor(0x232b32, 0)
     renderer.domElement.style.display = 'block'
     containerRef.current.appendChild(renderer.domElement)
 
@@ -61,7 +61,7 @@ const Wireframe = () => {
 
       const wireGeo = new THREE.WireframeGeometry(trianglesGeom)
       const material = new THREE.LineBasicMaterial({
-        color: 0x818589,
+        color: 0x374151,
         transparent: true,
         opacity: 1
       })

@@ -21,13 +21,14 @@ const Wrapper = ({ children }: Props) => {
           </div>
 
           <div
-            bg="gray-light"
+            b="1 solid brand/10"
+            bg="gray-lighter"
             color="gray-dark"
             flex="~ col"
             mx="auto"
             p="y-10 sm:x-10 x-4"
             rounded="xl"
-            shadow="xl">
+            shadow="md">
             <div>{children}</div>
           </div>
         </div>

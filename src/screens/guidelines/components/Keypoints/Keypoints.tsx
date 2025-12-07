@@ -9,7 +9,7 @@ type TocNode = {
   }[]
 }
 
-export const KEYPOINTS: TocNode[] = [
+const KEYPOINTS: TocNode[] = [
   {
     href: 'introduction',
     label: 'Introduction',
@@ -33,11 +33,13 @@ export const KEYPOINTS: TocNode[] = [
 const Keypoints = () => {
   return (
     <aside
-      bg="gray-light"
+      b="1 solid brand/10"
+      bg="gray-lighter"
       flex="~ col shrink-0"
       p="x-2 y-6"
       position="sticky top-100px left-0"
       rounded="2xl"
+      shadow="md"
       w="lg:250px full">
       <h2 mb="2" px="2" text="lg gray-darker">
         Keypoints
@@ -49,7 +51,7 @@ const Keypoints = () => {
             <li key={section.href}>
               <Link
                 b="none rounded-md"
-                bg="transparent hover:gray-lighter"
+                bg="transparent hover:brand/7"
                 cursor="pointer"
                 display="block"
                 font="500"
@@ -66,7 +68,7 @@ const Keypoints = () => {
                     <li key={child.id} m="y-1">
                       <Link
                         b="none rounded-md"
-                        bg="transparent hover:gray-lighter"
+                        bg="transparent hover:brand/7"
                         cursor="pointer"
                         display="block"
                         font="300"

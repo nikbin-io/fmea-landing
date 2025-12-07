@@ -20,10 +20,6 @@ export default defineConfig({
   transformers: [transformerDirectives(), transformerAttributifyJsx()],
   theme: {
     colors: {
-      blue: {
-        DEFAULT: '#003f9a',
-        light: '	#0059b3'
-      },
       gray: {
         darker: '#1f2937',
         dark: '#374151',
@@ -35,6 +31,9 @@ export default defineConfig({
         DEFAULT: '#ef4444',
         light: '#fee2e2',
         dark: '#dc2626'
+      },
+      brand: {
+        DEFAULT: '#232b32'
       }
     },
     breakpoints: {
