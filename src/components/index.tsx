@@ -12,6 +12,7 @@ import Layout from './Layout'
 import LinkButton from './Buttons/LinkButton'
 import Logo from './Logo'
 import Navbar from './Navbar'
+import SeoHead from './SeoHead'
 import Wireframe from './Wireframe'
 
 export {
@@ -29,5 +30,6 @@ export {
   LinkButton,
   Logo,
   Navbar,
+  SeoHead,
   Wireframe
 }

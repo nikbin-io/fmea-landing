@@ -1,204 +1,214 @@
-import { Container } from '~/components'
+import { Container, SeoHead } from '~/components'
 
 const PrivacyPolicy = () => {
   return (
-    <div py="lg:40 30">
-      <Container>
-        <div
-          bg="gray-light"
-          leading="relaxed"
-          max-w="5xl"
-          mx="auto"
-          p="y-10 sm:x-10 x-4"
-          rounded="2xl"
-          shadow="xl"
-          text="sm:base sm">
-          <div mb="12" text="center">
-            <h1
-              color="gray-darker "
-              font="bold"
-              mb="4"
-              text="3xl sm:5xl"
-              tracking="tight">
-              Privacy Policy
-            </h1>
+    <>
+      <SeoHead
+        description="Read our privacy policy to understand how we handle your data."
+        title="Privacy Policy"
+      />
 
-            <p text="base gray-dark">Last updated: November 8, 2024</p>
-          </div>
-
+      <div py="lg:40 30">
+        <Container>
           <div
-            className="[&_h2]:color-gray-darker [&_h2]:font-semibold [&_h2]:mb-4 [&_h2]:text-xl sm:3xl "
-            color="gray-dark"
-            space-y="8">
-            <div>
-              <h2>Introduction</h2>
+            bg="gray-light"
+            leading="relaxed"
+            max-w="5xl"
+            mx="auto"
+            p="y-10 sm:x-10 x-4"
+            rounded="2xl"
+            shadow="xl"
+            text="sm:base sm">
+            <div mb="12" text="center">
+              <h1
+                color="gray-darker "
+                font="bold"
+                mb="4"
+                text="3xl sm:5xl"
+                tracking="tight">
+                Privacy Policy
+              </h1>
 
-              <p>
-                Welcome to our Privacy Policy. Your privacy is critically
-                important to us. This Privacy Policy document contains types of
-                information that is collected and recorded by our website and
-                how we use it.
-              </p>
+              <p text="base gray-dark">Last updated: November 8, 2024</p>
             </div>
 
-            <div>
-              <h2>Information We Collect</h2>
+            <div
+              className="[&_h2]:color-gray-darker [&_h2]:font-semibold [&_h2]:mb-4 [&_h2]:text-xl sm:3xl "
+              color="gray-dark"
+              space-y="8">
+              <div>
+                <h2>Introduction</h2>
 
-              <p>
-                We collect several different types of information for various
-                purposes to provide and improve our service to you.
-              </p>
+                <p>
+                  Welcome to our Privacy Policy. Your privacy is critically
+                  important to us. This Privacy Policy document contains types
+                  of information that is collected and recorded by our website
+                  and how we use it.
+                </p>
+              </div>
 
-              <ul list="disc" mt="2" pl="6" space-y="2">
-                <li>
-                  <strong font="semibold">Personal Data:</strong> While using
-                  our service, we may ask you to provide us with certain
-                  personally identifiable information that can be used to
-                  contact or identify you.
-                </li>
+              <div>
+                <h2>Information We Collect</h2>
 
-                <li>
-                  <strong font="semibold">Usage Data:</strong> We may also
-                  collect information on how the service is accessed and used.
-                </li>
+                <p>
+                  We collect several different types of information for various
+                  purposes to provide and improve our service to you.
+                </p>
 
-                <li>
-                  <strong font="semibold">Cookies and Tracking:</strong> We use
-                  cookies and similar tracking technologies to track activity on
-                  our service.
-                </li>
-              </ul>
-            </div>
+                <ul list="disc" mt="2" pl="6" space-y="2">
+                  <li>
+                    <strong font="semibold">Personal Data:</strong> While using
+                    our service, we may ask you to provide us with certain
+                    personally identifiable information that can be used to
+                    contact or identify you.
+                  </li>
 
-            <div>
-              <h2>How We Use Your Information</h2>
+                  <li>
+                    <strong font="semibold">Usage Data:</strong> We may also
+                    collect information on how the service is accessed and used.
+                  </li>
 
-              <p mb="4">We use the collected data for various purposes:</p>
+                  <li>
+                    <strong font="semibold">Cookies and Tracking:</strong> We
+                    use cookies and similar tracking technologies to track
+                    activity on our service.
+                  </li>
+                </ul>
+              </div>
 
-              <ul list="disc" mt="2" pl="6" space-y="2">
-                <li>To provide and maintain our service</li>
+              <div>
+                <h2>How We Use Your Information</h2>
 
-                <li>To notify you about changes to our service</li>
+                <p mb="4">We use the collected data for various purposes:</p>
 
-                <li>To allow you to participate in interactive features</li>
+                <ul list="disc" mt="2" pl="6" space-y="2">
+                  <li>To provide and maintain our service</li>
 
-                <li>To provide customer support</li>
+                  <li>To notify you about changes to our service</li>
 
-                <li>
-                  To gather analysis or valuable information to improve our
-                  service
-                </li>
+                  <li>To allow you to participate in interactive features</li>
 
-                <li>To monitor the usage of our service</li>
+                  <li>To provide customer support</li>
 
-                <li>To detect, prevent and address technical issues</li>
-              </ul>
-            </div>
+                  <li>
+                    To gather analysis or valuable information to improve our
+                    service
+                  </li>
 
-            <div>
-              <h2>Data Security</h2>
+                  <li>To monitor the usage of our service</li>
 
-              <p>
-                The security of your data is important to us, but remember that
-                no method of transmission over the Internet or method of
-                electronic storage is 100% secure. While we strive to use
-                commercially acceptable means to protect your Personal Data, we
-                cannot guarantee its absolute security.
-              </p>
-            </div>
+                  <li>To detect, prevent and address technical issues</li>
+                </ul>
+              </div>
 
-            <div>
-              <h2>Third-Party Services</h2>
+              <div>
+                <h2>Data Security</h2>
 
-              <p>
-                We may employ third-party companies and individuals to
-                facilitate our service, provide the service on our behalf,
-                perform service-related services, or assist us in analyzing how
-                our service is used. These third parties have access to your
-                Personal Data only to perform these tasks on our behalf and are
-                obligated not to disclose or use it for any other purpose.
-              </p>
-            </div>
+                <p>
+                  The security of your data is important to us, but remember
+                  that no method of transmission over the Internet or method of
+                  electronic storage is 100% secure. While we strive to use
+                  commercially acceptable means to protect your Personal Data,
+                  we cannot guarantee its absolute security.
+                </p>
+              </div>
 
-            <div>
-              <h2>Your Rights</h2>
+              <div>
+                <h2>Third-Party Services</h2>
 
-              <p mb="4">
-                You have certain rights regarding your personal information:
-              </p>
+                <p>
+                  We may employ third-party companies and individuals to
+                  facilitate our service, provide the service on our behalf,
+                  perform service-related services, or assist us in analyzing
+                  how our service is used. These third parties have access to
+                  your Personal Data only to perform these tasks on our behalf
+                  and are obligated not to disclose or use it for any other
+                  purpose.
+                </p>
+              </div>
 
-              <ul list="disc" mt="2" pl="6" space-y="2">
-                <li>
-                  The right to access – You have the right to request copies of
-                  your personal data
-                </li>
+              <div>
+                <h2>Your Rights</h2>
 
-                <li>
-                  The right to rectification – You have the right to request
-                  that we correct any information you believe is inaccurate
-                </li>
+                <p mb="4">
+                  You have certain rights regarding your personal information:
+                </p>
 
-                <li>
-                  The right to erasure – You have the right to request that we
-                  erase your personal data, under certain conditions
-                </li>
+                <ul list="disc" mt="2" pl="6" space-y="2">
+                  <li>
+                    The right to access – You have the right to request copies
+                    of your personal data
+                  </li>
 
-                <li>
-                  The right to restrict processing – You have the right to
-                  request that we restrict the processing of your personal data
-                </li>
+                  <li>
+                    The right to rectification – You have the right to request
+                    that we correct any information you believe is inaccurate
+                  </li>
 
-                <li>
-                  The right to data portability – You have the right to request
-                  that we transfer the data that we have collected to another
-                  organization, or directly to you
-                </li>
-              </ul>
-            </div>
+                  <li>
+                    The right to erasure – You have the right to request that we
+                    erase your personal data, under certain conditions
+                  </li>
 
-            <div>
-              <h2>Children&apos;s Privacy</h2>
+                  <li>
+                    The right to restrict processing – You have the right to
+                    request that we restrict the processing of your personal
+                    data
+                  </li>
 
-              <p>
-                Our service does not address anyone under the age of 13. We do
-                not knowingly collect personally identifiable information from
-                children under 13. If you are a parent or guardian and you are
-                aware that your child has provided us with Personal Data, please
-                contact us.
-              </p>
-            </div>
+                  <li>
+                    The right to data portability – You have the right to
+                    request that we transfer the data that we have collected to
+                    another organization, or directly to you
+                  </li>
+                </ul>
+              </div>
 
-            <div>
-              <h2>Changes to This Privacy Policy</h2>
+              <div>
+                <h2>Children&apos;s Privacy</h2>
 
-              <p>
-                We may update our Privacy Policy from time to time. We will
-                notify you of any changes by posting the new Privacy Policy on
-                this page and updating the &quotLast updated&quot date at the
-                top of this Privacy Policy.
-              </p>
-            </div>
+                <p>
+                  Our service does not address anyone under the age of 13. We do
+                  not knowingly collect personally identifiable information from
+                  children under 13. If you are a parent or guardian and you are
+                  aware that your child has provided us with Personal Data,
+                  please contact us.
+                </p>
+              </div>
 
-            <div>
-              <h2>Contact Us</h2>
+              <div>
+                <h2>Changes to This Privacy Policy</h2>
 
-              <p>
-                If you have any questions about this Privacy Policy, please
-                contact us:
-              </p>
+                <p>
+                  We may update our Privacy Policy from time to time. We will
+                  notify you of any changes by posting the new Privacy Policy on
+                  this page and updating the &quotLast updated&quot date at the
+                  top of this Privacy Policy.
+                </p>
+              </div>
 
-              <ul list="disc" mt="4" pl="6" space-y="2">
-                <li>By email: privacy@example.com</li>
+              <div>
+                <h2>Contact Us</h2>
 
-                <li>
-                  By visiting this page on our website: www.example.com/contact
-                </li>
-              </ul>
+                <p>
+                  If you have any questions about this Privacy Policy, please
+                  contact us:
+                </p>
+
+                <ul list="disc" mt="4" pl="6" space-y="2">
+                  <li>By email: privacy@example.com</li>
+
+                  <li>
+                    By visiting this page on our website:
+                    www.example.com/contact
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
-        </div>
-      </Container>
-    </div>
+        </Container>
+      </div>
+    </>
   )
 }
 

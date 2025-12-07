@@ -1,7 +1,7 @@
 import { useForm, Controller } from 'react-hook-form'
 import * as z from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
-import { Input, Container, Button, Checkbox } from '~/components'
+import { Input, Container, Button, Checkbox, SeoHead } from '~/components'
 import Link from 'next/link'
 
 const validationSchema = z.object({
@@ -38,127 +38,131 @@ const Contact = () => {
   }
 
   return (
-    <div py="30" z="1">
-      <Container>
-        <div
-          bg="gray-lighter"
-          max-w="700px"
-          mx="auto"
-          p="y-10 sm:x-10 x-4"
-          rounded="2xl"
-          shadow="xl"
-          text="sm:base sm"
-          w="full">
-          <div mb="8" text="center">
-            <h1
-              font="600"
-              line-height="sm:40px 32px"
-              mb="6"
-              text="sm:36px gray-dark 24px">
-              Contact Us
-            </h1>
+    <>
+      <SeoHead description="" title="Contact Us" />
 
-            <p px="2" text=".9rem gray-dark">
-              We&apos;d love to hear from you. Send us a message and we&apos;ll
-              get back to you as soon as possible.
-            </p>
-          </div>
+      <div py="30" z="1">
+        <Container>
+          <div
+            bg="gray-lighter"
+            max-w="700px"
+            mx="auto"
+            p="y-10 sm:x-10 x-4"
+            rounded="2xl"
+            shadow="xl"
+            text="sm:base sm"
+            w="full">
+            <div mb="8" text="center">
+              <h1
+                font="600"
+                line-height="sm:40px 32px"
+                mb="6"
+                text="sm:36px gray-dark 24px">
+                Contact Us
+              </h1>
 
-          <form flex="~ col" gap="20px" onSubmit={handleSubmit(onSubmit)}>
-            <div flex="~ sm:row col" gap="20px">
+              <p px="2" text=".9rem gray-dark">
+                We&apos;d love to hear from you. Send us a message and
+                we&apos;ll get back to you as soon as possible.
+              </p>
+            </div>
+
+            <form flex="~ col" gap="20px" onSubmit={handleSubmit(onSubmit)}>
+              <div flex="~ sm:row col" gap="20px">
+                <Controller
+                  control={control}
+                  name="name"
+                  render={({ field, formState, fieldState: { error } }) => (
+                    <Input
+                      {...field}
+                      disabled={formState.isSubmitting}
+                      error={error?.message}
+                      label="Name"
+                      required
+                      type="text"
+                    />
+                  )}
+                />
+                <Controller
+                  control={control}
+                  name="email"
+                  render={({ field, formState, fieldState: { error } }) => (
+                    <Input
+                      {...field}
+                      disabled={formState.isSubmitting}
+                      error={error?.message}
+                      label="Email"
+                      required
+                      type="email"
+                    />
+                  )}
+                />
+              </div>
+
               <Controller
                 control={control}
-                name="name"
+                name="subject"
                 render={({ field, formState, fieldState: { error } }) => (
                   <Input
                     {...field}
                     disabled={formState.isSubmitting}
                     error={error?.message}
-                    label="Name"
+                    label="Subject"
                     required
                     type="text"
                   />
                 )}
               />
+
               <Controller
                 control={control}
-                name="email"
+                name="message"
                 render={({ field, formState, fieldState: { error } }) => (
                   <Input
                     {...field}
                     disabled={formState.isSubmitting}
                     error={error?.message}
-                    label="Email"
+                    label="Message"
                     required
-                    type="email"
+                    type="textarea"
                   />
                 )}
               />
-            </div>
 
-            <Controller
-              control={control}
-              name="subject"
-              render={({ field, formState, fieldState: { error } }) => (
-                <Input
-                  {...field}
-                  disabled={formState.isSubmitting}
-                  error={error?.message}
-                  label="Subject"
-                  required
-                  type="text"
-                />
-              )}
-            />
+              <Controller
+                control={control}
+                name="privacy_policy"
+                render={({ field, formState, fieldState: { error } }) => (
+                  <Checkbox
+                    {...field}
+                    disabled={formState.isSubmitting}
+                    error={error?.message}
+                    label={
+                      <p>
+                        I have read and agreed to{' '}
+                        <Link
+                          decoration="hover:underline"
+                          href="/privacy-policy"
+                          rel="noopener noreferrer"
+                          target="_blank"
+                          text="brand hover:black"
+                          transition="colors duration-200">
+                          Privacy Policy
+                        </Link>
+                      </p>
+                    }
+                  />
+                )}
+              />
 
-            <Controller
-              control={control}
-              name="message"
-              render={({ field, formState, fieldState: { error } }) => (
-                <Input
-                  {...field}
-                  disabled={formState.isSubmitting}
-                  error={error?.message}
-                  label="Message"
-                  required
-                  type="textarea"
-                />
-              )}
-            />
-
-            <Controller
-              control={control}
-              name="privacy_policy"
-              render={({ field, formState, fieldState: { error } }) => (
-                <Checkbox
-                  {...field}
-                  disabled={formState.isSubmitting}
-                  error={error?.message}
-                  label={
-                    <p>
-                      I have read and agreed to{' '}
-                      <Link
-                        decoration="hover:underline"
-                        href="/privacy-policy"
-                        rel="noopener noreferrer"
-                        target="_blank"
-                        text="brand hover:black"
-                        transition="colors duration-200">
-                        Privacy Policy
-                      </Link>
-                    </p>
-                  }
-                />
-              )}
-            />
-
-            <Button disabled={isSubmitting} mt="3" type="submit" w="full">
-              Send Message
-            </Button>
-          </form>
-        </div>
-      </Container>
-    </div>
+              <Button disabled={isSubmitting} mt="3" type="submit" w="full">
+                Send Message
+              </Button>
+            </form>
+          </div>
+        </Container>
+      </div>
+    </>
   )
 }
 

@@ -1,0 +1,35 @@
+import Head from 'next/head'
+
+type SeoHeadProps = {
+  title?: string
+  description?: string
+  ogImage?: string
+}
+
+const SeoHead = ({
+  title = 'AI FMEA Generator: Automate Your Risk Analysis',
+  description = '',
+  ogImage = 'https://fmeatool.ai/1200x630.png'
+}: SeoHeadProps) => {
+  const fullTitle = `${title} | FMEA Tool`
+  return (
+    <Head>
+      <title>{fullTitle}</title>
+      <meta content={description} name="description" />
+
+      <meta content="website" property="og:type" />
+      <meta content={fullTitle} property="og:title" />
+      <meta content={description} property="og:description" />
+      <meta content={ogImage} property="og:image" />
+      <meta content="1200" property="og:image:width" />
+      <meta content="630" property="og:image:height" />
+
+      <meta content="summary_large_image" name="twitter:card" />
+      <meta content={fullTitle} name="twitter:title" />
+      <meta content={description} name="twitter:description" />
+      <meta content={ogImage} name="twitter:image" />
+    </Head>
+  )
+}
+
+export default SeoHead

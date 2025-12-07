@@ -1,5 +1,5 @@
 import type { AppProps } from 'next/app'
-import { Layout } from '~/components'
+import { Layout, SeoHead } from '~/components'
 import '../styles/globals.scss'
 import { Plus_Jakarta_Sans } from 'next/font/google'
 const jakarta = Plus_Jakarta_Sans({
@@ -8,6 +8,7 @@ const jakarta = Plus_Jakarta_Sans({
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <Layout className={jakarta.className}>
+      <SeoHead />
       <Component {...pageProps} />
     </Layout>
   )
