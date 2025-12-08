@@ -54,27 +54,21 @@ const Navbar = () => {
             h="6"
             w="6"
             onClick={toggleMobileMenu}>
-            <span
-              bg="gray-dark"
-              className={mobileMenuOpen ? 'rotate-45 translate-y-2' : ''}
-              h="0.5"
-              rounded="full"
-              transition="all duration-200"
-              w="full"></span>
-            <span
-              bg="gray-dark"
-              className={mobileMenuOpen ? 'opacity-0' : ''}
-              h="0.5"
-              rounded="full"
-              transition="all duration-200"
-              w="full"></span>
-            <span
-              bg="gray-dark"
-              className={mobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}
-              h="0.5"
-              rounded="full"
-              transition="all duration-200"
-              w="full"></span>
+            {[
+              'rotate-45 translate-y-2',
+              'opacity-0',
+              '-rotate-45 -translate-y-2'
+            ].map((activeClass, i) => (
+              <span
+                bg="gray-dark"
+                className={mobileMenuOpen ? activeClass : ''}
+                h="0.5"
+                key={i}
+                rounded="full"
+                transition="all duration-200"
+                w="full"
+              />
+            ))}
           </button>
         </div>
       </div>
