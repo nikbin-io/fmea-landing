@@ -1,14 +1,14 @@
 import { useEffect, useRef } from 'react'
-import { Color, Mesh, Program, Renderer, Triangle } from 'ogl'
+import * as THREE from 'three'
 
-const VERT = `#version 300 es
-in vec2 position;
+const VERT = `
+in vec3 position;
 void main() {
-  gl_Position = vec4(position, 0.0, 1.0);
+  gl_Position = vec4(position.xy, 0.0, 1.0);
 }
 `
 
-const FRAG = `#version 300 es
+const FRAG = `
 precision highp float;
 
 uniform float uTime;
@@ -130,70 +130,114 @@ const Aurora = (props: AuroraProps) => {
     const ctn = ctnDom.current
     if (!ctn) return
 
-    const renderer = new Renderer({
+    const renderer = new THREE.WebGLRenderer({
       alpha: true,
       premultipliedAlpha: true,
       antialias: true
     })
-    const gl = renderer.gl
-    gl.clearColor(0, 0, 0, 0)
-    gl.enable(gl.BLEND)
-    gl.blendFunc(gl.ONE, gl.ONE_MINUS_SRC_ALPHA)
-    gl.canvas.style.backgroundColor = 'transparent'
+    renderer.setPixelRatio(1)
+    renderer.setClearColor(0x000000, 0)
+    renderer.domElement.style.backgroundColor = 'transparent'
+    renderer.domElement.style.display = 'block'
 
-    let program: Program | undefined
+    const scene = new THREE.Scene()
+    const camera = new THREE.Camera()
+
+    const hexToRgb01 = (hex: string): [number, number, number] => {
+      const h = hex.replace('#', '').trim()
+      if (h.length === 3) {
+        const r = parseInt(h[0] + h[0], 16)
+        const g = parseInt(h[1] + h[1], 16)
+        const b = parseInt(h[2] + h[2], 16)
+        return [r / 255, g / 255, b / 255]
+      }
+      const r = parseInt(h.slice(0, 2), 16)
+      const g = parseInt(h.slice(2, 4), 16)
+      const b = parseInt(h.slice(4, 6), 16)
+      return [r / 255, g / 255, b / 255]
+    }
 
     function resize() {
       if (!ctn) return
       const width = ctn.offsetWidth
       const height = ctn.offsetHeight
-      renderer.setSize(width, height)
-      if (program) {
-        program.uniforms.uResolution.value = [width, height]
-      }
+      renderer.setSize(width, height, false)
+      uniforms.uResolution.value.set(width, height)
     }
     window.addEventListener('resize', resize)
 
-    const geometry = new Triangle(gl)
-    if (geometry.attributes.uv) {
-      delete geometry.attributes.uv
+    const geometry = new THREE.BufferGeometry()
+    geometry.setAttribute(
+      'position',
+      new THREE.BufferAttribute(
+        new Float32Array([-1, -1, 0, 3, -1, 0, -1, 3, 0]),
+        3
+      )
+    )
+
+    const initStops = colorStops.length
+      ? colorStops
+      : ['#6B7FED', '#4B3AB3', '#6B7FED']
+    const stop0 = initStops[0] ?? initStops[initStops.length - 1]
+    const stop1 = initStops[1] ?? initStops[initStops.length - 1]
+    const stop2 = initStops[2] ?? initStops[initStops.length - 1]
+
+    const [r0, g0, b0] = hexToRgb01(stop0)
+    const [r1, g1, b1] = hexToRgb01(stop1)
+    const [r2, g2, b2] = hexToRgb01(stop2)
+
+    const uniforms = {
+      uTime: { value: 0 },
+      uAmplitude: { value: amplitude },
+      uColorStops: {
+        value: [
+          new THREE.Vector3(r0, g0, b0),
+          new THREE.Vector3(r1, g1, b1),
+          new THREE.Vector3(r2, g2, b2)
+        ]
+      },
+      uResolution: { value: new THREE.Vector2(ctn.offsetWidth, ctn.offsetHeight) },
+      uBlend: { value: blend }
     }
 
-    const colorStopsArray = colorStops.map((hex) => {
-      const c = new Color(hex)
-      return [c.r, c.g, c.b]
+    const material = new THREE.RawShaderMaterial({
+      vertexShader: VERT,
+      fragmentShader: FRAG,
+      uniforms,
+      glslVersion: THREE.GLSL3,
+      transparent: true,
+      premultipliedAlpha: true,
+      depthTest: false,
+      depthWrite: false,
+      blending: THREE.CustomBlending,
+      blendSrc: THREE.OneFactor,
+      blendDst: THREE.OneMinusSrcAlphaFactor,
+      blendEquation: THREE.AddEquation
     })
 
-    program = new Program(gl, {
-      vertex: VERT,
-      fragment: FRAG,
-      uniforms: {
-        uTime: { value: 0 },
-        uAmplitude: { value: amplitude },
-        uColorStops: { value: colorStopsArray },
-        uResolution: { value: [ctn.offsetWidth, ctn.offsetHeight] },
-        uBlend: { value: blend }
-      }
-    })
-
-    const mesh = new Mesh(gl, { geometry, program })
-    ctn.appendChild(gl.canvas)
+    const mesh = new THREE.Mesh(geometry, material)
+    mesh.frustumCulled = false
+    scene.add(mesh)
+    ctn.appendChild(renderer.domElement)
 
     let animateId = 0
     const update = (t: number) => {
       animateId = requestAnimationFrame(update)
       const { time = t * 0.01, speed = 1.0 } = propsRef.current
-      if (program) {
-        program.uniforms.uTime.value = time * speed * 0.1
-        program.uniforms.uAmplitude.value = propsRef.current.amplitude ?? 1.0
-        program.uniforms.uBlend.value = propsRef.current.blend ?? blend
-        const stops = propsRef.current.colorStops ?? colorStops
-        program.uniforms.uColorStops.value = stops.map((hex: string) => {
-          const c = new Color(hex)
-          return [c.r, c.g, c.b]
-        })
-        renderer.render({ scene: mesh })
+      uniforms.uTime.value = time * speed * 0.1
+      uniforms.uAmplitude.value = propsRef.current.amplitude ?? 1.0
+      uniforms.uBlend.value = propsRef.current.blend ?? blend
+
+      const stops = propsRef.current.colorStops ?? colorStops
+      const stopVecs = uniforms.uColorStops.value as THREE.Vector3[]
+      for (let i = 0; i < stopVecs.length; i++) {
+        const safeStops = stops.length ? stops : colorStops
+        const hex = safeStops[i] ?? safeStops[safeStops.length - 1]
+        const [r, g, b] = hexToRgb01(hex)
+        stopVecs[i].set(r, g, b)
       }
+
+      renderer.render(scene, camera)
     }
     animateId = requestAnimationFrame(update)
 
@@ -202,10 +246,13 @@ const Aurora = (props: AuroraProps) => {
     return () => {
       cancelAnimationFrame(animateId)
       window.removeEventListener('resize', resize)
-      if (ctn && gl.canvas.parentNode === ctn) {
-        ctn.removeChild(gl.canvas)
+      if (ctn && renderer.domElement.parentNode === ctn) {
+        ctn.removeChild(renderer.domElement)
       }
-      gl.getExtension('WEBGL_lose_context')?.loseContext()
+      material.dispose()
+      geometry.dispose()
+      renderer.dispose()
+      renderer.forceContextLoss()
     }
   }, [amplitude])
 
