@@ -168,7 +168,7 @@ const Demo = () => {
                     text="gray-text 14px"
                     w="full">
                     {true ? (
-                      ['', '', '', ''].map((invoice, index) => (
+                      ['', '', '', ''].map((_, index) => (
                         <tr key={index}>
                           <td>{index + 1}</td>
                           <td></td>
