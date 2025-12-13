@@ -196,7 +196,9 @@ const Aurora = (props: AuroraProps) => {
           new THREE.Vector3(r2, g2, b2)
         ]
       },
-      uResolution: { value: new THREE.Vector2(ctn.offsetWidth, ctn.offsetHeight) },
+      uResolution: {
+        value: new THREE.Vector2(ctn.offsetWidth, ctn.offsetHeight)
+      },
       uBlend: { value: blend }
     }
 
