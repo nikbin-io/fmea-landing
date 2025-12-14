@@ -1,4 +1,4 @@
-import { Demo, Faq, Hero, Features } from './components'
+import { Demo, Faq, Hero, Features, Pricing } from './components'
 
 const Home = () => {
   return (
@@ -8,6 +8,8 @@ const Home = () => {
       <Demo />
 
       <Features />
+
+      <Pricing />
 
       <Faq />
     </div>

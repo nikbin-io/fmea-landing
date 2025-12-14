@@ -34,6 +34,7 @@ const Navbar = () => {
               </Link>
             ))}
           </div>
+
           <div className="md:flex hidden" gap="10px">
             <LinkButton
               hasEffect
