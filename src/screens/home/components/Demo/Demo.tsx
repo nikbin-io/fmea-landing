@@ -8,6 +8,7 @@ const validationSchema = z.object({
   failure_models: z.number(),
   image_heavy_document: z.any()
 })
+
 type ValidationSchema = z.infer<typeof validationSchema>
 
 const Demo = () => {
@@ -27,6 +28,7 @@ const Demo = () => {
     try {
     } catch (error: any) {}
   }
+
   return (
     <div py="10">
       <Container>
@@ -80,7 +82,24 @@ const Demo = () => {
                     label="Upload Image-Heavy PDFs"
                     maxSize={200}
                     name="image_heavy_document"
-                    tooltipContent={<p>asd</p>}
+                    tooltipContent={
+                      <div p="y-15px x-5px">
+                        <p>Helpful documents to upload:</p>
+                        <ul mt="15px" pl="15px" space-y="1">
+                          {[
+                            'Product requirements / specifications',
+                            'Design description documents',
+                            'Architecture / functional diagrams',
+                            'Schematics and mechanical drawings',
+                            'Bill of materials',
+                            'Validation plans and test procedures',
+                            'Issue logs and lessons learned from similar products'
+                          ].map((item, index) => (
+                            <li key={index}> {item}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    }
                   />
                 )}
               />

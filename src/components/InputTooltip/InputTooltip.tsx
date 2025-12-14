@@ -30,7 +30,7 @@ const InputTooltip = ({ content }: InputTooltipProps) => {
         color="white"
         initial="closed"
         max-w="600px"
-        min-w="200px"
+        min-w="300px"
         p="x-15px y-5px"
         position="absolute bottom-full right-[-12px]"
         text="xs"
