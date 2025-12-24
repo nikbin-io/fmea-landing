@@ -1,6 +1,10 @@
 import dynamic from 'next/dynamic'
 
 import { Header, Footer } from '~/components'
+const CookieConsent = dynamic(() => import('~/components/CookieConsent'), {
+  ssr: false
+})
+
 const Aurora = dynamic(() => import('~/components/Aurora'), { ssr: false })
 
 const Layout = ({
@@ -31,6 +35,8 @@ const Layout = ({
         <Aurora speed={0.5} />
       </div>
       <Footer />
+
+      <CookieConsent />
     </div>
   )
 }
