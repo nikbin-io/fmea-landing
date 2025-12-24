@@ -19,13 +19,6 @@ type ConsentModeUpdate = {
   security_storage?: ConsentModeValue
 }
 
-type CookieConsentProps = {
-  storageKey?: string
-  privacyPolicyUrl?: string
-  className?: string
-  onConsentChange?: (value: ConsentValue) => void
-}
-
 declare global {
   interface Window {
     dataLayer?: unknown[]
@@ -33,7 +26,7 @@ declare global {
   }
 }
 
-const DEFAULT_STORAGE_KEY = 'cookie_consent_v1'
+const STORAGE_KEY = 'cookie_consent_v1'
 
 const getCookie = (name: string) => {
   if (typeof document === 'undefined') return null
@@ -144,12 +137,9 @@ const PREFERENCE_OPTIONS = [
   }
 ]
 
-const CookieConsent = ({
-  storageKey = DEFAULT_STORAGE_KEY,
-  onConsentChange
-}: CookieConsentProps) => {
-  const [isVisible, setIsVisible] = useState(false)
-  const [isPreferencesOpen, setIsPreferencesOpen] = useState(false)
+const CookieConsent = () => {
+  const [isVisible, setIsVisible] = useState<boolean>(false)
+  const [isPreferencesOpen, setIsPreferencesOpen] = useState<boolean>(false)
   const [draft, setDraft] = useState<ConsentValue>({
     analytics: false,
     marketing: false
@@ -157,13 +147,12 @@ const CookieConsent = ({
 
   const persistAndApply = (value: ConsentValue) => {
     if (typeof window !== 'undefined') {
-      window.localStorage.setItem(storageKey, JSON.stringify(value))
+      window.localStorage.setItem(STORAGE_KEY, JSON.stringify(value))
     }
 
-    setCookie(storageKey, JSON.stringify(value))
+    setCookie(STORAGE_KEY, JSON.stringify(value))
 
     applyConsentModeUpdate(toConsentModeUpdate(value))
-    onConsentChange?.(value)
     setIsVisible(false)
     setIsPreferencesOpen(false)
   }
@@ -172,12 +161,12 @@ const CookieConsent = ({
     if (typeof window === 'undefined') return
 
     const stored =
-      parseStoredValue(getCookie(storageKey)) ||
-      parseStoredValue(window.localStorage.getItem(storageKey))
+      parseStoredValue(getCookie(STORAGE_KEY)) ||
+      parseStoredValue(window.localStorage.getItem(STORAGE_KEY))
 
     if (stored) {
       setDraft(stored)
-      window.localStorage.setItem(storageKey, JSON.stringify(stored))
+      window.localStorage.setItem(STORAGE_KEY, JSON.stringify(stored))
       applyConsentModeUpdate(toConsentModeUpdate(stored))
       setIsVisible(false)
       return
@@ -187,7 +176,7 @@ const CookieConsent = ({
       toConsentModeUpdate({ analytics: false, marketing: false })
     )
     setIsVisible(true)
-  }, [storageKey])
+  }, [STORAGE_KEY])
 
   if (!isVisible) return null
 
@@ -201,9 +190,9 @@ const CookieConsent = ({
             We use cookies to enhance your experience and to analyze traffic.
             You can accept all cookies, reject non-essential cookies, or manage
             your preferences.
-            <Link href="/privacy-policy" rel="noreferrer" target="_blank">
+            <Link href="/cookie-policy" rel="noreferrer" target="_blank">
               {' '}
-              Privacy Policy
+              Cookie Policy
             </Link>
           </div>
         </div>
@@ -250,17 +239,23 @@ const CookieConsent = ({
                       {item.required ? (
                         <div className={styles.badge}>Always on</div>
                       ) : (
-                        <input
-                          checked={draft[item.id as keyof ConsentValue]}
-                          className={styles.toggle}
-                          type="checkbox"
-                          onChange={(e) =>
-                            setDraft((prev) => ({
-                              ...prev,
-                              [item.id]: e.target.checked
-                            }))
-                          }
-                        />
+                        <span className={styles.toggle}>
+                          <input
+                            checked={draft[item.id as keyof ConsentValue]}
+                            className={styles.toggleInput}
+                            type="checkbox"
+                            onChange={(e) =>
+                              setDraft((prev) => ({
+                                ...prev,
+                                [item.id]: e.target.checked
+                              }))
+                            }
+                          />
+                          <span
+                            aria-hidden="true"
+                            className={styles.toggleSlider}
+                          />
+                        </span>
                       )}
                     </div>
 
