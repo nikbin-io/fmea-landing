@@ -11,21 +11,39 @@ type TocNode = {
 
 const KEYPOINTS: TocNode[] = [
   {
-    href: 'introduction',
-    label: 'Introduction',
+    href: 'what-is-fmea',
+    label: 'What is FMEA?',
     children: [
-      { id: 'purpose', label: 'Purpose' },
-      { id: 'scope', label: 'Scope' },
-      { id: 'models', label: 'Models' }
+      {
+        id: 'the-core-methodology',
+        label: 'The Core Methodology: The Failure Chain'
+      },
+      {
+        id: 'quantifying-risk',
+        label: 'Quantifying Risk: S-O-D and Action Priority'
+      },
+      {
+        id: 'design-fmea',
+        label: 'Design FMEA (DFMEA): Robustness in Architecture'
+      },
+      { id: 'process-fmea', label: 'Process FMEA (PFMEA): Execution Integrit' }
     ]
   },
 
   {
-    href: 'core-concepts',
-    label: 'Core Concepts',
+    href: 'about-our-product-and-best-practices',
+    label: 'About Our Product and Best Practices',
     children: [
-      { id: 'data-model', label: 'Data Model' },
-      { id: 'risk-scoring', label: 'Risk Scoring' }
+      {
+        id: 'agentic-workflow',
+        label: 'An Agentic Workflow: The Virtual Engineering Team'
+      },
+      { id: 'best-practices', label: 'Best Practices: Optimizing Your Output' },
+      {
+        id: 'recommended-documents-by-fmea-type',
+        label: 'Recommended Documents by FMEA Type'
+      },
+      { id: 'standards-output-usage', label: 'Standards, Output, and Usage' }
     ]
   }
 ]
@@ -40,51 +58,50 @@ const Keypoints = () => {
       position="sticky top-100px left-0"
       rounded="2xl"
       shadow="md"
-      w="lg:250px full">
-      <h2 mb="2" px="2" text="lg gray-darker">
+      w="lg:300px full">
+      <h2 mb="2" px="3" text="lg gray-darker">
         Keypoints
       </h2>
 
       <div flex="~ 1 col">
-        <ul list="none">
-          {KEYPOINTS.map((section) => (
-            <li key={section.href}>
-              <Link
-                b="none rounded-md"
-                bg="transparent hover:brand/7"
-                cursor="pointer"
-                display="block"
-                font="500"
-                href={`/guidelines/${section.href}#${'page-top'}`}
-                p="y-1 x-3"
-                text="left base gray-darker"
-                w="full">
-                {section.label}
-              </Link>
+        {KEYPOINTS.map((section) => (
+          <div key={section.href}>
+            <Link
+              b="none rounded-md"
+              bg="transparent hover:brand/7"
+              cursor="pointer"
+              display="block"
+              flex="~"
+              font="500"
+              href={`/guidelines/${section.href}#${'page-top'}`}
+              p="y-1.5 x-3"
+              text="left base gray-darker"
+              w="full">
+              {section.label}
+            </Link>
 
-              <div m="l-3">
-                <ul list="none">
-                  {section.children.map((child) => (
-                    <li key={child.id} m="y-1">
-                      <Link
-                        b="none rounded-md"
-                        bg="transparent hover:brand/7"
-                        cursor="pointer"
-                        display="block"
-                        font="300"
-                        href={`/guidelines/${section.href}#${child.id}`}
-                        p="y-1 x-3"
-                        text="left base gray-dark hover:gray-darker"
-                        w="full">
-                        {child.label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </li>
-          ))}
-        </ul>
+            <div flex="~ col">
+              {section.children.map((child) => (
+                <Link
+                  b="none rounded-md"
+                  bg="transparent hover:brand/7"
+                  cursor="pointer"
+                  display="block"
+                  flex="~"
+                  font="300"
+                  h="full"
+                  href={`/guidelines/${section.href}#${child.id}`}
+                  key={child.id}
+                  line-height="19px"
+                  p="y-1.5 x-6"
+                  text="14px gray-dark hover:gray-darker"
+                  w="full">
+                  {child.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+        ))}
       </div>
     </aside>
   )

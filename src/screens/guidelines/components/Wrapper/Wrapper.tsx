@@ -31,7 +31,9 @@ const Wrapper = ({ children }: Props) => {
               p="y-10 sm:x-10 x-4"
               rounded="xl"
               shadow="md">
-              <div>{children}</div>
+              <div className="[&_p]:text-base [&_ul]:ml-6 [&_li]:text-base [&_h4]:mb-2 [&_h4]:mt-4 [&_ul]:mb-4 [&_p]:mb-4 [&_h3]:mt-6 [&_h3]:text-xl [&_h4]:font-semibold [&_h3]:font-semibold [&_h3]:mb-2">
+                {children}
+              </div>
             </div>
           </div>
         </Container>
