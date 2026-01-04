@@ -22,6 +22,15 @@ export const COLORS = {
   }
 }
 
+export const FMEA_TABLE_HEAD_COLORS = {
+  white: '#ffffff',
+  grey: '#d9d9d9',
+  blue: '#b9d7ed',
+  purple: '#cdbfda',
+  green_risk: '#aad08e',
+  green_opt: '#e4efda'
+}
+
 export const BREAKPOINTS = {
   xs: '500px',
   sm: '640px',
