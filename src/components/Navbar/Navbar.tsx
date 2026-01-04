@@ -41,8 +41,6 @@ const Navbar = () => {
               href="https://app.fmeatool.ai"
               label="Generator"
             />
-
-            <LinkButton href="https://app.fmeatool.ai" label="Sign Up" />
           </div>
 
           <button
@@ -101,8 +99,6 @@ const Navbar = () => {
               href="https://app.fmeatool.ai"
               label="Generator"
             />
-
-            <LinkButton href="https://app.fmeatool.ai" label="Sign Up" />
           </div>
         </div>
       </div>

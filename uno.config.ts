@@ -18,6 +18,18 @@ export default defineConfig({
     presetIcons()
   ],
   transformers: [transformerDirectives(), transformerAttributifyJsx()],
+  rules: [
+    [
+      'ribbon-shape',
+      {
+        '--d': '.8em',
+        'inset-inline': 'calc(-1*var(--d))',
+        'border-top-width': 'var(--d)',
+        'clip-path':
+          'polygon(0 100%,100% 100%,100% var(--d),calc(100% - var(--d)) 0%,calc(100% - var(--d)) var(--d),var(--d) var(--d),var(--d) 0%,0 var(--d))'
+      }
+    ]
+  ],
   theme: {
     colors: {
       gray: {
@@ -34,6 +46,9 @@ export default defineConfig({
       },
       brand: {
         DEFAULT: '#232b32'
+      },
+      green: {
+        DEFAULT: '#008000'
       }
     },
     breakpoints: {

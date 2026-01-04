@@ -52,3 +52,10 @@ a {
 
 
 
+.ribbon {
+  --d: .8em; /* the depth */
+  inset-inline: calc(-1*var(--d));
+  border-bottom: var(--d) solid #0008;
+  clip-path: polygon(0 0,100% 0,100% calc(100% - var(--d)),calc(100% - var(--d)) 100%,calc(100% - var(--d)) calc(100% - var(--d)),var(--d) calc(100% - var(--d)),var(--d) 100%,0 calc(100% - var(--d)));
+  background: radial-gradient(#1f2937, #374151);
+}

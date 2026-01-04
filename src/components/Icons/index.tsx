@@ -5,6 +5,7 @@ export {
   ChevronDown,
   ChevronLeft,
   ChevronRight,
+  CheckIcon,
   CrossIcon,
   GoogleIcon,
   InfoIcon,

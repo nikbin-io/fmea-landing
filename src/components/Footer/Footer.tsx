@@ -62,7 +62,7 @@ const Footer = () => {
             py="6"
             text="sm gray-dark ">
             <p>© 2025 Maudlin Works LLC. All rights reserved.</p>
-            <p>Developed by Nikbin.io.</p>
+            <p>Developed by nikbin.io.</p>
           </div>
         </div>
       </Container>
