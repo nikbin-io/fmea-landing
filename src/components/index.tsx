@@ -2,8 +2,8 @@ import Accordion from './Accordion'
 import Aurora from './Aurora'
 import Button from './Buttons/Button'
 import Checkbox from './Checkbox'
-import CookieConsent from './CookieConsent'
 import Container from './Container'
+import CookieConsent from './CookieConsent'
 import FileUpload from './FileUpload'
 import Footer from './Footer'
 import Header from './Header'
@@ -14,8 +14,8 @@ import LinkButton from './Buttons/LinkButton'
 import Logo from './Logo'
 import Navbar from './Navbar'
 import SeoHead from './SeoHead'
+import SwitchButton from './Buttons/SwitchButton'
 import Wireframe from './Wireframe'
-
 export {
   Accordion,
   Aurora,
@@ -33,5 +33,6 @@ export {
   Logo,
   Navbar,
   SeoHead,
+  SwitchButton,
   Wireframe
 }
