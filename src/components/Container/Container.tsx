@@ -12,7 +12,7 @@ const Container = ({
     <div
       className="container max-w-1400px"
       m="x-auto"
-      p="lg:x-60px sm:x-20px x-10px"
+      p="sm:x-20px x-10px"
       position="relative"
       z="1"
       {...rest}>

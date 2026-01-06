@@ -1,17 +1,27 @@
 import { useForm, Controller } from 'react-hook-form'
 import * as z from 'zod'
+import { useState } from 'react'
 import { ChevronRight, ChevronDown } from '~/components/Icons'
 import { zodResolver } from '@hookform/resolvers/zod'
-import { Input, FileUpload, Container, Button } from '~/components'
+import {
+  FileUpload,
+  Container,
+  Button,
+  SwitchButton,
+  RangeInput
+} from '~/components'
+import PfmeaTable from '../PfmeaTable'
 import DfmeaTable from '../DfmeaTable'
+
 const validationSchema = z.object({
-  failure_models: z.number(),
   image_heavy_document: z.any()
 })
 
 type ValidationSchema = z.infer<typeof validationSchema>
 
 const Demo = () => {
+  const [isPfmea, setIsPfmea] = useState<boolean>(false)
+
   const {
     control,
     handleSubmit,
@@ -19,7 +29,6 @@ const Demo = () => {
   } = useForm<ValidationSchema>({
     resolver: zodResolver(validationSchema),
     defaultValues: {
-      failure_models: 15,
       image_heavy_document: null
     }
   })
@@ -27,6 +36,10 @@ const Demo = () => {
   const onSubmit = async (values: ValidationSchema) => {
     try {
     } catch (error: any) {}
+  }
+
+  const handleCategorySwitch = (e: any) => {
+    setIsPfmea(e)
   }
 
   return (
@@ -44,10 +57,26 @@ const Demo = () => {
             <div overflow="hidden" rounded="2xl">
               <div bg-gradient="radial from-gray to-gray-darker" h="8px"></div>
 
-              <div b="0 b-1 solid gray-light" gap="2" mb="2" p="6">
+              <div
+                b="0 b-1 solid gray-light"
+                flex="~ col items-center"
+                gap="4"
+                mb="2"
+                p="6">
                 <h2 font="bold" text="2xl center gray-darker">
                   Configuration
                 </h2>
+                <div
+                  flex="~ items-center nowrap"
+                  gap="10px"
+                  text="md:16px 14px">
+                  <span text="nowrap">Design FMEA</span>
+                  <SwitchButton
+                    defaultChecked={false}
+                    onChange={handleCategorySwitch}
+                  />
+                  <span text="nowrap">Process FMEA</span>
+                </div>
               </div>
             </div>
 
@@ -56,19 +85,9 @@ const Demo = () => {
               gap="30px"
               p="6"
               onSubmit={handleSubmit(onSubmit)}>
-              <Controller
-                control={control}
-                name="failure_models"
-                render={({ field, formState, fieldState: { error } }) => (
-                  <Input
-                    {...field}
-                    disabled={formState.isSubmitting}
-                    error={error?.message}
-                    label="Minimum Failure Models (for Stage 1)"
-                    type="number"
-                  />
-                )}
-              />
+              <div>
+                <RangeInput label="Failer Mode Requested" />
+              </div>
 
               <Controller
                 control={control}
@@ -104,7 +123,9 @@ const Demo = () => {
                 )}
               />
 
-              <Button type="submit">Run FMEA Analysis</Button>
+              <Button disabled type="submit">
+                Run FMEA Analysis
+              </Button>
             </form>
 
             <div
@@ -135,7 +156,7 @@ const Demo = () => {
             border="1 gray-light"
             className="lg:col-span-4 md:col-span-3"
             h="full"
-            max-h="550px"
+            max-h="575px"
             overflow="hidden"
             rounded="2xl"
             shadow="lg">
@@ -147,12 +168,12 @@ const Demo = () => {
 
                 <div p="6">
                   <h2 font="bold" text="2xl center gray-darker">
-                    Final Refined FMEA Results
+                    {isPfmea ? 'Process' : 'Design'} FMEA Results
                   </h2>
                 </div>
               </div>
 
-              <DfmeaTable />
+              {isPfmea ? <PfmeaTable /> : <DfmeaTable />}
             </div>
           </div>
         </div>

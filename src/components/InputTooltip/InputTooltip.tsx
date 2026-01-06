@@ -25,12 +25,12 @@ const InputTooltip = ({ content }: InputTooltipProps) => {
     <div position="relative">
       <motion.div
         animate={open ? 'open' : 'closed'}
-        b="1 solid gray rounded-lg"
-        bg="gray"
+        b="1 solid brand rounded-lg"
+        bg="brand"
         color="white"
         initial="closed"
         max-w="600px"
-        min-w="300px"
+        min-w="320px"
         p="x-15px y-5px"
         position="absolute bottom-full right-[-12px]"
         text="xs"
@@ -42,9 +42,9 @@ const InputTooltip = ({ content }: InputTooltipProps) => {
           position="absolute right-15px"
           style={{ transform: 'rotate(45deg)' }}>
           <div
-            b-b="1 solid gray rounded-1px"
-            b-r="1 solid gray rounded-1px"
-            bg="gray"
+            b-b="1 solid brand rounded-1px"
+            b-r="1 solid brand rounded-1px"
+            bg="brand"
             h="10px"
             w="10px"
           />

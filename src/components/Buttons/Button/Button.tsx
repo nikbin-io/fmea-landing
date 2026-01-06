@@ -9,14 +9,14 @@ const Button = ({ children, type = 'button', ...rest }: ButtonProps) => {
   return (
     <button
       b="1 solid rounded-lg brand hover:black"
-      bg="transparent hover:white"
+      bg="transparent hover:white disabled:transparent"
       color="brand hover:black"
-      cursor="pointer"
+      cursor="pointer disabled:not-allowed"
       flex="~ items-center justify-center"
       font="500"
       gap="10px"
       h="44px"
-      scale="active:99 hover:101"
+      scale="active:99 hover:101 disabled:100"
       shadow="hover:sm"
       text="base"
       transition="duration-200"

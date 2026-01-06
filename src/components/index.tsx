@@ -13,9 +13,11 @@ import Layout from './Layout'
 import LinkButton from './Buttons/LinkButton'
 import Logo from './Logo'
 import Navbar from './Navbar'
+import RangeInput from './RangeInput'
 import SeoHead from './SeoHead'
 import SwitchButton from './Buttons/SwitchButton'
 import Wireframe from './Wireframe'
+
 export {
   Accordion,
   Aurora,
@@ -32,6 +34,7 @@ export {
   LinkButton,
   Logo,
   Navbar,
+  RangeInput,
   SeoHead,
   SwitchButton,
   Wireframe
