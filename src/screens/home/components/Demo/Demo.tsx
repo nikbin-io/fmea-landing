@@ -1,42 +1,17 @@
-import { useForm, Controller } from 'react-hook-form'
-import * as z from 'zod'
 import { useState } from 'react'
-import { ChevronRight, ChevronDown } from '~/components/Icons'
-import { zodResolver } from '@hookform/resolvers/zod'
+import { ChevronRight, ChevronDown, DownloadIcon } from '~/components/Icons'
 import {
-  FileUpload,
   Container,
   Button,
+  InputTooltip,
   SwitchButton,
   RangeInput
 } from '~/components'
 import PfmeaTable from '../PfmeaTable'
 import DfmeaTable from '../DfmeaTable'
 
-const validationSchema = z.object({
-  image_heavy_document: z.any()
-})
-
-type ValidationSchema = z.infer<typeof validationSchema>
-
 const Demo = () => {
   const [isPfmea, setIsPfmea] = useState<boolean>(false)
-
-  const {
-    control,
-    handleSubmit,
-    formState: { isSubmitting }
-  } = useForm<ValidationSchema>({
-    resolver: zodResolver(validationSchema),
-    defaultValues: {
-      image_heavy_document: null
-    }
-  })
-
-  const onSubmit = async (values: ValidationSchema) => {
-    try {
-    } catch (error: any) {}
-  }
 
   const handleCategorySwitch = (e: any) => {
     setIsPfmea(e)
@@ -80,28 +55,22 @@ const Demo = () => {
               </div>
             </div>
 
-            <form
-              flex="~ col"
-              gap="30px"
-              p="6"
-              onSubmit={handleSubmit(onSubmit)}>
+            <div flex="~ col" gap="30px" p="6">
               <div>
                 <RangeInput label="Failer Mode Requested" />
               </div>
 
-              <Controller
-                control={control}
-                name="image_heavy_document"
-                render={({ field, fieldState, formState }) => (
-                  <FileUpload
-                    {...field}
-                    accept="pdf"
-                    disabled={formState.isSubmitting}
-                    error={fieldState.error?.message}
-                    label="Upload Image-Heavy PDFs"
-                    maxSize={200}
-                    name="image_heavy_document"
-                    tooltipContent={
+              <div>
+                <div
+                  bg="transparent"
+                  color="gray-dark"
+                  flex="~ items-center justify-between"
+                  font="400"
+                  mb="10px"
+                  text="sm">
+                  Upload Image-Heavy PDFs
+                  <InputTooltip
+                    content={
                       <div p="y-15px x-5px">
                         <p>Helpful documents to upload:</p>
                         <ul mt="15px" pl="15px" space-y="1">
@@ -120,13 +89,52 @@ const Demo = () => {
                       </div>
                     }
                   />
-                )}
-              />
+                </div>
+
+                <div
+                  b="2 dashed gray/50"
+                  flex="~ col items-center justify-center"
+                  gap="10px"
+                  min-h="180px"
+                  p="6"
+                  rounded="lg">
+                  <p color="gray-dark">Drag and drop files here</p>
+
+                  <p text="gray xs center">
+                    Supported: pdf, jpg, jpeg, webp, csv, txt, xlsx, xls
+                  </p>
+
+                  <a
+                    b="1 solid gray/30 hover:gray/80"
+                    color="brand"
+                    cursor="pointer"
+                    download
+                    flex="~ items-center"
+                    gap="10px"
+                    href={
+                      isPfmea
+                        ? '/documents/assembly-manual.pdf'
+                        : '/documents/mosar.pdf'
+                    }
+                    mt="5px"
+                    p="12px"
+                    rounded="md"
+                    scale="hover:102"
+                    transition="all 200">
+                    <div>
+                      <DownloadIcon />
+                    </div>
+                    <span font="medium" text="sm">
+                      {isPfmea ? 'assembly-manual.pdf' : 'mosar.pdf'}
+                    </span>
+                  </a>
+                </div>
+              </div>
 
               <Button disabled type="submit">
                 Run FMEA Analysis
               </Button>
-            </form>
+            </div>
 
             <div
               bg="gray-lighter"

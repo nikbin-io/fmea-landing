@@ -7,6 +7,7 @@ export {
   ChevronRight,
   CheckIcon,
   CrossIcon,
+  DownloadIcon,
   GoogleIcon,
   InfoIcon,
   LinkedinIcon,
