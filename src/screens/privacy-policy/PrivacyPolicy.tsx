@@ -4,8 +4,8 @@ const PrivacyPolicy = () => {
   return (
     <>
       <SeoHead
-        description="Read our privacy policy to understand how we handle your data."
-        title="Privacy Policy"
+        description="Read our privacy policy to understand how Maudlin Works, LLC handles your data on fmeatool.ai."
+        title="Privacy Policy | FMEA Tool"
       />
 
       <div py="lg:40 30">
@@ -29,7 +29,7 @@ const PrivacyPolicy = () => {
                 Privacy Policy
               </h1>
 
-              <p text="base gray-dark">Last updated: November 8, 2024</p>
+              <p text="base gray-dark">Last updated: January 12, 2026</p>
             </div>
 
             <div
@@ -38,170 +38,119 @@ const PrivacyPolicy = () => {
               space-y="8">
               <div>
                 <h2>Introduction</h2>
-
                 <p>
-                  Welcome to our Privacy Policy. Your privacy is critically
-                  important to us. This Privacy Policy document contains types
-                  of information that is collected and recorded by our website
-                  and how we use it.
+                  Maudlin Works, LLC (&quot;we,&quot; &quot;our,&quot; or
+                  &quot;us&quot;) respects your privacy. This Privacy Policy
+                  explains how we collect, use, and protect your information
+                  when you visit our landing page <strong>fmeatool.ai</strong>{' '}
+                  (the &quot;Site&quot;).
                 </p>
               </div>
 
+              {/* Information We Collect */}
               <div>
                 <h2>Information We Collect</h2>
-
                 <p>
-                  We collect several different types of information for various
-                  purposes to provide and improve our service to you.
+                  We collect information to provide better services to all our
+                  users. This includes:
                 </p>
 
                 <ul list="disc" mt="2" pl="6" space-y="2">
                   <li>
-                    <strong font="semibold">Personal Data:</strong> While using
-                    our service, we may ask you to provide us with certain
-                    personally identifiable information that can be used to
-                    contact or identify you.
+                    <strong font="semibold">
+                      Voluntarily Provided Information:
+                    </strong>{' '}
+                    We collect personal information that you voluntarily provide
+                    to us (such as your name and email address) when you contact
+                    us via email at{' '}
+                    <span className="font-medium text-gray-darker">
+                      support@fmeatool.ai
+                    </span>{' '}
+                    or click on &quot;Get in Touch&quot; buttons.
                   </li>
 
                   <li>
-                    <strong font="semibold">Usage Data:</strong> We may also
-                    collect information on how the service is accessed and used.
-                  </li>
-
-                  <li>
-                    <strong font="semibold">Cookies and Tracking:</strong> We
-                    use cookies and similar tracking technologies to track
-                    activity on our service.
+                    <strong font="semibold">
+                      Automatically Collected Information:
+                    </strong>{' '}
+                    When you visit the Site, we may collect certain information
+                    automatically, including your IP address, browser type, and
+                    operating system, through the use of cookies or similar
+                    tracking technologies.
                   </li>
                 </ul>
               </div>
 
               <div>
                 <h2>How We Use Your Information</h2>
-
-                <p mb="4">We use the collected data for various purposes:</p>
+                <p mb="4">We use the information we collect solely to:</p>
 
                 <ul list="disc" mt="2" pl="6" space-y="2">
-                  <li>To provide and maintain our service</li>
-
-                  <li>To notify you about changes to our service</li>
-
-                  <li>To allow you to participate in interactive features</li>
-
-                  <li>To provide customer support</li>
-
                   <li>
-                    To gather analysis or valuable information to improve our
-                    service
+                    Respond to your inquiries, support requests, or business
+                    proposals
                   </li>
-
-                  <li>To monitor the usage of our service</li>
-
-                  <li>To detect, prevent and address technical issues</li>
+                  <li>
+                    Improve the performance and user experience of our Site
+                  </li>
+                  <li>Analyze website traffic and usage trends</li>
+                  <li>Detect, prevent, and address technical issues</li>
                 </ul>
               </div>
 
               <div>
-                <h2>Data Security</h2>
-
+                <h2>Sharing of Information</h2>
                 <p>
-                  The security of your data is important to us, but remember
-                  that no method of transmission over the Internet or method of
-                  electronic storage is 100% secure. While we strive to use
-                  commercially acceptable means to protect your Personal Data,
-                  we cannot guarantee its absolute security.
+                  We do not sell your personal information. We may share your
+                  information with trusted third-party service providers (e.g.,
+                  hosting providers, email services) solely for the purpose of
+                  operating our Site and conducting our business. These parties
+                  are obligated to keep your information confidential.
                 </p>
               </div>
 
               <div>
-                <h2>Third-Party Services</h2>
-
+                <h2>Data Security</h2>
                 <p>
-                  We may employ third-party companies and individuals to
-                  facilitate our service, provide the service on our behalf,
-                  perform service-related services, or assist us in analyzing
-                  how our service is used. These third parties have access to
-                  your Personal Data only to perform these tasks on our behalf
-                  and are obligated not to disclose or use it for any other
-                  purpose.
+                  We implement reasonable security measures to maintain the
+                  safety of your personal information. However, please be aware
+                  that no method of transmission over the Internet or method of
+                  electronic storage is 100% secure. While we strive to protect
+                  your data, we cannot guarantee its absolute security.
                 </p>
               </div>
 
               <div>
                 <h2>Your Rights</h2>
-
-                <p mb="4">
-                  You have certain rights regarding your personal information:
-                </p>
-
-                <ul list="disc" mt="2" pl="6" space-y="2">
-                  <li>
-                    The right to access – You have the right to request copies
-                    of your personal data
-                  </li>
-
-                  <li>
-                    The right to rectification – You have the right to request
-                    that we correct any information you believe is inaccurate
-                  </li>
-
-                  <li>
-                    The right to erasure – You have the right to request that we
-                    erase your personal data, under certain conditions
-                  </li>
-
-                  <li>
-                    The right to restrict processing – You have the right to
-                    request that we restrict the processing of your personal
-                    data
-                  </li>
-
-                  <li>
-                    The right to data portability – You have the right to
-                    request that we transfer the data that we have collected to
-                    another organization, or directly to you
-                  </li>
-                </ul>
-              </div>
-
-              <div>
-                <h2>Children&apos;s Privacy</h2>
-
                 <p>
-                  Our service does not address anyone under the age of 13. We do
-                  not knowingly collect personally identifiable information from
-                  children under 13. If you are a parent or guardian and you are
-                  aware that your child has provided us with Personal Data,
-                  please contact us.
+                  Depending on your location (e.g., GDPR for Europe, CCPA for
+                  California), you may have specific rights regarding your
+                  personal data, such as the right to access, correct, or delete
+                  your data.
                 </p>
-              </div>
-
-              <div>
-                <h2>Changes to This Privacy Policy</h2>
-
-                <p>
-                  We may update our Privacy Policy from time to time. We will
-                  notify you of any changes by posting the new Privacy Policy on
-                  this page and updating the &quotLast updated&quot date at the
-                  top of this Privacy Policy.
+                <p mt="2">
+                  To exercise these rights, please contact us at the email
+                  provided below.
                 </p>
               </div>
 
               <div>
                 <h2>Contact Us</h2>
-
                 <p>
                   If you have any questions about this Privacy Policy, please
                   contact us:
                 </p>
 
                 <ul list="disc" mt="4" pl="6" space-y="2">
-                  <li>By email: privacy@example.com</li>
-
                   <li>
-                    By visiting this page on our website:
-                    www.example.com/contact
+                    By email:{' '}
+                    <a
+                      className="text-primary hover:underline font-semibold"
+                      href="mailto:support@fmeatool.ai">
+                      support@fmeatool.ai
+                    </a>
                   </li>
+                  <li>Company: Maudlin Works, LLC (Delaware, US)</li>
                 </ul>
               </div>
             </div>

@@ -4,8 +4,8 @@ const CookiePolicy = () => {
   return (
     <>
       <SeoHead
-        description="Read our cookie policy to understand how we handle your data."
-        title="Cookie Policy"
+        description="Read our cookie policy to understand how Maudlin Works, LLC uses cookies on fmeatool.ai."
+        title="Cookie Policy | FMEA Tool"
       />
 
       <div py="lg:40 30">
@@ -29,7 +29,7 @@ const CookiePolicy = () => {
                 Cookie Policy
               </h1>
 
-              <p text="base gray-dark">Last updated: November 8, 2024</p>
+              <p text="base gray-dark">Last updated: January 12, 2026</p>
             </div>
 
             <div
@@ -38,170 +38,83 @@ const CookiePolicy = () => {
               space-y="8">
               <div>
                 <h2>Introduction</h2>
-
                 <p>
-                  Welcome to our Privacy Policy. Your privacy is critically
-                  important to us. This Privacy Policy document contains types
-                  of information that is collected and recorded by our website
-                  and how we use it.
+                  This Cookie Policy explains how{' '}
+                  <strong>Maudlin Works, LLC</strong> (&quot;we&quot;,
+                  &quot;us&quot;, and &quot;our&quot;) uses cookies and similar
+                  technologies to recognize you when you visit our website at{' '}
+                  <strong>fmeatool.ai</strong>. It explains what these
+                  technologies are and why we use them, as well as your rights
+                  to control our use of them.
                 </p>
               </div>
 
               <div>
-                <h2>Information We Collect</h2>
-
+                <h2>What are Cookies?</h2>
                 <p>
-                  We collect several different types of information for various
-                  purposes to provide and improve our service to you.
-                </p>
-
-                <ul list="disc" mt="2" pl="6" space-y="2">
-                  <li>
-                    <strong font="semibold">Personal Data:</strong> While using
-                    our service, we may ask you to provide us with certain
-                    personally identifiable information that can be used to
-                    contact or identify you.
-                  </li>
-
-                  <li>
-                    <strong font="semibold">Usage Data:</strong> We may also
-                    collect information on how the service is accessed and used.
-                  </li>
-
-                  <li>
-                    <strong font="semibold">Cookies and Tracking:</strong> We
-                    use cookies and similar tracking technologies to track
-                    activity on our service.
-                  </li>
-                </ul>
-              </div>
-
-              <div>
-                <h2>How We Use Your Information</h2>
-
-                <p mb="4">We use the collected data for various purposes:</p>
-
-                <ul list="disc" mt="2" pl="6" space-y="2">
-                  <li>To provide and maintain our service</li>
-
-                  <li>To notify you about changes to our service</li>
-
-                  <li>To allow you to participate in interactive features</li>
-
-                  <li>To provide customer support</li>
-
-                  <li>
-                    To gather analysis or valuable information to improve our
-                    service
-                  </li>
-
-                  <li>To monitor the usage of our service</li>
-
-                  <li>To detect, prevent and address technical issues</li>
-                </ul>
-              </div>
-
-              <div>
-                <h2>Data Security</h2>
-
-                <p>
-                  The security of your data is important to us, but remember
-                  that no method of transmission over the Internet or method of
-                  electronic storage is 100% secure. While we strive to use
-                  commercially acceptable means to protect your Personal Data,
-                  we cannot guarantee its absolute security.
+                  Cookies are small data files that are placed on your computer
+                  or mobile device when you visit a website. They are widely
+                  used by website owners in order to make their websites work,
+                  or to work more efficiently, as well as to provide reporting
+                  information.
                 </p>
               </div>
 
               <div>
-                <h2>Third-Party Services</h2>
-
-                <p>
-                  We may employ third-party companies and individuals to
-                  facilitate our service, provide the service on our behalf,
-                  perform service-related services, or assist us in analyzing
-                  how our service is used. These third parties have access to
-                  your Personal Data only to perform these tasks on our behalf
-                  and are obligated not to disclose or use it for any other
-                  purpose.
-                </p>
-              </div>
-
-              <div>
-                <h2>Your Rights</h2>
-
+                <h2>How We Use Cookies</h2>
                 <p mb="4">
-                  You have certain rights regarding your personal information:
+                  We use cookies for several reasons. Some cookies are required
+                  for technical reasons in order for our Website to operate, and
+                  we refer to these as &quot;essential&quot; or &quot;strictly
+                  necessary&quot; cookies. Other cookies enable us to track and
+                  target the interests of our users to enhance the experience on
+                  our Website.
                 </p>
 
                 <ul list="disc" mt="2" pl="6" space-y="2">
                   <li>
-                    The right to access – You have the right to request copies
-                    of your personal data
+                    <strong font="semibold">Essential Cookies:</strong> These
+                    are necessary for the Site to function properly and cannot
+                    be switched off in our systems.
                   </li>
 
                   <li>
-                    The right to rectification – You have the right to request
-                    that we correct any information you believe is inaccurate
-                  </li>
-
-                  <li>
-                    The right to erasure – You have the right to request that we
-                    erase your personal data, under certain conditions
-                  </li>
-
-                  <li>
-                    The right to restrict processing – You have the right to
-                    request that we restrict the processing of your personal
-                    data
-                  </li>
-
-                  <li>
-                    The right to data portability – You have the right to
-                    request that we transfer the data that we have collected to
-                    another organization, or directly to you
+                    <strong font="semibold">Analytics Cookies:</strong> We use
+                    these cookies (e.g., Google Analytics) to help us understand
+                    how visitors interact with the Site by collecting and
+                    reporting information anonymously.
                   </li>
                 </ul>
               </div>
 
               <div>
-                <h2>Children&apos;s Privacy</h2>
-
+                <h2>Your Choices</h2>
                 <p>
-                  Our service does not address anyone under the age of 13. We do
-                  not knowingly collect personally identifiable information from
-                  children under 13. If you are a parent or guardian and you are
-                  aware that your child has provided us with Personal Data,
-                  please contact us.
-                </p>
-              </div>
-
-              <div>
-                <h2>Changes to This Privacy Policy</h2>
-
-                <p>
-                  We may update our Privacy Policy from time to time. We will
-                  notify you of any changes by posting the new Privacy Policy on
-                  this page and updating the &quotLast updated&quot date at the
-                  top of this Privacy Policy.
+                  You have the right to decide whether to accept or reject
+                  cookies. You can set or amend your web browser controls to
+                  accept or refuse cookies. If you choose to reject cookies, you
+                  may still use our website though your access to some
+                  functionality and areas of our website may be restricted.
                 </p>
               </div>
 
               <div>
                 <h2>Contact Us</h2>
-
                 <p>
-                  If you have any questions about this Privacy Policy, please
-                  contact us:
+                  If you have any questions about our use of cookies or other
+                  technologies, please email us:
                 </p>
 
                 <ul list="disc" mt="4" pl="6" space-y="2">
-                  <li>By email: privacy@example.com</li>
-
                   <li>
-                    By visiting this page on our website:
-                    www.example.com/contact
+                    By email:{' '}
+                    <a
+                      className="text-primary hover:underline font-semibold"
+                      href="mailto:support@fmeatool.ai">
+                      support@fmeatool.ai
+                    </a>
                   </li>
+                  <li>Company: Maudlin Works, LLC</li>
                 </ul>
               </div>
             </div>
