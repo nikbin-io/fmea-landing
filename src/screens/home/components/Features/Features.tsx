@@ -1,62 +1,64 @@
 import { Container } from '~/components'
-
 import { FEATURES } from '~/constants/features'
 
-const Features = () => {
+const FeaturesSection = () => {
   return (
-    <section>
-      <div h="full" py="50px" w="full">
-        <Container>
+    <section bg="gray-light" py="20">
+      <Container>
+        <div mb="16" text="center">
+          <h2 font="bold" mb="4" text="3xl md:4xl brand">
+            Why FMEA TOOL?
+          </h2>
+          <p max-w="2xl" mx="auto" text="lg gray-dark">
+            Powerful features designed for engineering precision and data
+            security.
+          </p>
+        </div>
+
+        <div gap="8" grid="~ cols-1 md:cols-2 lg:cols-6">
           {FEATURES.map((feature, index) => (
             <div
-              gap="xl:50px 30px"
-              grid="~ lg:cols-2"
-              key={feature.id}
-              mb="lg:100px 50px">
+              b="1 white/50"
+              backdrop-blur="100px"
+              bg="white/15"
+              flex="~ col"
+              gap="4"
+              key={index}
+              lg={index === 3 ? 'col-start-2 col-span-2' : 'col-span-2'}
+              md={
+                index === 4
+                  ? 'col-span-2 w-full max-w-lg mx-auto'
+                  : 'col-span-1'
+              }
+              p="8"
+              rounded="3xl"
+              shadow="lg"
+              transition="all duration-300">
               <div
-                flex="~ col justify-center"
-                gap="lg:30px 20px"
-                order={index % 2 === 0 ? 0 : 'lg:1'}
-                p={index % 2 === 0 ? 'lg:r-50px' : 'lg:l-50px'}>
-                <h3
-                  line-height="normal"
-                  text="lg:left gray-dark center xl:2rem sm:1.5rem 1.3rem">
+                bg="gray-lighter"
+                flex="~ items-center justify-center"
+                h="14"
+                rounded="2xl"
+                text="gray-dark"
+                transition="colors duration-300"
+                w="14">
+                <div className="[&>svg]:w-7 [&>svg]:h-7">{feature.icon}</div>
+              </div>
+
+              <div>
+                <h3 font="bold" mb="3" text="xl brand">
                   {feature.title}
                 </h3>
-
-                <p
-                  line-height="normal"
-                  max-w="650px"
-                  mx="lg:0 auto"
-                  text="lg:left center sm:base sm gray-dark">
+                <p leading="relaxed" text="gray-dark">
                   {feature.description}
                 </p>
               </div>
-
-              <div
-                b="3 solid brand/70 rounded-xl"
-                max-w="650px"
-                mx="auto"
-                overflow="hidden"
-                position="relative">
-                <video
-                  autoPlay
-                  h="full"
-                  loop
-                  muted
-                  overflow="hidden"
-                  playsInline
-                  style={{ objectFit: 'cover' }}
-                  w="full">
-                  <source src={feature.video} type="video/mp4" />
-                </video>
-              </div>
             </div>
           ))}
-        </Container>
-      </div>
+        </div>
+      </Container>
     </section>
   )
 }
 
-export default Features
+export default FeaturesSection

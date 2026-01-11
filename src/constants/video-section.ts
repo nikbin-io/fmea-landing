@@ -1,11 +1,11 @@
-export interface FEATURES_TYPE {
+export interface VIDEO_CONTENT_TYPE {
   id: string
   title: string
   description: string
   video: string
 }
 
-export const FEATURES: FEATURES_TYPE[] = [
+export const VIDEO_CONTENT: VIDEO_CONTENT_TYPE[] = [
   {
     id: '01',
     title: 'Process Failure Mode and Effects Analysis',

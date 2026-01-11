@@ -23,6 +23,7 @@ const LinkButton = ({ label, hasEffect = false, ...rest }: LinkButtonProps) => {
       position="relative"
       scale="active:98 hover:101"
       shadow="hover:sm"
+      tracking="1px"
       transition="duration-200">
       {hasEffect && (
         <motion.div
