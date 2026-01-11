@@ -47,6 +47,12 @@ const CookiePolicy = () => {
                   technologies are and why we use them, as well as your rights
                   to control our use of them.
                 </p>
+                <p mt="2">
+                  <strong>Note:</strong> This policy applies only to this
+                  marketing website (fmeatool.ai). Our application at{' '}
+                  <span className="font-semibold">app.fmeatool.ai</span> has its
+                  own separate Cookie Policy available on that platform.
+                </p>
               </div>
 
               <div>
@@ -114,7 +120,7 @@ const CookiePolicy = () => {
                       support@fmeatool.ai
                     </a>
                   </li>
-                  <li>Company: Maudlin Works, LLC</li>
+                  <li>Company: Maudlin Works, LLC (Delaware, US)</li>
                 </ul>
               </div>
             </div>

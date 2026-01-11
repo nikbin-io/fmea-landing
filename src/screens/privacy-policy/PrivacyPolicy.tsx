@@ -45,6 +45,14 @@ const PrivacyPolicy = () => {
                   when you visit our landing page <strong>fmeatool.ai</strong>{' '}
                   (the &quot;Site&quot;).
                 </p>
+                <p mt="2">
+                  <strong>Note:</strong> This policy applies only to this
+                  marketing website (fmeatool.ai). If you create an account or
+                  use our application at{' '}
+                  <span className="font-semibold">app.fmeatool.ai</span>, that
+                  usage is governed by a separate Privacy Policy available on
+                  that platform.
+                </p>
               </div>
 
               {/* Information We Collect */}
