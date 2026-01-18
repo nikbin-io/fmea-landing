@@ -1,9 +1,11 @@
 //colors
-$black: #1f2937;
 $gray: #6b7280;
 $blue: #0073cf;
 $blue-light: #0c8feb;
 $green: #065f46;
+$gray-darker: #1f2937;
+$gray-dark: #374151;
+$brand: #232b32;
 
 .wrapper {
   position: fixed;
@@ -31,7 +33,7 @@ $green: #065f46;
   .title {
     font-size: 16px;
     font-weight: 600;
-    color: $black;
+    color: $brand;
     margin-bottom: 10px;
   }
 
@@ -40,12 +42,12 @@ $green: #065f46;
     line-height: 1.4;
     color: $gray;
     a {
-      color: $blue !important;
+      color: $gray-dark !important;
       text-decoration: underline;
       text-underline-offset: 2px;
 
       &:hover {
-        color: $blue-light !important;
+        color: $gray-darker !important;
       }
     }
   }
@@ -93,7 +95,7 @@ $green: #065f46;
   .modalTitle {
     font-size: 16px;
     font-weight: 700;
-    color: $black;
+    color: $brand;
   }
 }
 
@@ -114,7 +116,7 @@ $green: #065f46;
     justify-content: space-between;
     font-size: 16px;
     font-weight: 700;
-    color: $black;
+    color: $brand;
 
     .toggle {
       position: relative;
@@ -139,12 +141,14 @@ $green: #065f46;
       position: absolute;
       inset: 0;
       border-radius: 999px;
-      border: 1px solid rgba($black, 0.05);
-      background: rgba($black, 0.2);
-      transition: background-color 200ms ease, border-color 200ms ease;
+      border: 1px solid rgba($brand, 0.05);
+      background: rgba($brand, 0.2);
+      transition:
+        background-color 200ms ease,
+        border-color 200ms ease;
 
       &::before {
-        content: '';
+        content: "";
         position: absolute;
         top: 2px;
         left: 2px;
@@ -158,16 +162,11 @@ $green: #065f46;
     }
 
     .toggleInput:checked + .toggleSlider {
-      background: $blue;
-      border-color: rgba($blue, 0.5);
+      background: $brand;
     }
 
     .toggleInput:checked + .toggleSlider::before {
       transform: translateX(18px);
-    }
-
-    .toggleInput:focus-visible + .toggleSlider {
-      box-shadow: 0 0 0 3px rgba($blue, 0.25);
     }
 
     .toggleInput:disabled {
@@ -222,18 +221,18 @@ $green: #065f46;
   }
 
   &.buttonPrimary {
-    background: $blue;
+    background: $brand;
     color: #ffffff;
     &:hover {
-      background: $blue-light;
+      background: $gray-dark;
     }
   }
   &.buttonSecondary {
     background: white;
-    color: $black;
-    border-color: rgba($black, 0.2);
+    color: $brand;
+    border-color: rgba($brand, 0.2);
     &:hover {
-      border-color: rgba($black, 0.7);
+      border-color: rgba($brand, 0.7);
     }
   }
 }

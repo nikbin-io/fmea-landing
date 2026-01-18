@@ -13,19 +13,31 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://fmeatool.ai/guidelines/what-is-fmea</loc>
+    <lastmod>2025-12-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://fmeatool.ai/guidelines/about-our-product-and-best-practices</loc>
     <lastmod>2025-12-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://fmeatool.ai/guidelines/introduction</loc>
+    <loc>https://fmeatool.ai/privacy-policy</loc>
     <lastmod>2025-12-08</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://fmeatool.ai/privacy-policy</loc>
+    <loc>https://fmeatool.ai/terms-of-use</loc>
+    <lastmod>2025-12-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+   <url>
+    <loc>https://fmeatool.ai/cookie-policy</loc>
     <lastmod>2025-12-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>

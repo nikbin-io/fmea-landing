@@ -1,21 +1,31 @@
 {
-  "name": "",
-  "short_name": "",
+  "name": "FMEA Tool: AI Risk Analysis Software",
+  "short_name": "FMEA Tool",
+  "description": "Automate AIAG & VDA compliant DFMEA & PFMEA creation with AI.",
   "icons": [
     {
       "src": "/192x192.png",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any"
     },
     {
       "src": "/512x512.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ],
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#ffffff"
+  "background_color": "#f3f4f6",
+  "theme_color": "#f3f4f6",
+  "orientation": "portrait"
 }

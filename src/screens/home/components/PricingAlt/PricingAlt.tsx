@@ -35,14 +35,12 @@ const CARDS = [
           'Export to common formats for reporting and stakeholder updates.'
       },
       {
-        isEnabled: false,
-        description:
-          'Audit-friendly history, approvals, and change tracking for compliance.'
+        isEnabled: true,
+        description: 'Excel FMEA'
       },
       {
-        isEnabled: false,
-        description:
-          'Role-based access control and permissions for larger organizations.'
+        isEnabled: true,
+        description: 'Advanced agentic analysis workflow'
       }
     ],
     link: {
@@ -56,33 +54,23 @@ const CARDS = [
     features: [
       {
         isEnabled: true,
-        description:
-          'Core FMEA template with the essential fields ready to use for a simple workflow.'
+        description: 'Specific or advanced requirements'
       },
       {
         isEnabled: true,
-        description:
-          'Basic risk scoring and quick prioritization to keep teams aligned across teams.'
+        description: 'Custom needs beyond standard plans'
       },
       {
         isEnabled: true,
-        description:
-          'Lightweight collaboration: share links, review changes, and leave notes.'
+        description: 'Up to 200 complete FMEA entries per run'
       },
       {
         isEnabled: true,
-        description:
-          'Export to common formats for reporting and stakeholder updates.'
+        description: 'Excel FMEA (industry-aligned or customer templates)'
       },
       {
         isEnabled: true,
-        description:
-          'Audit-friendly history, approvals, and change tracking for compliance.'
-      },
-      {
-        isEnabled: true,
-        description:
-          'Role-based access control and permissions for larger organizations.'
+        description: 'Advanced agentic analysis workflow'
       }
     ],
     link: {
@@ -128,34 +116,31 @@ const Pricing = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 place-items-center">
+        <div
+          className="grid grid-cols-1 gap-10 place-items-center"
+          max-w="1200px"
+          mx="auto">
           {CARDS.map((card) => {
             const isStandard = card.id === 'standard'
 
             return (
-              <div
-                key={card.id}
-                position="relative"
-                style={{
-                  maxWidth: 550
-                }}
-                w="full">
+              <div key={card.id} position="relative" w="full">
                 <div
                   className="ribbon"
                   font="bold"
-                  mb="-20px"
-                  py="3"
+                  mb="-15px"
+                  py="5"
                   text="center white xl"
                   tracking="wide">
                   {card.title}
                 </div>
 
                 <div px="1em">
-                  <div bg="white">
+                  <div bg="white" flex="~ " gap="10" p="10">
                     <div
-                      flex="~ col items-center justify-center"
-                      min-h="240px"
-                      p="t-6 b-6 x-6">
+                      border="0 r-3 solid gray-lighter"
+                      flex="~ shrink-0 col items-center justify-center"
+                      pr="10">
                       {isStandard ? (
                         <>
                           <div
@@ -165,14 +150,14 @@ const Pricing = () => {
                             flex="~ items-center justify-center"
                             font="bold"
                             h="30px"
-                            mb="6"
+                            mb="30px"
                             rounded="full"
                             text="12px white"
                             w="200px">
                             LAUNCH SALE: LIMITED TIME
                           </div>
 
-                          <div className="grid grid-cols-4 gap-3 w-full">
+                          <div className="grid grid-cols-2 gap-3 w-full">
                             {CREDIT_PACKS.map((pack) => {
                               const isSelected = selectedPack.id === pack.id
                               return (
@@ -192,7 +177,7 @@ const Pricing = () => {
                                   rounded="xl"
                                   shadow={
                                     isSelected
-                                      ? '[0_0_18px_rgba(1,10,50,0.32)]'
+                                      ? '[0_0_18px_rgba(1,10,50,0.2)]'
                                       : 'sm'
                                   }
                                   transition="all duration-200"
@@ -218,27 +203,24 @@ const Pricing = () => {
                                       flex="~ items-center justify-center"
                                       font="bold"
                                       gap="2"
-                                      line-height="tight"
-                                      text="lg center brand">
+                                      line-height="30px"
+                                      text="3xl center brand">
                                       {pack.credits}
 
                                       {pack.bonus > 0 && `+${pack.bonus}`}
                                     </div>
-                                    <p font="normal" text="sm gray">
+                                    <p font="normal" text="xl gray">
                                       Credits
                                     </p>
                                   </div>
 
-                                  <div
-                                    flex="~ items-baseline"
-                                    gap="1"
-                                    text="sm">
+                                  <div flex="~ items-baseline" gap="1">
                                     <span
                                       className="line-through decoration-brand decoration-2"
-                                      text="gray base">
+                                      text="gray xl">
                                       ${pack.oldPrice}
                                     </span>
-                                    <span font="bold" text="brand lg">
+                                    <span font="bold" text="brand 2xl">
                                       ${pack.price}
                                     </span>
                                   </div>
@@ -246,61 +228,93 @@ const Pricing = () => {
                               )
                             })}
                           </div>
-                          <p mt="3" text="xs gray center">
+                          <p font="500" mt="3" text="sm gray-dark center">
                             1 Credit = 1 Failure Mode
                           </p>
                         </>
                       ) : (
-                        <p font="bold center" text="4xl">
-                          Get a Quote
-                        </p>
+                        <div
+                          flex="~ col items-center justify-center"
+                          max-w="300px"
+                          w="full">
+                          <p font="bold center" mb="6" text="4xl brand">
+                            Get a Quote
+                          </p>
+
+                          <div
+                            bg="gray-lighter"
+                            border="2 dashed gray-light"
+                            p="6"
+                            rounded="xl"
+                            text="center">
+                            <p line-height="relaxed" text="sm gray-dark">
+                              Tailored solutions for{' '}
+                              <strong font="semibold" text="gray-dark">
+                                high-volume
+                              </strong>{' '}
+                              needs, enterprise security, and dedicated support.
+                            </p>
+                          </div>
+                        </div>
                       )}
                     </div>
 
-                    <div className="flex flex-col">
-                      {card.features.map((feature, index) => {
-                        return (
-                          <div
-                            border="b-1 solid gray-lighter"
-                            key={`${card.id}-${index}`}
-                            p="y-3 sm:x-6 x-2">
-                            <div flex="~ items-start" gap="10px">
-                              <div
-                                className="[&>svg]:h-5 [&>svg]:w-5"
-                                color={feature.isEnabled ? 'green' : 'gray/50'}>
-                                {feature.isEnabled ? (
-                                  <CheckIcon />
-                                ) : (
-                                  <CrossIcon />
-                                )}
-                              </div>
+                    <div flex="~ 1 col justify-between">
+                      <div flex="~ items-center" gap="4" mb="6">
+                        <span font="bold" text="xs gray-400" uppercase>
+                          WHAT&apos;S INCLUDED
+                        </span>
+                        <div border="t-1 solid gray-light" flex="grow" />
+                      </div>
 
-                              <div
-                                color={
-                                  feature.isEnabled ? 'gray-dark' : 'gray/50'
-                                }
-                                line-height="normal"
-                                mt="-3px"
-                                text="sm">
-                                {feature.description}
+                      <div className="grid grid-cols-1 gap-3 ">
+                        {card.features.map((feature, index) => {
+                          return (
+                            <div key={`${card.id}-${index}`} p="y-1 ">
+                              <div flex="~ items-start" gap="10px">
+                                <div
+                                  className="[&>svg]:h-5 [&>svg]:w-5"
+                                  color={
+                                    feature.isEnabled ? 'green' : 'gray-dark'
+                                  }>
+                                  {feature.isEnabled ? (
+                                    <CheckIcon />
+                                  ) : (
+                                    <CrossIcon />
+                                  )}
+                                </div>
+
+                                <div
+                                  color={
+                                    feature.isEnabled ? 'gray-dark' : 'gray/60'
+                                  }
+                                  line-height="normal"
+                                  mt="-3px"
+                                  text="sm">
+                                  {feature.description}
+                                </div>
                               </div>
                             </div>
-                          </div>
-                        )
-                      })}
-                    </div>
+                          )
+                        })}
+                      </div>
 
-                    <div p="sm:x-6 x-3 y-6">
-                      <LinkButton
-                        h="45px"
-                        hasEffect
-                        href={card.link.href}
-                        label={
-                          isStandard
-                            ? `Buy ${selectedPack.credits} Credits - $${selectedPack.price}`
-                            : card.link.label
-                        }
-                      />
+                      <div
+                        flex="~ items-center justify-center"
+                        mt="auto"
+                        p="sm:x-6 x-3 t-6">
+                        <LinkButton
+                          h="45px"
+                          hasEffect
+                          href={card.link.href}
+                          label={
+                            isStandard
+                              ? `Buy ${selectedPack.credits} Credits - $${selectedPack.price}`
+                              : card.link.label
+                          }
+                          w="300px"
+                        />
+                      </div>
                     </div>
                   </div>
 

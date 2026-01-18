@@ -7,15 +7,20 @@ type SeoHeadProps = {
 }
 
 const SeoHead = ({
-  title = 'AI FMEA Generator: Automate Your Risk Analysis',
-  description = '',
+  title = 'AI FMEA Software & Automation',
+  description = 'Streamline risk analysis with AI. Create AIAG & VDA compliant DFMEA & PFMEA reports from PDFs instantly. Export to Excel with our automated FMEA tool.',
   ogImage = 'https://fmeatool.ai/1200x630.png'
 }: SeoHeadProps) => {
   const fullTitle = `${title} | FMEA Tool`
+
   return (
     <Head>
       <title>{fullTitle}</title>
       <meta content={description} name="description" />
+      <meta
+        content="AI FMEA Software, Automated FMEA Tool, Design FMEA, Process FMEA, AIAG VDA Compliance, Risk Analysis Automation, FMEA Excel Export"
+        name="keywords"
+      />
 
       <meta content="website" property="og:type" />
       <meta content={fullTitle} property="og:title" />
@@ -28,6 +33,8 @@ const SeoHead = ({
       <meta content={fullTitle} name="twitter:title" />
       <meta content={description} name="twitter:description" />
       <meta content={ogImage} name="twitter:image" />
+
+      <link href="https://fmeatool.ai" rel="canonical" />
     </Head>
   )
 }

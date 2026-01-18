@@ -1,5 +1,14 @@
-import { Demo, Faq, Hero, Features, Pricing, VideoSection } from './components'
+import {
+  Demo,
+  Faq,
+  Hero,
+  Features,
+  VideoSection,
+  PricingAlt
+} from './components'
+
 import { ContactBanner } from '~/components'
+
 const Home = () => {
   return (
     <div>
@@ -11,7 +20,7 @@ const Home = () => {
 
       <VideoSection />
 
-      <Pricing />
+      <PricingAlt />
 
       <Faq />
 

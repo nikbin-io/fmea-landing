@@ -72,6 +72,14 @@ export default defineConfig({
       '5xl': ['48px', '56px'],
       '6xl': ['60px', '70px'],
       '7xl': ['72px', '86px']
+    },
+    animation: {
+      keyframes: {
+        sale: '{0%, 100% { background-color: #006000;} 50% { background-color: #010A32;}}'
+      },
+      durations: {
+        sale: '2s'
+      }
     }
   }
 })

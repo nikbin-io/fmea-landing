@@ -5,10 +5,32 @@ import {
   Button,
   InputTooltip,
   SwitchButton,
-  RangeInput
+  RangeInput,
+  LinkButton
 } from '~/components'
 import PfmeaTable from '../PfmeaTable'
 import DfmeaTable from '../DfmeaTable'
+
+const DFMEA_DOCS = [
+  {
+    url: '/documents/dfmea/MOSAR-WP1-D1.4-SA_1.0.0-System-Requirements-Document.pdf',
+    label: 'MOSAR...System-Requirements-Document.pdf'
+  },
+  {
+    url: '/documents/dfmea/MOSAR-WP2-D2.4-SA_1.1.0-Preliminary-Design-Document.pdf',
+    label: 'MOSAR...Preliminary-Design-Document.pdf'
+  },
+  {
+    url: '/documents/dfmea/MOSAR-WP2-D2.5-SA_1.1.0-HOTDOCK-Preliminary-Design-Definition-File.pdf',
+    label: 'MOSAR...Design-Definition-File.pdf'
+  }
+]
+const PFMEA_DOCS = [
+  {
+    url: '/documents/pfmea/2.4_Assembly_Manual.pdf',
+    label: '2.4_Assembly_Manual.pdf'
+  }
+]
 
 const Demo = () => {
   const [isPfmea, setIsPfmea] = useState<boolean>(false)
@@ -18,13 +40,42 @@ const Demo = () => {
   }
 
   return (
-    <div py="10">
+    <section py="10">
       <Container>
-        <div gap="50px" grid="~ md:cols-6 cols-1" m="b-50px t-10px">
+        <div mb="sm:16 8" text="center">
+          <p case="upper" font="bold" mb="3" text="brand" tracking="widest">
+            From Technical Docs to Excel
+          </p>
+
+          <h2
+            font="bold"
+            line-height="tight"
+            mb="sm:8 6"
+            text="center lg:4xl 2rem gray-dark ">
+            {' '}
+            Real-World DFMEA & PFMEA Examples
+          </h2>
+
+          <p max-w="5xl" mx="auto" text="lg gray">
+            Toggle below to view a generated Design FMEA (DFMEA) example or a
+            Process FMEA (PFMEA) example. See how raw technical PDFs are
+            instantly transformed into structured, AIAG & VDA compliant risk
+            analysis tables ready for Excel export.
+          </p>
+        </div>
+
+        <div
+          gap="50px"
+          grid="~ md:cols-6 cols-1"
+          h="md:700px"
+          m="b-50px t-10px"
+          position="relative">
           <div
             bg="gray-lighter"
             border="1 gray-light"
             className="lg:col-span-2 md:col-span-3"
+            flex="~ col"
+            h="full"
             overflow="visible"
             position="relative"
             rounded="2xl"
@@ -34,10 +85,11 @@ const Demo = () => {
 
               <div
                 b="0 b-1 solid gray-light"
-                flex="~ col items-center"
+                flex="~ justify-center col items-center"
                 gap="4"
+                h="130px"
                 mb="2"
-                p="6">
+                p="x-6">
                 <h2 font="bold" text="2xl center gray-darker">
                   Configuration
                 </h2>
@@ -55,19 +107,20 @@ const Demo = () => {
               </div>
             </div>
 
-            <div flex="~ col" gap="30px" p="6">
+            <div flex="~ 1 col" gap="30px" p="6">
               <div>
                 <RangeInput label="Failer Mode Requested" />
               </div>
 
-              <div>
+              <div flex="~ 1 col items-center justify-between">
                 <div
                   bg="transparent"
                   color="gray-dark"
                   flex="~ items-center justify-between"
                   font="400"
                   mb="10px"
-                  text="sm">
+                  text="sm"
+                  w="full">
                   Upload Image-Heavy PDFs
                   <InputTooltip
                     content={
@@ -93,47 +146,49 @@ const Demo = () => {
 
                 <div
                   b="2 dashed gray/50"
-                  flex="~ col items-center justify-center"
+                  flex="~ 1 col items-center justify-center"
                   gap="10px"
                   min-h="180px"
                   p="6"
-                  rounded="lg">
-                  <p color="gray-dark">Drag and drop files here</p>
-
+                  rounded="lg"
+                  w="full">
                   <p text="gray xs center">
                     Supported: pdf, jpg, jpeg, webp, csv, txt, xlsx, xls
                   </p>
 
-                  <a
-                    b="1 solid gray/30 hover:gray/80"
-                    color="brand"
-                    cursor="pointer"
-                    download
-                    flex="~ items-center"
-                    gap="10px"
-                    href={
-                      isPfmea
-                        ? '/documents/assembly-manual.pdf'
-                        : '/documents/mosar.pdf'
-                    }
-                    mt="5px"
-                    p="12px"
-                    rounded="md"
-                    scale="hover:102"
-                    transition="all 200">
-                    <div>
-                      <DownloadIcon />
-                    </div>
-                    <span font="medium" text="sm">
-                      {isPfmea ? 'assembly-manual.pdf' : 'mosar.pdf'}
-                    </span>
-                  </a>
+                  {(isPfmea ? PFMEA_DOCS : DFMEA_DOCS).map((doc) => (
+                    <a
+                      b="1 solid gray/30 hover:gray/80"
+                      color="gray hover:brand"
+                      cursor="pointer"
+                      download
+                      flex="~ items-center"
+                      gap="10px"
+                      href={doc.url}
+                      key={doc.url}
+                      mt="5px"
+                      p="12px"
+                      rounded="md"
+                      scale="active:99"
+                      transition="all 200"
+                      w="full">
+                      <div>
+                        <DownloadIcon />
+                      </div>
+                      <span font="medium" text="sm">
+                        {doc.label}
+                      </span>
+                    </a>
+                  ))}
                 </div>
               </div>
 
-              <Button disabled type="submit">
-                Run FMEA Analysis
-              </Button>
+              <LinkButton
+                h="45px"
+                hasEffect
+                href="https://app.fmeatool.ai"
+                label="Start a Free Trial"
+              />
             </div>
 
             <div
@@ -163,8 +218,7 @@ const Demo = () => {
           <div
             border="1 gray-light"
             className="lg:col-span-4 md:col-span-3"
-            h="full"
-            max-h="575px"
+            h="md:full 700px"
             overflow="hidden"
             rounded="2xl"
             shadow="lg">
@@ -174,10 +228,20 @@ const Demo = () => {
                   bg-gradient="radial from-gray to-gray-darker"
                   h="8px"></div>
 
-                <div p="6">
+                <div
+                  b="0 b-1 solid gray-light"
+                  flex="~ col items-center justify-center"
+                  gap="4"
+                  h="130px"
+                  p="x-6">
                   <h2 font="bold" text="2xl center gray-darker">
                     {isPfmea ? 'Process' : 'Design'} FMEA Results
                   </h2>
+
+                  <p text="sm gray">
+                    Items are prioritized by Action Priority (High to Low)
+                    rather than numerical ID order.
+                  </p>
                 </div>
               </div>
 
@@ -186,7 +250,7 @@ const Demo = () => {
           </div>
         </div>
       </Container>
-    </div>
+    </section>
   )
 }
 
