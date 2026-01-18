@@ -39,8 +39,10 @@ const Navbar = () => {
             <LinkButton
               hasEffect
               href="https://app.fmeatool.ai"
-              label="Generator"
+              label="Launch App"
             />
+
+            <LinkButton href="https://app.fmeatool.ai" label="Sign Up" />
           </div>
 
           <button
@@ -97,8 +99,10 @@ const Navbar = () => {
             <LinkButton
               hasEffect
               href="https://app.fmeatool.ai"
-              label="Generator"
+              label="Launch App"
             />
+
+            <LinkButton href="https://app.fmeatool.ai" label="Sign Up" />
           </div>
         </div>
       </div>

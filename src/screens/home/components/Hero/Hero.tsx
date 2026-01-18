@@ -18,13 +18,14 @@ export default function Hero() {
           z="1">
           <div flex="~ col items-center">
             <h1 font="bold" mb="6" text="3xl sm:6xl center lg:7xl gray-darker">
-              Iterative FMEA Generator
+              AI-Powered FMEA Software{' '}
             </h1>
 
             <p max-w="4xl" text="lg:xl lg center gray-dark">
-              This tool uses a multi-stage AI process to generate, critique, and
-              refine a Failer Mode and Effect Analysis(FMEA) from technical
-              documents
+              Automate the creation of AIAG & VDA compliant DFMEA and PFMEA
+              reports. Transform your technical documents into structured{' '}
+              <span font="semibold">Failure Mode and Effects Analysis</span> and
+              export to Excel effortlessly.
             </p>
 
             <div

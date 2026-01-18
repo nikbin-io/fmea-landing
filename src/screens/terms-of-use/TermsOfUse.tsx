@@ -11,7 +11,7 @@ const TermsOfUse = () => {
       <div py="lg:40 30">
         <Container>
           <div
-            bg="gray-light"
+            bg="gray-lighter"
             leading="relaxed"
             max-w="5xl"
             mx="auto"

@@ -40,7 +40,7 @@ const Demo = () => {
   }
 
   return (
-    <section py="10">
+    <section p="b-30 t-20">
       <Container>
         <div mb="sm:16 8" text="center">
           <p case="upper" font="bold" mb="3" text="brand" tracking="widest">

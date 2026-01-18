@@ -1,11 +1,4 @@
-import {
-  Demo,
-  Faq,
-  Hero,
-  Features,
-  VideoSection,
-  PricingAlt
-} from './components'
+import { Demo, Faq, Hero, Features, VideoSection, Pricing } from './components'
 
 import { ContactBanner } from '~/components'
 
@@ -20,7 +13,7 @@ const Home = () => {
 
       <VideoSection />
 
-      <PricingAlt />
+      <Pricing />
 
       <Faq />
 

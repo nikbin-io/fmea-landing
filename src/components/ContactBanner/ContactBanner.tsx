@@ -3,13 +3,12 @@ import { MapPinIcon, EnvelopeIcon } from '~/components/Icons'
 
 const ContactBanner = () => {
   return (
-    <section py="10">
+    <section mb="20" py="10">
       <Container>
         <div
           b="1 solid gray-light"
           bg-gradient="to-br from-white to-gray-lighter"
           flex="~ col lg:row items-stretch justify-between"
-          gap="sm:50px 30px"
           max-w="1200px"
           mx="auto"
           overflow="hidden"
@@ -17,7 +16,7 @@ const ContactBanner = () => {
           position="relative"
           rounded="2xl"
           shadow="lg">
-          <div flex="~ col items-start" gap="6" max-w="650px">
+          <div flex="~ col items-start" gap="6" max-w="750px">
             <div>
               <h2 font="bold" mb="3" text="sm:3xl 2xl brand">
                 Get in Touch
@@ -38,9 +37,11 @@ const ContactBanner = () => {
             />
           </div>
 
-          <div b="0 lg:l-2 l-0 lg:t-0 t-1 solid gray-light"></div>
-
-          <div flex="~ col" gap="8">
+          <div
+            b="0 lg:l-2 l-0 lg:t-0 t-1 solid gray-light"
+            flex="~ col"
+            gap="8"
+            pl="sm:12">
             <div flex="~ col" gap="2">
               <div flex="~ items-center" gap="3" text="brand">
                 <div

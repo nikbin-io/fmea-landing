@@ -84,7 +84,7 @@ const Pricing = () => {
   const [selectedPack, setSelectedPack] = useState(CREDIT_PACKS[1])
 
   return (
-    <section id="pricing" p="b-30" position="relative">
+    <section id="pricing" m="b-30" p="y-10" position="relative">
       <div
         bg="blue-900/5"
         blur="120px"
@@ -117,7 +117,7 @@ const Pricing = () => {
         </div>
 
         <div
-          className="grid grid-cols-1 gap-10 place-items-center"
+          className="grid grid-cols-1 gap-20 place-items-center"
           max-w="1200px"
           mx="auto">
           {CARDS.map((card) => {

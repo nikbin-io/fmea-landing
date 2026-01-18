@@ -3,12 +3,13 @@ import { FEATURES } from '~/constants/features'
 
 const FeaturesSection = () => {
   return (
-    <section bg="gray-light" py="20">
+    <section bg="gray-light" py="30">
       <Container>
         <div mb="16" text="center">
-          <h2 font="bold" mb="4" text="3xl md:4xl brand">
+          <h2 font="bold" mb="4" text="center lg:4xl 2rem brand ">
             Why FMEA TOOL?
           </h2>
+
           <p max-w="2xl" mx="auto" text="lg gray-dark">
             Powerful features designed for engineering precision and data
             security.
