@@ -1,7 +1,6 @@
 import Accordion from './Accordion'
 import Aurora from './Aurora'
 import Button from './Buttons/Button'
-import Checkbox from './Checkbox'
 import ContactBanner from './ContactBanner'
 import Container from './Container'
 import CookieConsent from './CookieConsent'
@@ -21,7 +20,6 @@ export {
   Accordion,
   Aurora,
   Button,
-  Checkbox,
   ContactBanner,
   Container,
   CookieConsent,

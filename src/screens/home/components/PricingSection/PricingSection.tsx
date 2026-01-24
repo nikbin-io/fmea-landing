@@ -7,6 +7,7 @@ import { CheckIcon } from '~/components/Icons'
 const Discount = dynamic(() => import('~/components/Discount'), {
   ssr: false
 })
+
 const CREDIT_PACKS = [
   { id: 1, credits: 50, bonus: 0, price: 25, oldPrice: 50 },
   { id: 2, credits: 100, bonus: 10, price: 50, oldPrice: 100, popular: true },
@@ -48,7 +49,7 @@ const CARDS = [
   }
 ]
 
-const Pricing = () => {
+const PricingSection = () => {
   const [selectedPack, setSelectedPack] = useState(CREDIT_PACKS[1])
 
   return (
@@ -300,4 +301,4 @@ const Pricing = () => {
   )
 }
 
-export default Pricing
+export default PricingSection
