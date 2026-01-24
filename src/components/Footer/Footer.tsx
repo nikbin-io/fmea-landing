@@ -1,6 +1,5 @@
-import { SOCIAL_LINKS } from '~/constants/social-media'
 import Link from 'next/link'
-import { FOOTER_NAV_LINKS } from '~/constants/footer'
+import { FOOTER_NAV_LINKS, SOCIAL_LINKS } from '~/constants/navigation'
 import { Container, Logo } from '~/components'
 
 const Footer = () => {

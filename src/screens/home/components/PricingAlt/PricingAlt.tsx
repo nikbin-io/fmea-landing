@@ -1,12 +1,17 @@
+import dynamic from 'next/dynamic'
 import { useState } from 'react'
-import { Container, LinkButton } from '~/components'
-import { CheckIcon, CrossIcon } from '~/components/Icons'
 
+import { Container, LinkButton } from '~/components'
+import { CheckIcon } from '~/components/Icons'
+
+const Discount = dynamic(() => import('~/components/Discount'), {
+  ssr: false
+})
 const CREDIT_PACKS = [
   { id: 1, credits: 50, bonus: 0, price: 25, oldPrice: 50 },
   { id: 2, credits: 100, bonus: 10, price: 50, oldPrice: 100, popular: true },
-  { id: 3, credits: 250, bonus: 35, price: 125, oldPrice: 250 },
-  { id: 4, credits: 500, bonus: 100, price: 250, oldPrice: 500 }
+  { id: 3, credits: 250, bonus: 50, price: 125, oldPrice: 250 },
+  { id: 4, credits: 1000, bonus: 500, price: 500, oldPrice: 1000 }
 ]
 
 const CARDS = [
@@ -14,34 +19,12 @@ const CARDS = [
     id: 'standard',
     title: 'Standard',
     features: [
-      {
-        isEnabled: true,
-        description:
-          'Core FMEA template with the essential fields ready to use for a simple workflow.'
-      },
-      {
-        isEnabled: true,
-        description:
-          'Basic risk scoring and quick prioritization to keep teams aligned across teams.'
-      },
-      {
-        isEnabled: true,
-        description:
-          'Lightweight collaboration: share links, review changes, and leave notes.'
-      },
-      {
-        isEnabled: true,
-        description:
-          'Export to common formats for reporting and stakeholder updates.'
-      },
-      {
-        isEnabled: true,
-        description: 'Excel FMEA'
-      },
-      {
-        isEnabled: true,
-        description: 'Advanced agentic analysis workflow'
-      }
+      'Advanced agentic analysis workflow featuring deep internal quality checks',
+      'Full data privacy and security compliance',
+      'Supports input formats: PDF, JPEG, WebP, CSV, XLSX, XLS, TXT',
+      'Industry-aligned downloadable Excel output & instant email delivery',
+      'Customer support backed by Quality Engineers',
+      'Generate up to 200 complete fmea entries in a single run'
     ],
     link: {
       href: '#',
@@ -52,26 +35,11 @@ const CARDS = [
     id: 'custom',
     title: 'Custom',
     features: [
-      {
-        isEnabled: true,
-        description: 'Specific or advanced requirements'
-      },
-      {
-        isEnabled: true,
-        description: 'Custom needs beyond standard plans'
-      },
-      {
-        isEnabled: true,
-        description: 'Up to 200 complete FMEA entries per run'
-      },
-      {
-        isEnabled: true,
-        description: 'Excel FMEA (industry-aligned or customer templates)'
-      },
-      {
-        isEnabled: true,
-        description: 'Advanced agentic analysis workflow'
-      }
+      'Includes all Standard features',
+      'On-premise (local) deployment options',
+      'Custom FMEA template integration',
+      'Tailored solutions for advanced requirements',
+      'Dedicated account manager & SLA'
     ],
     link: {
       href: '/contact',
@@ -116,60 +84,53 @@ const Pricing = () => {
           </p>
         </div>
 
-        <div
-          className="grid grid-cols-1 gap-20 place-items-center"
-          max-w="1200px"
-          mx="auto">
+        <div max-w="1200px" mx="auto">
           {CARDS.map((card) => {
             const isStandard = card.id === 'standard'
 
             return (
-              <div key={card.id} position="relative" w="full">
+              <div key={card.id} mb="20" position="relative" w="full">
                 <div
                   className="ribbon"
                   font="bold"
                   mb="-15px"
                   py="5"
-                  text="center white xl"
+                  text="center white 2xl"
                   tracking="wide">
                   {card.title}
                 </div>
 
                 <div px="1em">
-                  <div bg="white" flex="~ " gap="10" p="10">
-                    <div
-                      border="0 r-3 solid gray-lighter"
-                      flex="~ shrink-0 col items-center justify-center"
-                      pr="10">
+                  <div
+                    bg="white"
+                    className="grid lg:grid-cols-2"
+                    gap="xl:25 10"
+                    p="y-10 sm:x-10 x-3">
+                    <div flex="~ col items-center justify-center" w="full">
                       {isStandard ? (
                         <>
                           <div
-                            animated=" infinite"
-                            bg="#010A32"
-                            className=" animate-sale"
-                            flex="~ items-center justify-center"
-                            font="bold"
-                            h="30px"
-                            mb="30px"
-                            rounded="full"
-                            text="12px white"
-                            w="200px">
-                            LAUNCH SALE: LIMITED TIME
+                            flex="~ justify-center"
+                            mb="lg:30px 40px"
+                            w="full">
+                            <Discount />
                           </div>
 
-                          <div className="grid grid-cols-2 gap-3 w-full">
+                          <div
+                            className="grid xs:grid-cols-2 gap-5 w-full"
+                            max-w="500px">
                             {CREDIT_PACKS.map((pack) => {
                               const isSelected = selectedPack.id === pack.id
                               return (
                                 <button
                                   b={
                                     isSelected
-                                      ? '2 solid brand'
+                                      ? '2 solid purple-dark'
                                       : '2 solid gray-light'
                                   }
                                   bg={isSelected ? 'white' : 'white'}
                                   cursor="pointer"
-                                  flex="~ col items-center justify-center"
+                                  flex="~ col items-center justify-between"
                                   key={pack.id}
                                   outline="none"
                                   p="4"
@@ -185,7 +146,11 @@ const Pricing = () => {
                                   onClick={() => setSelectedPack(pack)}>
                                   {pack.popular && (
                                     <span
-                                      bg={isSelected ? 'brand' : 'gray-light'}
+                                      bg={
+                                        isSelected
+                                          ? 'purple-dark'
+                                          : 'gray-light'
+                                      }
                                       color={isSelected ? 'white' : 'brand'}
                                       font="bold"
                                       line-height="10px"
@@ -198,25 +163,29 @@ const Pricing = () => {
                                     </span>
                                   )}
 
-                                  <div m="y-1">
+                                  <div m="t-1 lg:b-3 b-4" space-y="xs:2 3">
                                     <div
-                                      flex="~ items-center justify-center"
                                       font="bold"
-                                      gap="2"
-                                      line-height="30px"
-                                      text="3xl center brand">
-                                      {pack.credits}
-
-                                      {pack.bonus > 0 && `+${pack.bonus}`}
+                                      line-height="28px"
+                                      text="2xl center brand">
+                                      {pack.credits} Credits
                                     </div>
-                                    <p font="normal" text="xl gray">
-                                      Credits
-                                    </p>
+
+                                    <div
+                                      bg="purple/10"
+                                      font="normal"
+                                      p="x-5px y-2px"
+                                      rounded="10px"
+                                      text="sm purple-dark">
+                                      {pack.bonus > 0
+                                        ? `+${pack.bonus} Bonus Credits`
+                                        : 'Starter'}
+                                    </div>
                                   </div>
 
                                   <div flex="~ items-baseline" gap="1">
                                     <span
-                                      className="line-through decoration-brand decoration-2"
+                                      className="line-through decoration-gray decoration-2"
                                       text="gray xl">
                                       ${pack.oldPrice}
                                     </span>
@@ -229,7 +198,7 @@ const Pricing = () => {
                             })}
                           </div>
                           <p font="500" mt="3" text="sm gray-dark center">
-                            1 Credit = 1 Failure Mode
+                            1 Credit = 1 Complete FMEA Entry
                           </p>
                         </>
                       ) : (
@@ -259,12 +228,18 @@ const Pricing = () => {
                       )}
                     </div>
 
-                    <div flex="~ 1 col justify-between">
-                      <div flex="~ items-center" gap="4" mb="6">
-                        <span font="bold" text="xs gray-400" uppercase>
-                          WHAT&apos;S INCLUDED
-                        </span>
-                        <div border="t-1 solid gray-light" flex="grow" />
+                    <div
+                      border="0 t-2 lg:l-2 solid gray-light"
+                      flex="~ 1 col justify-between"
+                      p="xl:l-10 lg:l-5 t-10"
+                      position="relative"
+                      rounded="lg:tl-xl">
+                      <div
+                        bg="white"
+                        font="semibold"
+                        p="x-20px"
+                        position="absolute top-[-12px] lg:left-20px xs:left-30px left-20px">
+                        <span>What&apos;s Included</span>
                       </div>
 
                       <div className="grid grid-cols-1 gap-3 ">
@@ -274,24 +249,16 @@ const Pricing = () => {
                               <div flex="~ items-start" gap="10px">
                                 <div
                                   className="[&>svg]:h-5 [&>svg]:w-5"
-                                  color={
-                                    feature.isEnabled ? 'green' : 'gray-dark'
-                                  }>
-                                  {feature.isEnabled ? (
-                                    <CheckIcon />
-                                  ) : (
-                                    <CrossIcon />
-                                  )}
+                                  color="green">
+                                  <CheckIcon />
                                 </div>
 
                                 <div
-                                  color={
-                                    feature.isEnabled ? 'gray-dark' : 'gray/60'
-                                  }
+                                  color="gray-dark"
                                   line-height="normal"
                                   mt="-3px"
-                                  text="sm">
-                                  {feature.description}
+                                  text="xs:base sm">
+                                  {feature}
                                 </div>
                               </div>
                             </div>
@@ -302,17 +269,17 @@ const Pricing = () => {
                       <div
                         flex="~ items-center justify-center"
                         mt="auto"
-                        p="sm:x-6 x-3 t-6">
+                        p="t-6">
                         <LinkButton
                           h="45px"
                           hasEffect
                           href={card.link.href}
                           label={
                             isStandard
-                              ? `Buy ${selectedPack.credits} Credits - $${selectedPack.price}`
+                              ? `Buy ${selectedPack.credits + selectedPack.bonus} Credits - $${selectedPack.price}`
                               : card.link.label
                           }
-                          w="300px"
+                          w="xs:300px full"
                         />
                       </div>
                     </div>

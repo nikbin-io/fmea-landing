@@ -5,10 +5,8 @@ import Checkbox from './Checkbox'
 import ContactBanner from './ContactBanner'
 import Container from './Container'
 import CookieConsent from './CookieConsent'
-import FileUpload from './FileUpload'
 import Footer from './Footer'
 import Header from './Header'
-import Input from './Input'
 import InputTooltip from './InputTooltip'
 import Layout from './Layout'
 import LinkButton from './Buttons/LinkButton'
@@ -27,10 +25,8 @@ export {
   ContactBanner,
   Container,
   CookieConsent,
-  FileUpload,
   Footer,
   Header,
-  Input,
   InputTooltip,
   Layout,
   LinkButton,

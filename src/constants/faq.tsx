@@ -232,5 +232,18 @@ export const FAQ = [
         </p>
       </div>
     )
+  },
+  {
+    question: 'Can I try the tool for free?',
+    answer: (
+      <div space-y="3">
+        <p>
+          Yes. We offer 25 free credits to every new user upon registration—no
+          credit card required. You can use these credits to generate your first
+          FMEA entries and test the full capabilities of our AI workflow before
+          purchasing a plan.
+        </p>
+      </div>
+    )
   }
 ]

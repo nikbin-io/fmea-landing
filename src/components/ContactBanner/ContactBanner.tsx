@@ -16,7 +16,7 @@ const ContactBanner = () => {
           position="relative"
           rounded="2xl"
           shadow="lg">
-          <div flex="~ col items-start" gap="6" max-w="750px">
+          <div flex="~ col items-start" gap="6" max-w="750px" mb="lg:0 sm:12 8">
             <div>
               <h2 font="bold" mb="3" text="sm:3xl 2xl brand">
                 Get in Touch
@@ -39,10 +39,10 @@ const ContactBanner = () => {
 
           <div
             b="0 lg:l-2 l-0 lg:t-0 t-1 solid gray-light"
-            flex="~ col"
+            flex="~ lg:col sm:row col"
             gap="8"
-            pl="sm:12">
-            <div flex="~ col" gap="2">
+            p="lg:l-12 lg:t-0 xs:t-10 t-8">
+            <div flex="~ col" gap="2" min-w="280px">
               <div flex="~ items-center" gap="3" text="brand">
                 <div
                   className="[&>svg]:w-6 [&>svg]:h-6"

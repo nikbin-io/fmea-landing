@@ -49,6 +49,10 @@ export default defineConfig({
       },
       green: {
         DEFAULT: '#008000'
+      },
+      purple: {
+        DEFAULT: '#4B3AB3',
+        dark: '#231b55'
       }
     },
     breakpoints: {
@@ -75,10 +79,13 @@ export default defineConfig({
     },
     animation: {
       keyframes: {
-        sale: '{0%, 100% { background-color: #006000;} 50% { background-color: #010A32;}}'
+        sale: '{0%, 100% { background-color: #231b55;} 50% { background-color: #03045e;}}',
+        countdown:
+          '{0% { opacity: 0.5; transform: scale3d(0.3, 0.3, 0.3); } 20% { transform: scale3d(1.1, 1.1, 1.1); } 40% { transform: scale3d(0.9, 0.9, 0.9); } 60% { opacity: 1; transform: scale3d(1.03, 1.03, 1.03); } 80% { transform: scale3d(0.97, 0.97, 0.97); } 100% { opacity: 1; transform: scale3d(1, 1, 1); }}'
       },
       durations: {
-        sale: '2s'
+        sale: '2s',
+        countdown: '1s'
       }
     }
   }
