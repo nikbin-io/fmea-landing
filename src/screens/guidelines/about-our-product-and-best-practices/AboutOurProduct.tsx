@@ -16,15 +16,16 @@ const AboutOurProduct = () => {
           Conducting a high-quality FMEA has historically presented a difficult
           trade-off between depth and speed. Engineers often face the choice of
           spending weeks meticulously building failure chains or rushing the
-          process to meet deadlines, potentially leaving risks undiscovered.
+          process to meet deadlines, potentially leaving important risks
+          undiscovered.
         </p>
 
         <p>
           Our application is designed to resolve this tension. By leveraging
           advanced generative AI within a specialized engineering framework, we
           automate the heavy lifting of structure creation, failure mode
-          identification, and risk mapping with delivering a comprehensive
-          analysis in a single click.
+          identification, and risk mapping, delivering a comprehensive analysis
+          in a single run.
         </p>
 
         <h3 id="agentic-workflow" scroll-m="lg:t-150px t-120px">
@@ -33,20 +34,26 @@ const AboutOurProduct = () => {
 
         <p>
           Unlike standard AI tools that simply &quot;predict text,&quot; our
-          application utilizes an Agentic Workflow. This means the AI simulates
-          a cross-functional team of experts working in sequence, rather than a
-          single entity trying to do everything at once.
+          application utilizes an <span font="bold">agentic workflow</span>.
+          This means the AI simulates a cross-functional team of experts working
+          in collaboration, rather than a single entity attempting to perform
+          all tasks at once.
         </p>
 
         <p>
           Instead of generating a flat list of risks, the system employs a
-          multi-stage process with built-in Quality Gates. It deconstructs your
-          documents to understand the system architecture, generates logical
-          failure chains, and rigorously self-corrects against engineering
-          standards before the output is ever presented to you. This internal
-          review process allows the tool to generate up to 200 distinct failure
-          modes in a single run with a level of technical depth that mirrors a
-          human-led workshop.
+          multi-stage process with built-in{' '}
+          <span font="bold">quality gates</span>. It deconstructs your documents
+          to understand system architecture, generates logical failure chains,
+          and rigorously self-corrects against engineering standards before the
+          output is presented.
+        </p>
+
+        <p>
+          This approach enables the system to generate{' '}
+          <span font="bold">up to 200 </span>technically distinct, logically
+          consistent failure modes in a single run, with a depth that mirrors a
+          facilitated engineering workshop.
         </p>
 
         <h3 id="best-practices" scroll-m="lg:t-150px t-120px">
@@ -54,46 +61,52 @@ const AboutOurProduct = () => {
         </h3>
 
         <p>
-          The quality of the FMEA output is directly proportional to the quality
-          and context of the documents you upload. The AI does grounds its
-          analysis in the files you provide.
+          The quality of the generated FMEA is directly proportional to the
+          quality, clarity, and relevance of the documents you provide. The AI
+          does not invent technical knowledge; it{' '}
+          <span font="bold">grounds</span> its analysis strictly in your inputs.
         </p>
 
-        <h4 text="18px">The Power of PDF</h4>
+        <h4 text="18px">File Formats</h4>
 
         <p>
-          The application supports a wide range of file formats (PDF,CSV, TXT,
-          XLSX, Image). However, to get the best results,{' '}
-          <span font="bold">
-            we strongly recommend uploading documents in PDF format.
-          </span>
+          The application supports PDF, CSV, TXT, XLSX, and image files.
+          However, <span font="bold">PDF</span> format is strongly recommended.
         </p>
 
         <p>
-          Modern Generative AI models possess{' '}
-          <span font="bold">multimodal visual capabilities.</span>
-          This means they do not just read the text; they &quot;see&quot; the
-          document. By using PDFs, the AI can interpret visual data such as:
+          Modern multimodal AI models do not only read text, but they also
+          interpret visual structure. PDFs allow the system to extract
+          information from:
         </p>
 
         <ul list="disc" space="y-2">
-          <li>
-            <span font="bold">Block & Boundary Diagrams: </span>
-            Understanding system interfaces physically rather than just
-            textually.
-          </li>
+          <li>Block and boundary diagrams</li>
 
-          <li>
-            <span font="bold">Schematics & Drawings: </span>
-            Analyzing geometry and connections.
-          </li>
+          <li>Schematics and drawings</li>
+
+          <li>Tables, callouts, and annotations</li>
+
+          <li>Page structure and hierarchy</li>
         </ul>
 
         <p>
-          <span font="bold"> Capacity Limit:</span>
-          To maintain deep analytical reasoning without losing context, the tool
-          currently accepts up to <span>100,000</span> tokens (approximately
-          300-400 pages of standard technical documentation) per analysis run.
+          This visual understanding significantly improves system decomposition,
+          interface identification, and functional accuracy.
+        </p>
+
+        <h4 text="18px">Capacity Limit</h4>
+
+        <p>
+          To preserve deep contextual reasoning, each analysis run currently
+          supports up to <span font="bold">100,000 tokens</span>, equivalent to
+          <span font="bold"> approximately 300-400 pages</span> of typical
+          technical documentation.{' '}
+        </p>
+
+        <p>
+          Uploading fewer, higher-quality, and well-structured documents usually
+          produces better results than uploading many loosely related files.
         </p>
 
         <h3
@@ -105,135 +118,317 @@ const AboutOurProduct = () => {
         <h4 text="18px">For Design FMEA (DFMEA)</h4>
 
         <p>
-          Focus on documents that define boundaries, interfaces, and physics:
+          Focus on documents that define system behaviour, boundaries, and
+          physics:
         </p>
 
         <ul list="disc" space="y-2">
-          <li>
-            <span font="bold">Requirements Specifications: </span>
-            To define the &quot;Ideal Function.&quot;
-          </li>
+          <li>Requirements specifications</li>
 
-          <li>
-            <span font="bold">Design Description Documents: </span>
-            To understand the technical details.
-          </li>
+          <li>Architecture and block diagrams</li>
 
-          <li>
-            <span font="bold">Architecture & Block Diagrams: </span>
-            To establish system boundaries and interfaces.
-          </li>
+          <li>Design descriptions and schematics</li>
 
-          <li>
-            <span font="bold">Bill of Materials (BOM): </span>
-            To ensure detailed coverage.
-          </li>
+          <li>Interface definitions</li>
 
-          <li>
-            <span font="bold">Validation Plans: </span>
-            To ground &quot;Detection Controls&quot; in reality.
-          </li>
+          <li>Bill of Materials (BOM)</li>
+
+          <li>Validation and verification plans</li>
         </ul>
+
+        <p>
+          These documents allow the AI to ground functions, interfaces,
+          prevention controls, and detection logic in objective design intent.
+        </p>
 
         <h4 text="18px">For Process FMEA (PFMEA)</h4>
 
         <p>
-          PFMEA requires specific documentation to link the manufacturing steps
-          back to the product design:{' '}
+          PFMEA requires documentation that connects manufacturing execution to
+          product characteristics:
         </p>
 
         <ul list="disc" space="y-2">
-          <li>
-            <span font="bold">Process Flow Diagrams (PFD):</span> Essential for
-            defining the structure and sequence of operations.
-          </li>
-
-          <li>
-            <span font="bold">Design FMEA (DFMEA):</span> Critical for linking
-            Process Steps to Product Characteristics and defining the Severity
-            of effects on the End User.
-          </li>
-
-          <li>
-            <span font="bold">Engineering Drawings / Specs:</span> To identify
-            tolerances and Special Characteristics (SC/CC).
-          </li>
-
-          <li>
-            <span font="bold">Control Plans:</span> To provide evidence for
-            current Prevention and Detection controls.
-          </li>
-          <li>
-            <span font="bold">Lessons Learned / History:</span> Scrap reports
-            and customer complaints help the AI prioritize known high-risk
-            areas.
-          </li>
+          <li>Process flow diagrams</li>
+          <li>Work instructions and SOPs</li>
+          <li>Control plans</li>
+          <li>Engineering drawings and tolerances</li>
+          <li>Design FMEA (for severity linkage)</li>
+          <li>Scrap history, deviations, and lessons learned</li>
         </ul>
 
-        <h3 id="standards-output-usage" scroll-m="lg:t-150px t-120px">
-          Standards, Output, and Usage
+        <p>
+          This enables accurate 4M analysis and realistic prevention and
+          detection control identification.
+        </p>
+
+        <h3 id="output" scroll-m="lg:t-150px t-120px">
+          Output
         </h3>
 
-        <h4 text="18px">De Facto Standardization</h4>
+        <h4 text="18px">Standards Alignment</h4>
 
         <p>
-          The generated analysis is exported directly into an{' '}
-          <span font="bold">AIAG & VDA compliant Excel template</span>. While
-          this standard originated in the automotive sector, its rigorous 7-Step
-          approach and Action Priority (AP) logic have made it the de facto
-          standard for technical risk assessment across Aerospace, Medical
-          Devices, and high-tech industries. Using this format ensures your risk
-          analysis is structured and logical.
+          All outputs are delivered in an
+          <span font="bold"> AIAG & VDA aligned Excel structure</span> using the
+          harmonized 7-Step approach and Action Priority logic.
         </p>
 
-        <h4 text="18px">Interpreting the Results</h4>
+        <p>
+          While originally developed for automotive applications, this
+          methodology has become the de facto standard for technical risk
+          analysis across aerospace, medical, industrial, and high-reliability
+          industries.
+        </p>
 
         <p>
-          The AI generates a &quot;Draft FMEA,&quot; intended to accelerate the
-          engineering workload, not replace it.
+          Using this structure ensures that your FMEA remains review-ready,
+          auditable, and logically <span font="bold">consistent</span>.
+        </p>
+
+        <h4 text="18px">How to Interpret the Results</h4>
+
+        <p>The generated output is a complete, structured FMEA draft.</p>
+
+        <p>Each row represents a full failure chain, connecting:</p>
+
+        <ul list="disc" space="y-2">
+          <li>Structure (system or process hierarchy)</li>
+
+          <li>Functions and requirements</li>
+
+          <li>Failure Causes → Failure Modes → Failure Effects</li>
+
+          <li>Current controls</li>
+
+          <li>Risk ratings and Action Priority</li>
+
+          <li>Recommended optimization actions</li>
+        </ul>
+
+        <p>
+          The application generates approximately the requested number of
+          technically distinct failure modes, distributed across the system or
+          process structure to ensure broad and balanced coverage.
+        </p>
+
+        <p>
+          The output should be treated as a{' '}
+          <span font="bold">high-quality engineering draft</span>, intended to
+          accelerate structured FMEA development rather than replace
+          professional judgment.
+        </p>
+
+        <h4 text="18px">Evidence-Based Controls</h4>
+
+        <p>
+          The AI searches your uploaded documents to locate objective support
+          for:
         </p>
 
         <ul list="disc" space="y-2">
-          <li>
-            <span font="bold">Evidence-Based Controls:</span> The AI searches
-            your uploaded documents (such as Test Plans or Design Standards) to
-            find actual proof for &quot;Current Prevention&quot; and
-            &quot;Current Detection&quot; controls. Check the
-            <span font="bold"> &apos;Remarks&apos;</span> column in the Excel
-            output to see the specific source document and logic used. This
-            ensures the controls are grounded in your documentation.
-          </li>
+          <li>Current Prevention Controls</li>
+
+          <li>Current Detection Controls</li>
+        </ul>
+
+        <p>
+          The Remarks column explicitly shows the source and reasoning used.
+          This allows rapid validation and easy identification of assumptions or
+          gaps.
+        </p>
+
+        <h4 text="18px">Optimization Actions</h4>
+
+        <p>
+          Preventive and detection actions are generated as engineering
+          suggestions based on the failure physics. These should be reviewed and
+          adjusted by the engineering team to confirm:
+        </p>
+
+        <ul list="disc" space="y-2">
+          <li>Technical feasibility</li>
+
+          <li>Economic justification</li>
+
+          <li>Organizational applicability</li>
+        </ul>
+
+        <h4 text="18px">Administrative Fields</h4>
+
+        <p>
+          Project management fields (responsibility, dates, status) are
+          intentionally left blank. These must be assigned through your internal
+          processes.
+        </p>
+
+        <h4 text="18px">The Human in the Loop</h4>
+
+        <p>
+          This application applies advanced self-review logic and quality gates
+          to produce a disciplined FMEA draft. However, no automated system can
+          fully replace engineering judgment.
+        </p>
+
+        <p>The output should always be:</p>
+
+        <ul list="disc" space="y-2">
+          <li>Reviewed by qualified subject matter experts</li>
+
+          <li>Adjusted to reflect final design and process intent</li>
+
+          <li>Approved through your standard FMEA governance process</li>
+        </ul>
+
+        <h3 id="practical-tips" scroll-m="lg:t-150px t-120px">
+          Practical Tips for Efficient Use
+        </h3>
+
+        <h4 text="18px">Simplicity of Use</h4>
+
+        <p>
+          The application is intentionally designed to remain simple and
+          focused. A typical workflow consists of only four steps:
+        </p>
+
+        <ul list="decimal" space="y-2">
+          <li>Select the FMEA type (DFMEA or PFMEA).</li>
+
+          <li>Upload the relevant technical documents.</li>
+
+          <li>Define the desired number of failure modes.</li>
 
           <li>
-            <span font="bold">Optimization Actions:</span> The fields for{' '}
-            Preventive Actions and Detection Actions are filled with{' '}
-            <span font="bold">suggestions</span> based on the identified failure
-            causes. These should be reviewed by the engineering team to
-            determine relevancy, feasibility, and cost-effectiveness.
-          </li>
-
-          <li>
-            <span font="bold">Administrative Fields:</span> Fields such as{' '}
-            Responsible Person, Target Completion Date, and Status are
-            intentionally left blank. These are project management variables
-            that must be assigned by the human team.
+            Click <span font="bold">Run FMEA Analysis</span>.
           </li>
         </ul>
 
-        <h4 text="18px">Important: The Human in the Loop</h4>
+        <p>No additional configuration is required.</p>
+
+        <h4 text="18px">Selecting the Number of Failure Modes</h4>
 
         <p>
-          This application uses advanced self-correction and quality checks to
-          generate high-quality draft analyses. As with any AI-assisted tool, it
-          may occasionally miss edge cases or interpret complex technical
-          nuances differently than intended.
+          The requested number of failure modes is the primary cost and
+          computation driver.
         </p>
 
         <p>
-          The generated output should be considered a strong engineering draft
-          rather than a finalized, fully compliant FMEA. A human review by
-          qualified subject matter experts is required to validate, refine, and
-          align the analysis with the final product or process design.
+          The value is adjustable up to{' '}
+          <span font="bold">200 failure modes</span> and should be selected
+          based on:
+        </p>
+
+        <ul list="disc" space="y-2">
+          <li>System or process complexity</li>
+
+          <li>Level of decomposition required</li>
+
+          <li>Project phase and risk exposure</li>
+        </ul>
+
+        <p>
+          For early concept phases, fewer failure modes may be sufficient. For
+          detailed design or manufacturing release, higher values are usually
+          justified.
+        </p>
+
+        <h4 text="18px">Document Format and Token Usage</h4>
+
+        <p>
+          Whenever possible, <span font="bold">PDF format should be used</span>.
+          PDF files preserve layout, diagrams, tables, and hierarchy, which
+          significantly improves system understanding.
+        </p>
+
+        <p>
+          The application supports up to{' '}
+          <span font="bold">100,000 tokens per analysis run</span>, which is
+          sufficient for most real-world projects. Token usage per document is
+          visible to the user.
+        </p>
+
+        <p>
+          If the <span font="bold">token</span> limit is approached, users can:
+        </p>
+
+        <ul list="disc" space="y-2">
+          <li>Remove less relevant documents</li>
+
+          <li>Shorten repetitive or administrative content</li>
+
+          <li>Replace low-value files with higher-quality technical sources</li>
+        </ul>
+
+        <p>
+          This allows users to optimize input quality without sacrificing
+          essential information.
+        </p>
+
+        <h4 text="18px">Analysis Duration</h4>
+
+        <p>FMEA generation time depends on:</p>
+
+        <ul list="disc" space="y-2">
+          <li>Total document volume</li>
+
+          <li>Document complexity</li>
+
+          <li>Requested number of failure modes</li>
+        </ul>
+
+        <p>
+          In large analyses, generation can take{' '}
+          <span font="bold">up to one hour</span>. This reflects the multi-stage
+          reasoning and internal quality review process applied during analysis.
+        </p>
+
+        <h4 text="18px">Credit Usage Policy</h4>
+
+        <p>
+          Credits are charged only when the delivered Excel file contains{' '}
+          <span font="bold">more than 75% of the requested failure modes</span>.
+        </p>
+
+        <p>
+          If the system generates{' '}
+          <span font="bold">more complete FMEA entries than requested</span>, no
+          additional credits are charged.
+        </p>
+
+        <p>
+          This ensures that users only pay for usable, complete engineering
+          output.
+        </p>
+
+        <h4 text="18px">Importance of Document Quality</h4>
+        <p>
+          Document quality is the single most important factor influencing FMEA
+          quality.
+        </p>
+        <p>
+          Clear, structured, technically meaningful documents lead directly to:
+        </p>
+
+        <ul list="disc" space="y-2">
+          <li>Better failure chain logic</li>
+
+          <li>More realistic controls</li>
+
+          <li>More accurate ratings</li>
+
+          <li>More practical optimization actions</li>
+        </ul>
+
+        <p>
+          Poor, incomplete, or inconsistent documentation will limit output
+          quality regardless of AI capability.
+        </p>
+
+        <h4 text="18px">Support and Feedback</h4>
+
+        <p>
+          If you have questions, require guidance, or wish to share feedback,
+          your input is always welcome and our team is available to support you.
         </p>
       </div>
     </Wrapper>

@@ -43,7 +43,11 @@ const KEYPOINTS: TocNode[] = [
         id: 'recommended-documents-by-fmea-type',
         label: 'Recommended Documents by FMEA Type'
       },
-      { id: 'standards-output-usage', label: 'Standards, Output, and Usage' }
+      { id: 'output', label: 'Output' },
+      {
+        id: 'practical-tips',
+        label: 'Practical Tips for Efficient Use'
+      }
     ]
   }
 ]
