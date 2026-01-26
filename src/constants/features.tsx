@@ -42,7 +42,7 @@ export const FEATURES: FeatureItem[] = [
   {
     title: 'Data-Respectful',
     description:
-      'Documents are deleted immediately after processing, ensuring you retain full control over sensitive engineering data.',
+      'Documents are deleted after processing, ensuring you retain full control over sensitive data.',
     icon: <LockIcon />
   }
 ]

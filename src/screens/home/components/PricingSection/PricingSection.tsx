@@ -1,9 +1,9 @@
 import dynamic from 'next/dynamic'
 import { useState } from 'react'
-
+import imgEnterprise from '~/assets/deneme2.jpg'
 import { Container, LinkButton } from '~/components'
 import { CheckIcon } from '~/components/Icons'
-
+import Image from 'next/image'
 const Discount = dynamic(() => import('~/components/Discount'), {
   ssr: false
 })
@@ -20,12 +20,12 @@ const CARDS = [
     id: 'standard',
     title: 'Standard',
     features: [
-      'Advanced agentic analysis workflow featuring deep internal quality checks',
-      'Full data privacy and security compliance',
+      'Advanced agentic analysis workflow with deep internal quality checks',
       'Supports input formats: PDF, JPEG, WebP, CSV, XLSX, XLS, TXT',
-      'Industry-aligned downloadable Excel output & instant email delivery',
+      'Industry-aligned downloadable Excel output & email delivery',
       'Customer support backed by Quality Engineers',
-      'Generate up to 200 complete fmea entries in a single run'
+      'Generate up to 200 complete fmea entries in a single run',
+      'Full data privacy and security compliance'
     ],
     link: {
       href: '#',
@@ -53,7 +53,7 @@ const PricingSection = () => {
   const [selectedPack, setSelectedPack] = useState(CREDIT_PACKS[1])
 
   return (
-    <section id="pricing" m="b-30" p="y-10" position="relative">
+    <section id="pricing" m="sm:b-30" p="y-10" position="relative">
       <div
         bg="blue-900/5"
         blur="120px"
@@ -204,25 +204,46 @@ const PricingSection = () => {
                         </>
                       ) : (
                         <div
+                          border="2 dashed gray-light rounded-xl"
                           flex="~ col items-center justify-center"
-                          max-w="300px"
+                          h="full"
+                          p="x-10px y-30px"
+                          position="relative"
                           w="full">
-                          <p font="bold center" mb="6" text="4xl brand">
+                          <Image
+                            alt="enterprise"
+                            fill
+                            grayscale="100"
+                            object="cover"
+                            op="30"
+                            src={imgEnterprise}
+                            style={{
+                              objectPosition: 'bottom'
+                            }}
+                          />
+
+                          <p
+                            font="bold center"
+                            mb="6"
+                            position="relative"
+                            text="xs:4xl 2xl brand"
+                            z="10">
                             Get a Quote
                           </p>
 
                           <div
-                            bg="gray-lighter"
-                            border="2 dashed gray-light"
+                            backdrop-blur="10px"
+                            border="2 solid gray-light"
+                            max-w="300px"
                             p="6"
+                            position="relative"
                             rounded="xl"
-                            text="center">
+                            text="center"
+                            z="10">
                             <p line-height="relaxed" text="sm gray-dark">
-                              Tailored solutions for{' '}
-                              <strong font="semibold" text="gray-dark">
-                                high-volume
-                              </strong>{' '}
-                              needs, enterprise security, and dedicated support.
+                              Enterprise solutions for high-volume needs,
+                              on-premise solutions, dedicated support, and
+                              custom requirements.
                             </p>
                           </div>
                         </div>

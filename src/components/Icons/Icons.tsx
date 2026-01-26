@@ -55,45 +55,6 @@ export const CheckIcon = () => {
   )
 }
 
-export const MapPinIcon = () => (
-  <svg
-    fill="none"
-    height="20"
-    stroke="currentColor"
-    strokeWidth={1.5}
-    viewBox="0 0 24 24"
-    width="20"
-    xmlns="http://www.w3.org/2000/svg">
-    <path
-      d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-    <path
-      d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-  </svg>
-)
-
-export const EnvelopeIcon = () => (
-  <svg
-    fill="none"
-    height="20"
-    stroke="currentColor"
-    strokeWidth={1.5}
-    viewBox="0 0 24 24"
-    width="20"
-    xmlns="http://www.w3.org/2000/svg">
-    <path
-      d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-  </svg>
-)
-
 export const ChevronDown = () => {
   return (
     <svg
@@ -230,6 +191,23 @@ export const DownloadIcon = () => {
   )
 }
 
+export const EnvelopeIcon = () => (
+  <svg
+    fill="none"
+    height="20"
+    stroke="currentColor"
+    strokeWidth={1.5}
+    viewBox="0 0 24 24"
+    width="20"
+    xmlns="http://www.w3.org/2000/svg">
+    <path
+      d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+)
+
 export const FileCheckIcon = () => (
   <svg
     fill="none"
@@ -246,6 +224,21 @@ export const FileCheckIcon = () => (
     />
   </svg>
 )
+
+export const GiftIcon = () => {
+  return (
+    <svg
+      height="32"
+      viewBox="0 0 24 24"
+      width="32"
+      xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M19.5 7.75h-1.4c.4-.48.65-1.08.65-1.75c0-1.52-1.23-2.75-2.75-2.75c-1.68 0-3.16.89-4 2.21a4.75 4.75 0 0 0-4-2.21C6.48 3.25 5.25 4.48 5.25 6c0 .67.25 1.27.65 1.75H4.5c-.69 0-1.25.56-1.25 1.25v2.5c0 .6.43 1.08 1 1.2v6.8c0 .69.56 1.25 1.25 1.25h13c.69 0 1.25-.56 1.25-1.25v-6.8c.57-.12 1-.6 1-1.2V9c0-.69-.56-1.25-1.25-1.25m-.25 3.5h-6.5v-2h6.5zM16 4.75a1.25 1.25 0 0 1 0 2.5h-3.16c.34-1.43 1.63-2.5 3.16-2.5m-8 0c1.53 0 2.82 1.07 3.16 2.5H8a1.25 1.25 0 0 1 0-2.5m-3.25 4.5h6.5v2h-6.5zm1 3.5h5.5v6.5h-5.5zm12.5 6.5h-5.5v-6.5h5.5z"
+        fill="currentColor"
+      />
+    </svg>
+  )
+}
 
 export const GoogleIcon = () => {
   return (
@@ -335,6 +328,28 @@ export const LockIcon = () => (
   </svg>
 )
 
+export const MapPinIcon = () => (
+  <svg
+    fill="none"
+    height="20"
+    stroke="currentColor"
+    strokeWidth={1.5}
+    viewBox="0 0 24 24"
+    width="20"
+    xmlns="http://www.w3.org/2000/svg">
+    <path
+      d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+)
+
 export const MinusIcon = () => {
   return (
     <svg
@@ -385,6 +400,30 @@ export const ShieldCheckIcon = () => (
     />
   </svg>
 )
+
+export const TechIcon = () => {
+  return (
+    <svg
+      height="32"
+      viewBox="0 0 48 48"
+      width="32"
+      xmlns="http://www.w3.org/2000/svg">
+      <g fill="none" stroke="currentColor" strokeWidth="3">
+        <path
+          d="M32 44.5v-5.163l4.668.787a3 3 0 0 0 3.488-2.706l.574-6.812c1.85-.415 3.18-1.084 4.043-1.642c.774-.5.864-1.51.348-2.274l-4.146-6.137C40.483 11.328 32.847 4 23.5 4v40.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path d="M3 24a3 3 0 1 0 6 0a3 3 0 1 0-6 0M8 9a3 3 0 1 0 6 0a3 3 0 1 0-6 0M7 40a3 3 0 1 0 6 0a3 3 0 1 0-6 0" />
+        <path
+          d="M9 24h14.5m0-8H18l-4.5-4.5m10 21.5H17l-4.5 4.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </g>
+    </svg>
+  )
+}
 
 export const XIcon = () => {
   return (

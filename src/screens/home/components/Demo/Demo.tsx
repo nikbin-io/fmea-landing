@@ -1,8 +1,9 @@
 import { useState } from 'react'
 import { ChevronRight, ChevronDown, DownloadIcon } from '~/components/Icons'
+import Image from 'next/image'
+import logoImg from '~/assets/logo-with-text.png'
 import {
   Container,
-  Button,
   InputTooltip,
   SwitchButton,
   RangeInput,
@@ -43,24 +44,31 @@ const Demo = () => {
     <section p="b-30 t-20">
       <Container>
         <div mb="sm:16 8" text="center">
-          <p case="upper" font="bold" mb="3" text="brand" tracking="widest">
-            From Technical Docs to Excel
+          <p
+            case="upper"
+            font="bold"
+            mb="lg:4 2"
+            text="brand sm:base sm"
+            tracking="widest">
+            From Technical Docs to Structured FMEA
           </p>
 
-          <h2
-            font="bold"
-            line-height="tight"
-            mb="sm:8 6"
-            text="center lg:4xl 2rem gray-dark ">
-            {' '}
-            Real-World DFMEA & PFMEA Examples
-          </h2>
+          <div flex="~ items-center justify-center" gap="3" mb="sm:8 6">
+            <h2
+              font="bold"
+              line-height="tight"
+              text="center lg:4xl 2xl gray-dark ">
+              Examples Created by
+            </h2>
 
-          <p max-w="5xl" mx="auto" text="lg gray">
+            <Image alt="logo" h="50px" src={logoImg} w="auto" />
+          </div>
+
+          <p max-w="5xl" mx="auto" text="xs:lg base gray">
             Toggle below to view a generated Design FMEA (DFMEA) example or a
             Process FMEA (PFMEA) example. See how raw technical PDFs are
-            instantly transformed into structured, AIAG & VDA compliant risk
-            analysis tables ready for Excel export.
+            transformed into structured, AIAG & VDA compliant risk analysis
+            tables ready for Excel export.
           </p>
         </div>
 
@@ -232,13 +240,13 @@ const Demo = () => {
                   b="0 b-1 solid gray-light"
                   flex="~ col items-center justify-center"
                   gap="4"
-                  h="130px"
+                  h="xs:130px 150px"
                   p="x-6">
                   <h2 font="bold" text="2xl center gray-darker">
                     {isPfmea ? 'Process' : 'Design'} FMEA Results
                   </h2>
 
-                  <p text="sm gray">
+                  <p text="sm gray center">
                     Items are prioritized by Action Priority (High to Low)
                     rather than numerical ID order.
                   </p>

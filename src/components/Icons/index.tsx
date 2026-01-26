@@ -12,6 +12,7 @@ export {
   DownloadIcon,
   EnvelopeIcon,
   FileCheckIcon,
+  GiftIcon,
   GoogleIcon,
   InfoIcon,
   LinkedinIcon,
@@ -20,6 +21,7 @@ export {
   MinusIcon,
   PlusIcon,
   ShieldCheckIcon,
+  TechIcon,
   XIcon,
   YoutubeIcon
 } from './Icons'

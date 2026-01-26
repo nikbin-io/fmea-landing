@@ -6,13 +6,14 @@ const FeaturesSection = () => {
     <section bg="gray-light" py="30">
       <Container>
         <div mb="16" text="center">
-          <h2 font="bold" mb="4" text="center lg:4xl 2rem brand ">
-            Why FMEA TOOL?
+          <h2 font="bold" mb="4" text="center lg:4xl 2xl brand ">
+            Engineered for Precision & Compliance{' '}
           </h2>
 
           <p max-w="2xl" mx="auto" text="lg gray-dark">
-            Powerful features designed for engineering precision and data
-            security.
+            We bridge the gap between AI efficiency and strict industry
+            standards, delivering reliable risk analysis outcomes that
+            engineering teams can trust.
           </p>
         </div>
 
@@ -47,7 +48,7 @@ const FeaturesSection = () => {
               </div>
 
               <div>
-                <h3 font="bold" mb="3" text="xl brand">
+                <h3 font="bold" mb="3" text="xs:xl brand">
                   {feature.title}
                 </h3>
                 <p leading="relaxed" text="gray-dark">

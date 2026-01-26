@@ -3,7 +3,7 @@ import { FAQ } from '~/constants/faq'
 
 const Faq = () => {
   return (
-    <section m="b-30" p="y-10">
+    <section m="sm:b-30 b-15" p="y-10">
       <Container>
         <div flex="~ col items-center" gap="6" mb="sm:10 8" text="center">
           <h2 line-height="tight" text="center lg:3rem 2rem gray-dark ">
