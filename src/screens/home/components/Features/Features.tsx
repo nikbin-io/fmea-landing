@@ -1,5 +1,52 @@
+import { ReactNode } from 'react'
+
 import { Container } from '~/components'
-import { FEATURES } from '~/constants/features'
+import {
+  ShieldCheckIcon,
+  DatabaseIcon,
+  CpuIcon,
+  FileCheckIcon,
+  LockIcon
+} from '~/components/Icons'
+
+type FeatureItem = {
+  title: string
+  description: string
+  icon: ReactNode
+}
+
+export const FEATURES: FeatureItem[] = [
+  {
+    title: 'Expert Engineering',
+    description:
+      'Developed by experienced FMEA practitioners and AI engineers to reflect established DFMEA and PFMEA practices.',
+    icon: <ShieldCheckIcon />
+  },
+  {
+    title: 'Scalable Analysis',
+    description:
+      'Supports large, structured FMEA analyses (up to 200 entries) in a single run, maintaining hierarchy and consistency.',
+    icon: <DatabaseIcon />
+  },
+  {
+    title: 'Industry Compliant',
+    description:
+      'Produces Excel outputs compatible with industry practices and AIAG & VDA conventions without manual reformatting.',
+    icon: <FileCheckIcon />
+  },
+  {
+    title: 'Agentic Quality Control',
+    description:
+      'Applies an agentic workflow with quality gates to support logical rigor, consistency, and disciplined FMEA development.',
+    icon: <CpuIcon />
+  },
+  {
+    title: 'Strict Data Privacy',
+    description:
+      'Documents are deleted after processing, ensuring you retain full control over sensitive data.',
+    icon: <LockIcon />
+  }
+]
 
 const FeaturesSection = () => {
   return (

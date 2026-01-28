@@ -1,6 +1,6 @@
 import dynamic from 'next/dynamic'
 import { useState } from 'react'
-import imgEnterprise from '~/assets/deneme2.jpg'
+import imgEnterprise from '~/assets/enterprise-bg.jpg'
 import { Container, LinkButton } from '~/components'
 import { CheckIcon } from '~/components/Icons'
 import Image from 'next/image'
@@ -215,7 +215,8 @@ const PricingSection = () => {
                             fill
                             grayscale="100"
                             object="cover"
-                            op="30"
+                            op="60"
+                            rotate-y="180"
                             src={imgEnterprise}
                             style={{
                               objectPosition: 'bottom'

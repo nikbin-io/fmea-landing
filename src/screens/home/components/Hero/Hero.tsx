@@ -1,7 +1,7 @@
 import dynamic from 'next/dynamic'
 import { Container } from '~/components'
-import { FEATURES } from '~/constants/features'
 import { TechIcon, GiftIcon } from '~/components/Icons'
+
 const Wireframe = dynamic(() => import('~/components/Wireframe'), {
   ssr: false
 })
