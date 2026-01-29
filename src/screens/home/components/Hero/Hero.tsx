@@ -1,6 +1,6 @@
 import dynamic from 'next/dynamic'
-import { Container } from '~/components'
-import { TechIcon, GiftIcon } from '~/components/Icons'
+import { Container, LinkButton } from '~/components'
+import { TechIcon, GiftIcon, ArrowRight } from '~/components/Icons'
 
 const Wireframe = dynamic(() => import('~/components/Wireframe'), {
   ssr: false
@@ -18,12 +18,12 @@ export default function Hero() {
           z="1">
           <div flex="~ col items-center">
             <h1 font="bold" mb="6" text="3xl sm:6xl center lg:7xl gray-darker">
-              AI-Powered FMEA Generator{' '}
+              Agentic FMEA Generator
             </h1>
 
             <p max-w="4xl" text="lg:xl lg center gray-dark">
-              Automate the creation of AIAG & VDA compliant DFMEA and PFMEA
-              reports. Transform your technical documents into structured{' '}
+              Automate the creation of industry-aligned DFMEA and PFMEA reports.
+              Transform your technical documents into structured{' '}
               <span font="semibold">Failure Mode and Effects Analysis</span> and
               export to Excel effortlessly.
             </p>
@@ -38,7 +38,8 @@ export default function Hero() {
                 p="8"
                 rounded="3xl"
                 shadow="lg"
-                transition="all duration-300">
+                transition="all duration-300"
+                w="full">
                 <div flex="~ items-center justify-start" gap="4">
                   <div
                     bg="gray-lighter"
@@ -53,15 +54,14 @@ export default function Hero() {
                     </div>
                   </div>
                   <h3 font="bold" text="xs:xl brand">
-                    Built by QA Experts
+                    Built by QA & AI Experts{' '}
                   </h3>
                 </div>
 
                 <div>
                   <p leading="relaxed" text="gray-dark">
-                    Created by a team of Quality Engineers who understand the
-                    nuances of risk analysis to ensure every output meets
-                    rigorous industry standards.{' '}
+                    Developed by Quality and AI engineers to ensure deep risk
+                    analysis accuracy and strict industry standard compliance.
                   </p>
                 </div>
               </div>
@@ -84,10 +84,12 @@ export default function Hero() {
                 flex="~ col"
                 gap="4"
                 p="8"
+                position="relative"
                 rounded="3xl"
                 shadow="lg"
-                transition="all duration-300">
-                <div flex="~ items-center justify-start" gap="4">
+                transition="all duration-300"
+                w="full">
+                <div flex="~ items-center justify-start" gap="5">
                   <div
                     bg="gray-lighter"
                     flex="~ items-center justify-center"
@@ -100,16 +102,18 @@ export default function Hero() {
                       <GiftIcon />
                     </div>
                   </div>
-                  <h3 font="bold" text="xs:xl brand">
-                    Start with Free Credits{' '}
-                  </h3>
+                  <LinkButton
+                    hasEffect
+                    href="https://app.fmeatool.ai"
+                    label="Get 25 Free Credits"
+                  />
                 </div>
 
                 <div>
                   <p leading="relaxed" text="gray-dark">
                     Sign up today and get{' '}
                     <span font="bold">25 free credits</span> instantly. Test our
-                    AI workflow and generate real FMEA reports without any
+                    agentic workflow and generate real FMEA reports without any
                     commitment.{' '}
                   </p>
                 </div>

@@ -195,7 +195,7 @@ const Demo = () => {
                 h="45px"
                 hasEffect
                 href="https://app.fmeatool.ai"
-                label="Start a Free Trial"
+                label="Start Free Trial"
               />
             </div>
 

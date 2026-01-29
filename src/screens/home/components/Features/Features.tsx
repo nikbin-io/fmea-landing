@@ -17,7 +17,7 @@ type FeatureItem = {
 
 export const FEATURES: FeatureItem[] = [
   {
-    title: 'Expert Engineering',
+    title: 'Expert Engineered',
     description:
       'Developed by experienced FMEA practitioners and AI engineers to reflect established DFMEA and PFMEA practices.',
     icon: <ShieldCheckIcon />
@@ -35,7 +35,7 @@ export const FEATURES: FeatureItem[] = [
     icon: <FileCheckIcon />
   },
   {
-    title: 'Agentic Quality Control',
+    title: 'Agentic Quality Checks',
     description:
       'Applies an agentic workflow with quality gates to support logical rigor, consistency, and disciplined FMEA development.',
     icon: <CpuIcon />

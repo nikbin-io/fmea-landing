@@ -79,12 +79,12 @@ export default defineConfig({
     },
     animation: {
       keyframes: {
-        sale: '{0%, 100% { background-color: #231b55;} 50% { background-color: #03045e;}}',
+        sale: '{0%, 100% { background-color: #231b55;} 50% { background-color: #374151;}}',
         countdown:
           '{0% { opacity: 0.5; transform: scale3d(0.3, 0.3, 0.3); } 20% { transform: scale3d(1.1, 1.1, 1.1); } 40% { transform: scale3d(0.9, 0.9, 0.9); } 60% { opacity: 1; transform: scale3d(1.03, 1.03, 1.03); } 80% { transform: scale3d(0.97, 0.97, 0.97); } 100% { opacity: 1; transform: scale3d(1, 1, 1); }}'
       },
       durations: {
-        sale: '2s',
+        sale: '1s',
         countdown: '1s'
       }
     }

@@ -21,11 +21,12 @@ const CARDS = [
     title: 'Standard',
     features: [
       'Advanced agentic analysis workflow with deep internal quality checks',
+      'Supports both Design (DFMEA) & Process (PFMEA)',
       'Supports input formats: PDF, JPEG, WebP, CSV, XLSX, XLS, TXT',
       'Industry-aligned downloadable Excel output & email delivery',
       'Customer support backed by Quality Engineers',
       'Generate up to 200 complete fmea entries in a single run',
-      'Full data privacy and security compliance'
+      'Strict data privacy & security protocols'
     ],
     link: {
       href: '#',
@@ -110,6 +111,16 @@ const PricingSection = () => {
                     <div flex="~ col items-center justify-center" w="full">
                       {isStandard ? (
                         <>
+                          <div
+                            className="animate-sale animated-infinite"
+                            font="500"
+                            mb="25px"
+                            p="x-20px y-8px"
+                            rounded="lg"
+                            text="sm white"
+                            tracking="wider">
+                            LAUNCH SALE: LIMITED TIME
+                          </div>
                           <div
                             flex="~ justify-center"
                             mb="lg:30px 40px"
@@ -289,10 +300,7 @@ const PricingSection = () => {
                         })}
                       </div>
 
-                      <div
-                        flex="~ items-center justify-center"
-                        mt="auto"
-                        p="t-6">
+                      <div flex="~ items-center justify-center" p="t-6">
                         <LinkButton
                           h="45px"
                           hasEffect
