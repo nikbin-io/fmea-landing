@@ -5,11 +5,6 @@ export const COLORS = {
   black: {
     default: '#000000'
   },
-  red: {
-    default: '#ef4444',
-    light: '#fee2e2',
-    dark: '#dc2626'
-  },
   gray: {
     default: '#6b7280',
     darker: '#1f2937',
@@ -19,6 +14,13 @@ export const COLORS = {
   },
   brand: {
     default: '#232b32'
+  },
+  green: {
+    default: '#008000'
+  },
+  purple: {
+    default: '#4B3AB3',
+    dark: '#231b55'
   }
 }
 
