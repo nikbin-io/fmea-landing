@@ -41,27 +41,27 @@ const Demo = () => {
   }
 
   return (
-    <section p="b-30 t-20">
+    <section p="b-30 t-30">
       <Container>
         <div mb="sm:16 8" text="center">
           <p
             case="upper"
             font="bold"
-            mb="lg:4 2"
+            mb="lg:4 3"
             text="brand sm:base sm"
             tracking="widest">
             From Technical Docs to Structured FMEA
           </p>
 
-          <div flex="~ items-center justify-center" gap="3" mb="sm:8 6">
+          <div flex="~ items-center justify-center" gap="sm:3 2" mb="sm:8 6">
             <h2
               font="bold"
               line-height="tight"
-              text="center lg:4xl 2xl gray-dark ">
+              text="center lg:4xl sm:2xl xl gray-dark ">
               Examples Created by
             </h2>
 
-            <Image alt="logo" h="50px" src={logoImg} w="auto" />
+            <Image alt="logo" h="sm:50px 40px" src={logoImg} w="auto" />
           </div>
 
           <p max-w="5xl" mx="auto" text="xs:lg base gray">

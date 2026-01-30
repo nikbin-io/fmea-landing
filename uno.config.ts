@@ -39,11 +39,6 @@ export default defineConfig({
         light: '#e5e7eb',
         lighter: '#f3f4f6'
       },
-      red: {
-        DEFAULT: '#ef4444',
-        light: '#fee2e2',
-        dark: '#dc2626'
-      },
       brand: {
         DEFAULT: '#232b32'
       },

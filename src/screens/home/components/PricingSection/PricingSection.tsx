@@ -54,7 +54,7 @@ const PricingSection = () => {
   const [selectedPack, setSelectedPack] = useState(CREDIT_PACKS[1])
 
   return (
-    <section id="pricing" m="sm:b-30" p="y-10" position="relative">
+    <section id="pricing" m="sm:b-20" p="y-10" position="relative">
       <div
         bg="blue-900/5"
         blur="120px"

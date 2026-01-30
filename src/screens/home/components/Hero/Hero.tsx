@@ -1,6 +1,6 @@
 import dynamic from 'next/dynamic'
 import { Container, LinkButton } from '~/components'
-import { TechIcon, GiftIcon, ArrowRight } from '~/components/Icons'
+import { TechIcon, GiftIcon } from '~/components/Icons'
 
 const Wireframe = dynamic(() => import('~/components/Wireframe'), {
   ssr: false
@@ -14,7 +14,6 @@ export default function Hero() {
           flex="~ col items-center justify-center"
           mx="auto"
           position="relative"
-          px="3 sm:6 lg:8"
           z="1">
           <div flex="~ col items-center">
             <h1 font="bold" mb="6" text="3xl sm:6xl center lg:7xl gray-darker">
@@ -28,14 +27,35 @@ export default function Hero() {
               export to Excel effortlessly.
             </p>
 
-            <div flex="~ items-center justify-between" gap="50px" mt="50px">
+            <div
+              className="xl:grid-cols-[1fr_auto_1fr]"
+              gap="2xl:40px md:30px 15px"
+              grid="~ md:cols-2 cols-1"
+              items="center"
+              mt="16">
+              <div
+                col-span="md:2 xl:1"
+                flex="~ shrink-0 items-center justify-center"
+                h="300px"
+                justify-self="center"
+                mb="md:0 15px"
+                order="xl:2"
+                pointerEvents="none"
+                w="300px"
+                z="0">
+                <Wireframe />
+              </div>
+
               <div
                 b="1 white/50"
                 backdrop-blur="100px"
                 bg="white/15"
                 flex="~ col"
                 gap="4"
-                p="8"
+                h="xl:auto full"
+                max-w="xl:auto 420px"
+                order="xl:1"
+                p="md:x-8 x-6 y-6"
                 rounded="3xl"
                 shadow="lg"
                 transition="all duration-300"
@@ -53,7 +73,7 @@ export default function Hero() {
                       <TechIcon />
                     </div>
                   </div>
-                  <h3 font="bold" text="xs:xl brand">
+                  <h3 font="bold" text="lg:xl base brand">
                     Built by QA & AI Experts{' '}
                   </h3>
                 </div>
@@ -67,28 +87,18 @@ export default function Hero() {
               </div>
 
               <div
-                flex="~ items-center justify-center"
-                h="300px"
-                inset="0"
-                mt="8"
-                pointerEvents="none"
-                w="300px"
-                z="0">
-                <Wireframe />
-              </div>
-
-              <div
                 b="1 white/50"
                 backdrop-blur="100px"
                 bg="white/15"
                 flex="~ col"
                 gap="4"
-                p="8"
-                position="relative"
+                h="xl:auto full"
+                max-w="xl:auto 420px"
+                order="xl:3"
+                p="md:x-8 x-6 y-6"
                 rounded="3xl"
                 shadow="lg"
-                transition="all duration-300"
-                w="full">
+                transition="all duration-300">
                 <div flex="~ items-center justify-start" gap="5">
                   <div
                     bg="gray-lighter"
@@ -106,6 +116,7 @@ export default function Hero() {
                     hasEffect
                     href="https://app.fmeatool.ai"
                     label="Get 25 Free Credits"
+                    text="lg:md sm"
                   />
                 </div>
 
