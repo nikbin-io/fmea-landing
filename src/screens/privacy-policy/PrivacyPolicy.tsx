@@ -107,13 +107,40 @@ const PrivacyPolicy = () => {
               </div>
 
               <div>
+                <h2>Payment Information</h2>
+                <p>
+                  If you make a purchase through our application, your payment
+                  is processed by <strong>Stripe, Inc.</strong>, a third-party
+                  payment processor. We do not store your credit card number or
+                  full payment details on our servers. Stripe handles all
+                  payment information in accordance with PCI-DSS (Payment Card
+                  Industry Data Security Standard) requirements.
+                </p>
+                <p mt="2">
+                  We may receive from Stripe limited information such as the
+                  last four digits of your card, card type, expiration date,
+                  billing address, and transaction history for record-keeping
+                  and support purposes. For more information, please review{' '}
+                  <a
+                    className="font-semibold text-gray-darker hover:underline"
+                    href="https://stripe.com/privacy"
+                    rel="noopener noreferrer"
+                    target="_blank">
+                    Stripe&apos;s Privacy Policy
+                  </a>
+                  .
+                </p>
+              </div>
+
+              <div>
                 <h2>Sharing of Information</h2>
                 <p>
                   We do not sell your personal information. We may share your
                   information with trusted third-party service providers (e.g.,
-                  hosting providers, email services) solely for the purpose of
-                  operating our Site and conducting our business. These parties
-                  are obligated to keep your information confidential.
+                  hosting providers, email services, payment processors) solely
+                  for the purpose of operating our Site and conducting our
+                  business. These parties are obligated to keep your information
+                  confidential.
                 </p>
               </div>
 

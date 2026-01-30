@@ -57,8 +57,7 @@ const TermsOfUse = () => {
                   Please note that the actual software service is hosted
                   separately at{' '}
                   <span className="font-semibold">app.fmeatool.ai</span> and is
-                  subject to its own separate Terms of Service and Subscription
-                  Agreement.
+                  subject to its own separate Terms of Service.
                 </p>
               </div>
 
@@ -100,14 +99,150 @@ const TermsOfUse = () => {
               </div>
 
               <div>
+                <h2>Disclaimer of Warranties</h2>
+                <p>
+                  THE SITE, ITS CONTENT, AND ANY SERVICES OR PRODUCTS OBTAINED
+                  THROUGH THE SITE ARE PROVIDED ON AN &quot;AS IS&quot; AND
+                  &quot;AS AVAILABLE&quot; BASIS, WITHOUT ANY WARRANTIES OF ANY
+                  KIND, EITHER EXPRESS OR IMPLIED. NEITHER MAUDLIN WORKS, LLC
+                  NOR ANY PERSON ASSOCIATED WITH THE COMPANY MAKES ANY WARRANTY
+                  OR REPRESENTATION WITH RESPECT TO THE COMPLETENESS, SECURITY,
+                  RELIABILITY, QUALITY, ACCURACY, OR AVAILABILITY OF THE SITE OR
+                  ANY AI-GENERATED OUTPUTS.
+                </p>
+                <p mt="2">
+                  TO THE FULLEST EXTENT PROVIDED BY LAW, THE COMPANY HEREBY
+                  DISCLAIMS ALL WARRANTIES OF ANY KIND, WHETHER EXPRESS OR
+                  IMPLIED, STATUTORY, OR OTHERWISE, INCLUDING BUT NOT LIMITED TO
+                  ANY WARRANTIES OF MERCHANTABILITY, NON-INFRINGEMENT, AND
+                  FITNESS FOR A PARTICULAR PURPOSE.
+                </p>
+              </div>
+
+              <div>
                 <h2>Limitation of Liability</h2>
                 <p>
-                  To the fullest extent permitted by law, Maudlin Works, LLC
-                  shall not be liable for any indirect, incidental, special,
-                  consequential, or punitive damages arising out of or related
-                  to your use of this Site (the landing page). The information
-                  on the Site is provided on an &quot;as is&quot; basis without
-                  warranties of any kind.
+                  TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT
+                  SHALL MAUDLIN WORKS, LLC, ITS AFFILIATES, OFFICERS, DIRECTORS,
+                  EMPLOYEES, AGENTS, OR LICENSORS BE LIABLE FOR ANY INDIRECT,
+                  PUNITIVE, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR EXEMPLARY
+                  DAMAGES, INCLUDING WITHOUT LIMITATION DAMAGES FOR LOSS OF
+                  PROFITS, GOODWILL, USE, DATA, OR OTHER INTANGIBLE LOSSES,
+                  ARISING OUT OF OR RELATING TO YOUR USE OF THE SITE OR
+                  SERVICES.
+                </p>
+                <p mt="2">
+                  IN NO EVENT SHALL OUR TOTAL LIABILITY TO YOU FOR ALL CLAIMS
+                  EXCEED THE AMOUNT PAID BY YOU TO US DURING THE TWELVE (12)
+                  MONTHS PRIOR TO THE CLAIM, OR ONE HUNDRED US DOLLARS ($100),
+                  WHICHEVER IS GREATER.
+                </p>
+              </div>
+
+              <div>
+                <h2>Indemnification</h2>
+                <p>
+                  You agree to defend, indemnify, and hold harmless Maudlin
+                  Works, LLC, its affiliates, licensors, and service providers,
+                  and its and their respective officers, directors, employees,
+                  contractors, agents, licensors, suppliers, successors, and
+                  assigns from and against any claims, liabilities, damages,
+                  judgments, awards, losses, costs, expenses, or fees (including
+                  reasonable attorneys&apos; fees) arising out of or relating
+                  to: (a) your violation of these Terms; (b) your use of the
+                  Site or services; (c) your reliance on any AI-generated
+                  content or FMEA outputs; or (d) any engineering, safety, or
+                  compliance decisions made using information from this Site or
+                  our services.
+                </p>
+              </div>
+
+              <div>
+                <h2>Service Availability</h2>
+                <p>
+                  We do not guarantee that the Site or our services will be
+                  available at all times or without interruption. We reserve the
+                  right to modify, suspend, or discontinue any part of the Site
+                  or services at any time without notice. We shall not be liable
+                  to you or any third party for any modification, suspension, or
+                  discontinuance of the Site or services.
+                </p>
+              </div>
+
+              <div>
+                <h2>Account Termination</h2>
+                <p>
+                  We reserve the right, in our sole discretion, to terminate or
+                  suspend your access to all or part of the Site or services,
+                  with or without notice, for any reason, including without
+                  limitation breach of these Terms, suspected fraudulent or
+                  abusive activity, or conduct that we determine to be harmful
+                  to other users, us, or third parties. Upon termination, your
+                  right to use the services will immediately cease, and any
+                  unused credits may be forfeited without refund.
+                </p>
+              </div>
+
+              <div>
+                <h2>Credits and Usage</h2>
+                <p>
+                  Our services operate on a credit-based system. Credits are
+                  purchased in advance and consumed when you use the FMEA
+                  generation features. Credits are non-transferable, have no
+                  cash value, and cannot be exchanged or redeemed for cash.
+                  Unused credits do not expire unless your account is
+                  terminated.
+                </p>
+                <p mt="2">
+                  We reserve the right to modify credit pricing, credit
+                  consumption rates, or the features available for credit
+                  redemption at any time. Such changes will not affect credits
+                  already purchased but may affect how future credits are priced
+                  or consumed.
+                </p>
+              </div>
+
+              <div>
+                <h2>Payments and Billing</h2>
+                <p>
+                  All credit purchases are processed by{' '}
+                  <strong>Stripe, Inc.</strong>, a third-party payment
+                  processor. By making a purchase, you agree to Stripe&apos;s{' '}
+                  <a
+                    className="font-semibold text-gray-darker hover:underline"
+                    href="https://stripe.com/legal/consumer"
+                    rel="noopener noreferrer"
+                    target="_blank">
+                    Terms of Service
+                  </a>
+                  . All prices are listed in US Dollars (USD). You are
+                  responsible for any applicable taxes.
+                </p>
+                <p mt="2">
+                  You are responsible for providing accurate billing
+                  information. We reserve the right to suspend or terminate
+                  access to paid features if payment cannot be processed or is
+                  disputed fraudulently.
+                </p>
+              </div>
+
+              <div>
+                <h2>Refund Policy</h2>
+                <p>
+                  All purchases of credits and digital services are final and
+                  non-refundable upon delivery. Given that our services involve
+                  AI-generated content that is delivered immediately upon
+                  purchase, refunds are not available once credits have been
+                  issued to your account. In the event of a verified technical
+                  failure attributable to our platform, we may, at our sole
+                  discretion, issue replacement credits. To report such issues,
+                  please contact{' '}
+                  <a
+                    className="font-semibold text-gray-darker hover:underline"
+                    href="mailto:support@fmeatool.ai">
+                    support@fmeatool.ai
+                  </a>
+                  .
                 </p>
               </div>
 
@@ -116,9 +251,9 @@ const TermsOfUse = () => {
                 <p>
                   This Site may contain links to third-party websites or
                   services (including our own application app.fmeatool.ai) that
-                  are not owned or controlled by this Site’s specific terms. We
-                  assume no responsibility for the content, privacy policies, or
-                  practices of any third-party websites.
+                  are not owned or controlled by this Site&apos;s specific
+                  terms. We assume no responsibility for the content, privacy
+                  policies, or practices of any third-party websites.
                 </p>
               </div>
 
@@ -153,12 +288,40 @@ const TermsOfUse = () => {
               </div>
 
               <div>
-                <h2>Dispute Resolution</h2>
+                <h2>Dispute Resolution and Arbitration</h2>
                 <p>
-                  Any disputes arising out of or relating to these Terms or your
-                  use of the Site shall be resolved exclusively in the state or
-                  federal courts located in Delaware, and you consent to the
-                  personal jurisdiction of such courts.
+                  <strong>Binding Arbitration:</strong> Any dispute, claim, or
+                  controversy arising out of or relating to these Terms or the
+                  breach, termination, enforcement, interpretation, or validity
+                  thereof, including the determination of the scope or
+                  applicability of this agreement to arbitrate, shall be
+                  determined by arbitration in Delaware before a single
+                  arbitrator. The arbitration shall be administered by JAMS
+                  pursuant to its Comprehensive Arbitration Rules and
+                  Procedures. Judgment on the award may be entered in any court
+                  having jurisdiction.
+                </p>
+                <p mt="2">
+                  <strong>Class Action Waiver:</strong> YOU AND MAUDLIN WORKS,
+                  LLC AGREE THAT EACH MAY BRING CLAIMS AGAINST THE OTHER ONLY IN
+                  YOUR OR ITS INDIVIDUAL CAPACITY, AND NOT AS A PLAINTIFF OR
+                  CLASS MEMBER IN ANY PURPORTED CLASS OR REPRESENTATIVE
+                  PROCEEDING. Unless both you and the Company agree otherwise,
+                  the arbitrator may not consolidate more than one person&apos;s
+                  claims and may not otherwise preside over any form of a
+                  representative or class proceeding.
+                </p>
+                <p mt="2">
+                  <strong>Opt-Out:</strong> You may opt out of this arbitration
+                  agreement by sending written notice to{' '}
+                  <a
+                    className="font-semibold text-gray-darker hover:underline"
+                    href="mailto:support@fmeatool.ai">
+                    support@fmeatool.ai
+                  </a>{' '}
+                  within thirty (30) days of first accepting these Terms. Your
+                  notice must include your name, address, and a clear statement
+                  that you wish to opt out of this arbitration agreement.
                 </p>
               </div>
 
