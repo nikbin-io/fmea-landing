@@ -4,7 +4,7 @@ import { ContactBanner } from '~/components'
 
 const Home = () => {
   return (
-    <div>
+    <div pb="20">
       <Hero />
 
       <Demo />

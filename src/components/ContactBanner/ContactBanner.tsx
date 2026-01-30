@@ -3,7 +3,7 @@ import { MapPinIcon, EnvelopeIcon } from '~/components/Icons'
 
 const ContactBanner = () => {
   return (
-    <section mb="20" py="10">
+    <section>
       <Container>
         <div
           b="1 solid gray-light"
