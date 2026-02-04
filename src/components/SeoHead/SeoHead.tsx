@@ -7,8 +7,8 @@ type SeoHeadProps = {
 }
 
 const SeoHead = ({
-  title = 'AI FMEA Software & Automation',
-  description = 'Streamline risk analysis with AI. Create AIAG & VDA compliant DFMEA & PFMEA reports from PDFs instantly. Export to Excel with our automated FMEA tool.',
+  title = 'Agentic FMEA Generator',
+  description = 'AI FMEA tool for automated Failure Mode and Effect Analysis. Create DFMEA (Design) & PFMEA (Process) reports instantly. Export to Excel.',
   ogImage = 'https://fmeatool.ai/1200x630.png'
 }: SeoHeadProps) => {
   const fullTitle = `${title} | FMEA Tool`
@@ -18,7 +18,7 @@ const SeoHead = ({
       <title>{fullTitle}</title>
       <meta content={description} name="description" />
       <meta
-        content="AI FMEA Software, Automated FMEA Tool, Design FMEA, Process FMEA, AIAG VDA Compliance, Risk Analysis Automation, FMEA Excel Export"
+        content="AI FMEA Generator, Automated FMEA Tool, Design FMEA, Process FMEA, AIAG VDA Compliance, Risk Analysis Automation, FMEA Excel Export"
         name="keywords"
       />
 

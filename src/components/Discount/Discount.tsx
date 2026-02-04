@@ -1,5 +1,5 @@
 import useCountdown from '~/hooks/useCountdown'
-const END_DATE = '2026-01-30T21:00:00.000+00:00'
+const END_DATE = '2026-03-30T21:00:00.000+00:00'
 
 const Discount = () => {
   const [times, isFinished] = useCountdown({

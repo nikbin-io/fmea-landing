@@ -20,7 +20,7 @@ export const VIDEO_CONTENT: VIDEO_CONTENT_TYPE[] = [
     title: 'Process Failure Mode and Effects Analysis',
 
     description:
-      'Manufacturing and Process Engineers envision a process is free of errors. Unfortunately, errors and especially errors propagated when people are present can be quite catastrophic. Process Failure Mode and Effects Analysis (PFMEA) looks at each process step to identify risks and possible errors from many different sources.',
+      'Convert manufacturing process documentation into a complete, logically connected risk picture with minimal user effort. By following the actual process flow and linking operations to realistic causes and impacts, the app helps teams strengthen process robustness, reduce variation, and complete FMEA work more efficiently through a simple, focused user experience.',
     video: '/videos/demo.mp4'
   }
 ]
