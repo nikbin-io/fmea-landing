@@ -79,8 +79,7 @@ const PricingSection = () => {
           <h2 line-height="tight" text="center lg:3rem 2rem gray-dark ">
             PRICING
           </h2>
-
-          <p font="500" max-w="3xl" text="xl gray">
+          <p max-w="4xl" text="lg:xl lg center gray-dark">
             Get started instantly with our Standard plan or contact us for
             custom volume licensing and dedicated support.
           </p>
@@ -129,7 +128,7 @@ const PricingSection = () => {
                           </div>
 
                           <div
-                            className="grid xs:grid-cols-2 gap-5 w-full"
+                            className="grid grid-cols-2 gap-5 w-full"
                             max-w="500px">
                             {CREDIT_PACKS.map((pack) => {
                               const isSelected = selectedPack.id === pack.id
@@ -179,16 +178,16 @@ const PricingSection = () => {
                                     <div
                                       font="bold"
                                       line-height="28px"
-                                      text="2xl center brand">
+                                      text="xs:2xl xl center brand">
                                       {pack.credits} Credits
                                     </div>
 
                                     <div
                                       bg="purple/10"
                                       font="normal"
-                                      p="x-5px y-2px"
+                                      p="x-7px y-2px"
                                       rounded="10px"
-                                      text="sm purple-dark">
+                                      text="xs:sm xs purple-dark">
                                       {pack.bonus > 0
                                         ? `+${pack.bonus} Bonus Credits`
                                         : 'Starter'}
@@ -198,10 +197,10 @@ const PricingSection = () => {
                                   <div flex="~ items-baseline" gap="1">
                                     <span
                                       className="line-through decoration-gray decoration-2"
-                                      text="gray xl">
+                                      text="gray xs:xl lg">
                                       ${pack.oldPrice}
                                     </span>
-                                    <span font="bold" text="brand 2xl">
+                                    <span font="bold" text="brand xs:2xl xl">
                                       ${pack.price}
                                     </span>
                                   </div>

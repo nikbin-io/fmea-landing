@@ -27,7 +27,7 @@ const Layout = ({
         {children}
       </div>
       <div
-        className="absolute right-0 bottom-0 left-0 top-0 opacity-15"
+        className="absolute right-0 bottom-0 left-0 top-0 opacity-25"
         h="full"
         overflow="hidden"
         style={{ pointerEvents: 'none' }}

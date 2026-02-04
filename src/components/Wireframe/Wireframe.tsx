@@ -18,8 +18,9 @@ const Wireframe = () => {
     camera.lookAt(0, 0, 0)
 
     const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true })
-    renderer.setPixelRatio(2)
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
     renderer.setClearColor(0x232b32, 0)
+    renderer.outputColorSpace = THREE.SRGBColorSpace
     renderer.domElement.style.display = 'block'
     containerRef.current.appendChild(renderer.domElement)
 

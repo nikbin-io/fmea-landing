@@ -26,7 +26,7 @@ export const VIDEO_CONTENT: VIDEO_CONTENT_TYPE[] = [
 
 const VideoSection = () => {
   return (
-    <section p="sm:t-40 t-30 sö:b-30 b-20">
+    <section p="xs:t-40 t-15 xs:b-30 b-15">
       <Container>
         {VIDEO_CONTENT.map((feature, index) => (
           <div

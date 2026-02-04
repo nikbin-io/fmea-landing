@@ -41,7 +41,7 @@ const Demo = () => {
   }
 
   return (
-    <section p="b-30 t-30">
+    <section p="xs:b-30 b-15 t-30">
       <Container>
         <div mb="sm:16 8" text="center">
           <p
@@ -76,7 +76,7 @@ const Demo = () => {
           gap="50px"
           grid="~ md:cols-6 cols-1"
           h="md:700px"
-          m="b-50px t-10px"
+          m="xs:b-50px t-10px"
           position="relative">
           <div
             bg="gray-lighter"

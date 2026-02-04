@@ -50,7 +50,7 @@ export const FEATURES: FeatureItem[] = [
 
 const FeaturesSection = () => {
   return (
-    <section bg="gray-light" py="30">
+    <section bg="gray-light" py="xs:30 15">
       <Container>
         <div mb="16" text="center">
           <h2 font="bold" mb="4" text="center lg:4xl 2xl brand ">
