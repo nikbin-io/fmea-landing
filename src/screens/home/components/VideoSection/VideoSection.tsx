@@ -10,15 +10,14 @@ export interface VIDEO_CONTENT_TYPE {
 export const VIDEO_CONTENT: VIDEO_CONTENT_TYPE[] = [
   {
     id: '01',
-    title: 'Process Failure Mode and Effects Analysis',
+    title: 'Design Failure Mode and Effects Analysis',
     description:
-      'Manufacturing and Process Engineers envision a process is free of errors. Unfortunately, errors and especially errors propagated when people are present can be quite catastrophic. Process Failure Mode and Effects Analysis (PFMEA) looks at each process step to identify risks and possible errors from many different sources.',
+      'Build technically grounded design risk analyses directly from engineering documentation with minimal user effort. The app structures complex systems, connects functions to real failure mechanisms, and surfaces meaningful risks early, significantly reducing manual FMEA preparation while maintaining engineering rigor.',
     video: '/videos/demo.mp4'
   },
   {
     id: '02',
     title: 'Process Failure Mode and Effects Analysis',
-
     description:
       'Convert manufacturing process documentation into a complete, logically connected risk picture with minimal user effort. By following the actual process flow and linking operations to realistic causes and impacts, the app helps teams strengthen process robustness, reduce variation, and complete FMEA work more efficiently through a simple, focused user experience.',
     video: '/videos/demo.mp4'
