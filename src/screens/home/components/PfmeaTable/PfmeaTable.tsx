@@ -66,7 +66,9 @@ const PfmeaTable = () => {
                 {/* STRUCTURE */}
                 <td>{row.structure_processItem}</td>
                 <td>{row.structure_processStep}</td>
-                <td>{row.structure_workElement4m ?? row.structure_workElement}</td>
+                <td>
+                  {row.structure_workElement4m ?? row.structure_workElement}
+                </td>
 
                 {/* FUNCTION */}
                 <td>{row.func_processItem}</td>
