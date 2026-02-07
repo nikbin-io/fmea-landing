@@ -7,7 +7,7 @@ const Faq = () => {
       <Container>
         <div flex="~ col items-center" gap="6" mb="sm:10 8" text="center">
           <h2 line-height="tight" text="center lg:3rem 2rem gray-dark ">
-            Do you have any question?
+            Do you have any questions?
           </h2>
         </div>
 
