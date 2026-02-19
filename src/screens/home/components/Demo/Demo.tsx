@@ -117,7 +117,7 @@ const Demo = () => {
 
             <div flex="~ 1 col" gap="30px" p="6">
               <div>
-                <RangeInput label="Failer Modes Requested" />
+                <RangeInput label="Failure Modes Requested" />
               </div>
 
               <div flex="~ 1 col items-center justify-between">

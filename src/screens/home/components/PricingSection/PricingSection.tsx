@@ -77,7 +77,7 @@ const PricingSection = () => {
       <Container>
         <div flex="~ col items-center" gap="sm:10 6" mb="sm:20 8" text="center">
           <h2 line-height="tight" text="center lg:3rem 2rem gray-dark ">
-            PRICING
+            Pricing
           </h2>
           <p max-w="4xl" text="lg:xl lg center gray-dark">
             Get started instantly with our Standard plan or contact us for
