@@ -62,7 +62,14 @@ const Demo = () => {
               Examples Created by
             </h2>
 
-            <Image alt="logo" h="sm:50px 40px" src={logoImg} w="auto" />
+            <Image
+              alt="logo"
+              h="sm:50px 40px"
+              height={50}
+              src={logoImg}
+              w="auto"
+              width={124}
+            />
           </div>
 
           <p max-w="5xl" mx="auto" text="xs:lg base gray">

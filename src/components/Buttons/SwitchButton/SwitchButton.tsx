@@ -18,6 +18,7 @@ const SwitchButton = ({
   return (
     <div flex="~ items-center justify-between" w="full">
       <label
+        aria-label="Toggle between Design FMEA and Process FMEA"
         cursor={disabled ? 'auto' : 'pointer'}
         flex="~ items-center"
         htmlFor="demo-switch-button"
