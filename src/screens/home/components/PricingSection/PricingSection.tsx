@@ -29,7 +29,7 @@ const CARDS = [
       'Strict data privacy & security protocols'
     ],
     link: {
-      href: '#',
+      href: 'https://app.fmeatool.ai/',
       label: 'Get Standard'
     }
   },
@@ -44,7 +44,7 @@ const CARDS = [
       'Dedicated account manager & SLA'
     ],
     link: {
-      href: '/contact',
+      href: 'mailto:support@fmeatool.ai',
       label: 'Contact Us'
     }
   }

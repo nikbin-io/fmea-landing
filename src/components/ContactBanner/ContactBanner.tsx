@@ -31,7 +31,7 @@ const ContactBanner = () => {
             <LinkButton
               h="45px"
               hasEffect
-              href="https://app.fmeatool.ai"
+              href="mailto:support@fmeatool.ai"
               label="Contact Us"
               w="160px"
             />
