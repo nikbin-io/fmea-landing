@@ -26,6 +26,7 @@ const DFMEA_DOCS = [
     label: 'MOSAR...Design-Definition-File.pdf'
   }
 ]
+
 const PFMEA_DOCS = [
   {
     url: '/documents/pfmea/2.4_Assembly_Manual.pdf',
@@ -160,14 +161,14 @@ const Demo = () => {
                   p="6"
                   rounded="lg"
                   w="full">
-                  <p text="gray xs center">
+                  <p text="gray-dark xs center">
                     Supported: pdf, jpg, jpeg, webp, csv, txt, xlsx, xls
                   </p>
 
                   {(isPfmea ? PFMEA_DOCS : DFMEA_DOCS).map((doc) => (
                     <a
                       b="1 solid gray/30 hover:gray/80"
-                      color="gray hover:brand"
+                      color="gray-dark hover:brand"
                       cursor="pointer"
                       download
                       flex="~ items-center"
@@ -246,7 +247,7 @@ const Demo = () => {
                     {isPfmea ? 'Process' : 'Design'} FMEA Results
                   </h2>
 
-                  <p text="sm gray center">
+                  <p text="sm gray-dark center">
                     Items are prioritized by Action Priority (High to Low)
                     rather than numerical ID order.
                   </p>

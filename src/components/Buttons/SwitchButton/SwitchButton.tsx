@@ -20,12 +20,14 @@ const SwitchButton = ({
       <label
         cursor={disabled ? 'auto' : 'pointer'}
         flex="~ items-center"
+        htmlFor="demo-switch-button"
         position="relative">
         <input
           checked={checked}
           className="sr-only peer"
           defaultChecked={defaultChecked}
           disabled={disabled}
+          id="demo-switch-button"
           type="checkbox"
           onChange={handleChange}
         />

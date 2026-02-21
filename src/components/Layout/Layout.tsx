@@ -23,9 +23,9 @@ const Layout = ({
       position="relative">
       <Header />
 
-      <div flex="~ 1 col" p="t-10" position="relative">
+      <main flex="~ 1 col" p="t-10" position="relative">
         {children}
-      </div>
+      </main>
       <div
         className="absolute right-0 bottom-0 left-0 top-0 opacity-25"
         h="full"

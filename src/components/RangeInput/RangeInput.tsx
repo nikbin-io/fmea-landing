@@ -10,83 +10,59 @@ import {
 interface RangeInputProps
   extends Omit<InputHTMLAttributes<HTMLInputElement>, 'type'> {
   label: string
-  required?: boolean
   tooltipContent?: JSX.Element
-  min?: number
-  max?: number
 }
 
 const RangeInput = forwardRef<HTMLInputElement, RangeInputProps>(
   (
     {
       label,
-      required,
       tooltipContent,
-      disabled = false,
-      value: propValue, // Dışarıdan gelen değeri propValue olarak aldık
-      defaultValue,
-      min = 25,
-      max = 200,
+      value: propValue,
       className,
       style,
       id,
       name,
-      onChange, // onChange'i buradan ayıkladık
+      onChange,
       ...rest
     },
     ref
   ) => {
-    // Başlangıç değeri: Varsa value, yoksa defaultValue, o da yoksa max
-    const initialValue =
-      propValue !== undefined
-        ? Number(propValue)
-        : defaultValue !== undefined
-          ? Number(defaultValue)
-          : max
+    const [localValue, setLocalValue] = useState<number>(Number(200))
 
-    // İçerideki state
-    const [localValue, setLocalValue] = useState<number>(Number(initialValue))
-
-    // Eğer dışarıdan "value" prop'u değişirse (controlled component durumu), state'i güncelle
     useEffect(() => {
       if (propValue !== undefined) {
         setLocalValue(Number(propValue))
       }
     }, [propValue])
 
-    // Slider hareket ettiğinde çalışacak fonksiyon
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
       const newValue = Number(e.target.value)
-      setLocalValue(newValue) // Kendi state'imizi güncelle (UI anında tepki verir)
+      setLocalValue(newValue)
 
       if (onChange) {
-        onChange(e) // Eğer parent component bir fonksiyon yolladıysa onu da tetikle
+        onChange(e)
       }
     }
 
-    // İlerleme çubuğu hesabını localValue üzerinden yapıyoruz
     const progressPercent = useMemo(() => {
       const val = localValue
-      const safeMin = Number(min)
-      const safeMax = Number(max)
-      // Sıfıra bölünme hatasını önlemek için kontrol
+      const safeMin = Number(25)
+      const safeMax = Number(200)
       if (safeMax - safeMin === 0) return 0
       return ((val - safeMin) * 100) / (safeMax - safeMin)
-    }, [localValue, min, max])
+    }, [localValue])
 
     return (
       <div className={className} position="relative" w="full">
         <label
-          color={disabled ? 'gray-dark/50' : 'gray-dark'}
+          color="gray-dark"
           flex="~ items-center justify-between"
           font="400"
-          htmlFor={id ?? name}
+          htmlFor="range-input"
           mb="20px"
           text="sm gray-dark">
-          <span>
-            {label}
-            {required && <span ml="2px">*</span>}
-          </span>
+          <span>{label}</span>
           {tooltipContent && <div>{tooltipContent}</div>}
           <div flex="~ items-center justify-end">({localValue}) </div>
         </label>
@@ -104,12 +80,11 @@ const RangeInput = forwardRef<HTMLInputElement, RangeInputProps>(
               [&::-moz-range-progress]:(h-6px rounded-full)
               [&::-webkit-slider-thumb]:(appearance-none w-10px h-10px rounded-full bg-white border-3 border-solid border-gray/20 shadow-sm transition-transform hover:scale-110)
             `}
-            cursor={disabled ? 'not-allowed' : 'pointer'}
-            disabled={disabled}
+            cursor="pointer"
             h="6px"
-            id={id ?? name}
-            max={max}
-            min={min}
+            id="range-input"
+            max={200}
+            min={25}
             name={name}
             outline="none"
             ref={ref}
@@ -125,16 +100,17 @@ const RangeInput = forwardRef<HTMLInputElement, RangeInputProps>(
             onChange={handleInputChange}
           />
 
-          <div flex="~ items-center justify-between" mt="2px" text="xs gray">
-            <span>{min}</span>
-            <span>{max}</span>
+          <div
+            flex="~ items-center justify-between"
+            mt="2px"
+            text="xs gray-dark">
+            <span>25</span>
+            <span>200</span>
           </div>
         </div>
       </div>
     )
   }
 )
-
-RangeInput.displayName = 'RangeInput'
 
 export default RangeInput

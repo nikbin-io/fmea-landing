@@ -197,7 +197,7 @@ const PricingSection = () => {
                                   <div flex="~ items-baseline" gap="1">
                                     <span
                                       className="line-through decoration-gray decoration-2"
-                                      text="gray xs:xl lg">
+                                      text="gray-dark xs:xl lg">
                                       ${pack.oldPrice}
                                     </span>
                                     <span font="bold" text="brand xs:2xl xl">

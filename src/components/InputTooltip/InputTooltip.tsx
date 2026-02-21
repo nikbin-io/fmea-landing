@@ -54,6 +54,7 @@ const InputTooltip = ({ content }: InputTooltipProps) => {
       </motion.div>
 
       <button
+        aria-label="tooltip icon"
         b="none"
         bg="transparent"
         color="gray hover:gray-darker"

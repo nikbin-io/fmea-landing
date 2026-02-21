@@ -73,9 +73,9 @@ export default function Hero() {
                       <TechIcon />
                     </div>
                   </div>
-                  <h3 font="bold" text="lg:xl base brand">
+                  <p font="bold" text="lg:xl base brand">
                     Built by QA & AI Experts{' '}
-                  </h3>
+                  </p>
                 </div>
 
                 <div>
