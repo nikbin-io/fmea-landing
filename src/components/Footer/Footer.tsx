@@ -60,7 +60,7 @@ const Footer = () => {
             gap="10px"
             py="6"
             text="sm gray-dark ">
-            <p>© 2025 Maudlin Works LLC. All rights reserved.</p>
+            <p>© 2026 Maudlin Works LLC. All rights reserved.</p>
             <p>Developed by nikbin.io.</p>
           </div>
         </div>
