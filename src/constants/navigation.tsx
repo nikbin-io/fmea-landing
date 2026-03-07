@@ -20,12 +20,12 @@ export const SOCIAL_LINKS = [
   },
   {
     title: 'Youtube',
-    url: 'https://www.youtube.com/',
+    url: 'https://www.youtube.com/@FMEAToolAI',
     icon: <YoutubeIcon />
   },
   {
     title: 'Linkedin',
-    url: 'https://www.linkedin.com/company/',
+    url: 'https://www.linkedin.com/showcase/fmea-tool-ai',
     icon: <LinkedinIcon />
   }
 ]
