@@ -1,7 +1,23 @@
 import Head from 'next/head'
-import { useRouter } from 'next/router'
 
 const BASE_URL = 'https://fmeatool.ai'
+
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'FMEA Tool',
+  url: BASE_URL,
+  logo: `${BASE_URL}/180x180.png`,
+  sameAs: [
+    'https://www.youtube.com/@FMEAToolAI',
+    'https://www.linkedin.com/showcase/fmea-tool-ai'
+  ],
+  contactPoint: {
+    '@type': 'ContactPoint',
+    email: 'support@fmeatool.ai',
+    contactType: 'customer support'
+  }
+}
 
 type SeoHeadProps = {
   title?: string
@@ -16,9 +32,8 @@ const SeoHead = ({
   ogImage = 'https://fmeatool.ai/1200x630.png',
   canonical
 }: SeoHeadProps) => {
-  const { asPath } = useRouter()
   const fullTitle = `${title} | FMEA Tool`
-  const canonicalUrl = canonical ?? `${BASE_URL}${asPath.split('?')[0]}`
+  const canonicalUrl = canonical ?? `${BASE_URL}`
 
   return (
     <Head>
@@ -38,11 +53,17 @@ const SeoHead = ({
       <meta content={canonicalUrl} key="og:url" property="og:url" />
 
       <meta content="summary_large_image" name="twitter:card" />
+      <meta content="@FMEAToolAI" name="twitter:site" />
       <meta content={fullTitle} name="twitter:title" />
       <meta content={description} name="twitter:description" />
       <meta content={ogImage} name="twitter:image" />
 
       <link href={canonicalUrl} key="canonical" rel="canonical" />
+
+      <script
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        type="application/ld+json"
+      />
     </Head>
   )
 }

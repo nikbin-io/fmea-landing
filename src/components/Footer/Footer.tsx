@@ -44,6 +44,7 @@ const Footer = () => {
                     href={item.url}
                     key={item.title}
                     p="2"
+                    rel="noopener noreferrer"
                     target="_blank"
                     title={item.title}
                     transition="colors 200">
