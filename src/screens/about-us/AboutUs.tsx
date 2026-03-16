@@ -4,6 +4,7 @@ const AboutUs = () => {
   return (
     <>
       <SeoHead
+        canonical="https://fmeatool.ai/about-us"
         description="FMEA Tool combines AI efficiency with established FMEA methodologies to automate risk analysis for quality engineers."
         title="About Us | FMEA Tool"
       />

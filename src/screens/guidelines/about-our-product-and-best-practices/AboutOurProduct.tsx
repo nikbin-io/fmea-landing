@@ -2,7 +2,10 @@ import Wrapper from '../components/Wrapper'
 
 const AboutOurProduct = () => {
   return (
-    <Wrapper>
+    <Wrapper
+      canonical="https://fmeatool.ai/guidelines/about-our-product-and-best-practices"
+      description="Learn how to use FMEA Tool effectively. Best practices for document upload, failure mode selection, and interpreting AI-generated FMEA outputs."
+      title="About Our Product & Best Practices | User Guide">
       <div h="full">
         <h2
           id="page-top"

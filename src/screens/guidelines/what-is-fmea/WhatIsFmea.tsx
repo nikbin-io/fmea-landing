@@ -2,7 +2,9 @@ import Wrapper from '../components/Wrapper'
 
 const WhatIsFmea = () => {
   return (
-    <Wrapper>
+    <Wrapper
+      description="Learn what FMEA is, how it works, and when to use Design FMEA (DFMEA) or Process FMEA (PFMEA) for risk analysis."
+      title="What is FMEA? | User Guide">
       <div h="full">
         <h2
           id="page-top"

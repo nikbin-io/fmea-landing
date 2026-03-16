@@ -13,7 +13,7 @@ const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID || ''
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <Layout className={jakarta.className}>
-      <SeoHead />
+      <SeoHead canonical="https://fmeatool.ai/" />
       {GTM_ID && (
         <>
           <Script id="gtm-consent" strategy="afterInteractive">

@@ -4,6 +4,7 @@ const PrivacyPolicy = () => {
   return (
     <>
       <SeoHead
+        canonical="https://fmeatool.ai/privacy-policy"
         description="Read our privacy policy to understand how Maudlin Works, LLC handles your data on fmeatool.ai."
         title="Privacy Policy | FMEA Tool"
       />

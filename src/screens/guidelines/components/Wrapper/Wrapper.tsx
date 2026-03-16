@@ -4,12 +4,20 @@ import Keypoints from '../Keypoints'
 
 type Props = {
   children: ReactNode
+  title?: string
+  description?: string
+  canonical?: string
 }
 
-const Wrapper = ({ children }: Props) => {
+const Wrapper = ({
+  children,
+  title = 'User Guide & Best Practices',
+  description,
+  canonical = 'https://fmeatool.ai/guidelines'
+}: Props) => {
   return (
     <>
-      <SeoHead description="" title="User Guide & Best Practices" />
+      <SeoHead canonical={canonical} description={description} title={title} />
       <div py="20">
         <Container>
           <div

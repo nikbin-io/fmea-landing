@@ -4,6 +4,7 @@ const TermsOfUse = () => {
   return (
     <>
       <SeoHead
+        canonical="https://fmeatool.ai/terms-of-use"
         description="Read the Terms of Use for the fmeatool.ai website operated by Maudlin Works, LLC."
         title="Terms of Use | FMEA Tool"
       />

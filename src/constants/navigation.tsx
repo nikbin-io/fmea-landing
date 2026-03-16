@@ -1,4 +1,4 @@
-import { LinkedinIcon, XIcon, YoutubeIcon } from '~/components/Icons'
+import { LinkedinIcon, YoutubeIcon } from '~/components/Icons'
 
 export const NAVIGATION_LINKS = [
   { name: 'Pricing', href: '/#pricing' },
@@ -13,11 +13,6 @@ export const FOOTER_NAV_LINKS = [
 ]
 
 export const SOCIAL_LINKS = [
-  {
-    title: 'x',
-    url: 'https://x.com/',
-    icon: <XIcon />
-  },
   {
     title: 'Youtube',
     url: 'https://www.youtube.com/@FMEAToolAI',

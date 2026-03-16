@@ -4,6 +4,7 @@ const CookiePolicy = () => {
   return (
     <>
       <SeoHead
+        canonical="https://fmeatool.ai/cookie-policy"
         description="Read our cookie policy to understand how Maudlin Works, LLC uses cookies on fmeatool.ai."
         title="Cookie Policy | FMEA Tool"
       />
