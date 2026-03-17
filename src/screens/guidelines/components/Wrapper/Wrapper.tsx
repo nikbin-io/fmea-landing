@@ -70,7 +70,7 @@ const Wrapper = ({
               p="y-10 sm:x-10 x-4"
               rounded="xl"
               shadow="md">
-              <div className="[&_p]:text-base [&_ul]:ml-6 [&_li]:text-base [&_h4]:mb-2 [&_h4]:mt-4 [&_ul]:mb-4 [&_p]:mb-4 [&_h3]:mt-6 [&_h3]:text-xl [&_h4]:font-semibold [&_h3]:font-semibold [&_h3]:mb-2">
+              <div className="[&_p]:text-base [&_ul]:ml-6 [&_li]:text-base [&_h3]:mb-2 [&_h3]:mt-4 [&_ul]:mb-4 [&_p]:mb-4 [&_h2]:mt-6 [&_h2]:text-xl [&_h3]:text-base [&_h3]:font-bold [&_h2]:font-semibold [&_h2]:mb-2">
                 {children}
               </div>
             </div>

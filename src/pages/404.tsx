@@ -7,7 +7,8 @@ const NotFoundPage = () => {
       <SeoHead
         canonical="https://fmeatool.ai/404"
         description="The page you are looking for might have been moved, deleted, or never existed. Return to the FMEA Tool homepage."
-        title="404 Page Not Found | FMEA Tool"
+        robots="noindex, nofollow"
+        title="404 Page Not Found"
       />
       <main
         flex="~ 1 col items-center justify-center"

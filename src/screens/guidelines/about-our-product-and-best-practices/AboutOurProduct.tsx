@@ -15,13 +15,13 @@ const AboutOurProduct = () => {
       description="Learn how to use FMEA Tool effectively. Best practices for document upload, failure mode selection, and interpreting AI-generated FMEA outputs."
       title="About Our Product & Best Practices | User Guide">
       <div h="full">
-        <h2
+        <h1
           id="page-top"
           m="b-2"
           scroll-m="lg:t-180px t-120px"
           text="2xl font-semibold">
           About Our Product and Best Practices
-        </h2>
+        </h1>
 
         <p>
           Conducting a high-quality FMEA has historically presented a difficult
@@ -39,13 +39,13 @@ const AboutOurProduct = () => {
           in a single run.
         </p>
 
-        <h3 id="agentic-workflow" scroll-m="lg:t-150px t-120px">
+        <h2 id="agentic-workflow" scroll-m="lg:t-150px t-120px">
           An Agentic Workflow: The Virtual Engineering Team
-        </h3>
+        </h2>
 
         <p>
           Unlike standard AI tools that simply &quot;predict text,&quot; our
-          application utilizes an <span font="bold">agentic workflow</span>.
+          application utilizes an <span font="semibold">agentic workflow</span>.
           This means the AI simulates a cross-functional team of experts working
           in collaboration, rather than a single entity attempting to perform
           all tasks at once.
@@ -54,35 +54,37 @@ const AboutOurProduct = () => {
         <p>
           Instead of generating a flat list of risks, the system employs a
           multi-stage process with built-in{' '}
-          <span font="bold">quality gates</span>. It deconstructs your documents
-          to understand system architecture, generates logical failure chains,
-          and rigorously self-corrects against engineering standards before the
-          output is presented.
+          <span font="semibold">quality gates</span>. It deconstructs your
+          documents to understand system architecture, generates logical failure
+          chains, and rigorously self-corrects against engineering standards
+          before the output is presented.
         </p>
 
         <p>
           This approach enables the system to generate{' '}
-          <span font="bold">up to 200 </span>technically distinct, logically
+          <span font="semibold">up to 200 </span>technically distinct, logically
           consistent failure modes in a single run, with a depth that mirrors a
           facilitated engineering workshop.
         </p>
 
-        <h3 id="best-practices" scroll-m="lg:t-150px t-120px">
+        <h2 id="best-practices" scroll-m="lg:t-150px t-120px">
           Best Practices: Optimizing Your Output
-        </h3>
+        </h2>
 
         <p>
           The quality of the generated FMEA is directly proportional to the
           quality, clarity, and relevance of the documents you provide. The AI
           does not invent technical knowledge; it{' '}
-          <span font="bold">grounds</span> its analysis strictly in your inputs.
+          <span font="semibold">grounds</span> its analysis strictly in your
+          inputs.
         </p>
 
-        <h4 text="18px">File Formats</h4>
+        <h3 text="18px">File Formats</h3>
 
         <p>
           The application supports PDF, CSV, TXT, XLSX, and image files.
-          However, <span font="bold">PDF</span> format is strongly recommended.
+          However, <span font="semibold">PDF</span> format is strongly
+          recommended.
         </p>
 
         <p>
@@ -106,12 +108,13 @@ const AboutOurProduct = () => {
           interface identification, and functional accuracy.
         </p>
 
-        <h4 text="18px">Capacity Limit</h4>
+        <h3 text="18px">Capacity Limit</h3>
 
         <p>
           To preserve deep contextual reasoning, each analysis run currently
-          supports up to <span font="bold">100,000 tokens</span>, equivalent to
-          <span font="bold"> approximately 300-400 pages</span> of typical
+          supports up to <span font="semibold">100,000 tokens</span>, equivalent
+          to
+          <span font="semibold"> approximately 300-400 pages</span> of typical
           technical documentation.{' '}
         </p>
 
@@ -120,13 +123,13 @@ const AboutOurProduct = () => {
           produces better results than uploading many loosely related files.
         </p>
 
-        <h3
+        <h2
           id="recommended-documents-by-fmea-type"
           scroll-m="lg:t-150px t-120px">
           Recommended Documents by FMEA Type
-        </h3>
+        </h2>
 
-        <h4 text="18px">For Design FMEA (DFMEA)</h4>
+        <h3 text="18px">For Design FMEA (DFMEA)</h3>
 
         <p>
           Focus on documents that define system behaviour, boundaries, and
@@ -152,7 +155,7 @@ const AboutOurProduct = () => {
           prevention controls, and detection logic in objective design intent.
         </p>
 
-        <h4 text="18px">For Process FMEA (PFMEA)</h4>
+        <h3 text="18px">For Process FMEA (PFMEA)</h3>
 
         <p>
           PFMEA requires documentation that connects manufacturing execution to
@@ -173,16 +176,16 @@ const AboutOurProduct = () => {
           detection control identification.
         </p>
 
-        <h3 id="output" scroll-m="lg:t-150px t-120px">
+        <h2 id="output" scroll-m="lg:t-150px t-120px">
           Output
-        </h3>
+        </h2>
 
-        <h4 text="18px">Standards Alignment</h4>
+        <h3 text="18px">Standards Alignment</h3>
 
         <p>
           All outputs are delivered in an
-          <span font="bold"> AIAG & VDA aligned Excel structure</span> using the
-          harmonized 7-Step approach and Action Priority logic.
+          <span font="semibold"> AIAG & VDA aligned Excel structure</span> using
+          the harmonized 7-Step approach and Action Priority logic.
         </p>
 
         <p>
@@ -194,10 +197,10 @@ const AboutOurProduct = () => {
 
         <p>
           Using this structure ensures that your FMEA remains review-ready,
-          auditable, and logically <span font="bold">consistent</span>.
+          auditable, and logically <span font="semibold">consistent</span>.
         </p>
 
-        <h4 text="18px">How to Interpret the Results</h4>
+        <h3 text="18px">How to Interpret the Results</h3>
 
         <p>The generated output is a complete, structured FMEA draft.</p>
 
@@ -225,12 +228,12 @@ const AboutOurProduct = () => {
 
         <p>
           The output should be treated as a{' '}
-          <span font="bold">high-quality engineering draft</span>, intended to
-          accelerate structured FMEA development rather than replace
+          <span font="semibold">high-quality engineering draft</span>, intended
+          to accelerate structured FMEA development rather than replace
           professional judgment.
         </p>
 
-        <h4 text="18px">Evidence-Based Controls</h4>
+        <h3 text="18px">Evidence-Based Controls</h3>
 
         <p>
           The AI searches your uploaded documents to locate objective support
@@ -249,7 +252,7 @@ const AboutOurProduct = () => {
           gaps.
         </p>
 
-        <h4 text="18px">Optimization Actions</h4>
+        <h3 text="18px">Optimization Actions</h3>
 
         <p>
           Preventive and detection actions are generated as engineering
@@ -265,7 +268,7 @@ const AboutOurProduct = () => {
           <li>Organizational applicability</li>
         </ul>
 
-        <h4 text="18px">Administrative Fields</h4>
+        <h3 text="18px">Administrative Fields</h3>
 
         <p>
           Project management fields (responsibility, dates, status) are
@@ -273,7 +276,7 @@ const AboutOurProduct = () => {
           processes.
         </p>
 
-        <h4 text="18px">The Human in the Loop</h4>
+        <h3 text="18px">The Human in the Loop</h3>
 
         <p>
           This application applies advanced self-review logic and quality gates
@@ -291,11 +294,11 @@ const AboutOurProduct = () => {
           <li>Approved through your standard FMEA governance process</li>
         </ul>
 
-        <h3 id="practical-tips" scroll-m="lg:t-150px t-120px">
+        <h2 id="practical-tips" scroll-m="lg:t-150px t-120px">
           Practical Tips for Efficient Use
-        </h3>
+        </h2>
 
-        <h4 text="18px">Simplicity of Use</h4>
+        <h3 text="18px">Simplicity of Use</h3>
 
         <p>
           The application is intentionally designed to remain simple and
@@ -310,13 +313,13 @@ const AboutOurProduct = () => {
           <li>Define the desired number of failure modes.</li>
 
           <li>
-            Click <span font="bold">Run FMEA Analysis</span>.
+            Click <span font="semibold">Run FMEA Analysis</span>.
           </li>
         </ul>
 
         <p>No additional configuration is required.</p>
 
-        <h4 text="18px">Selecting the Number of Failure Modes</h4>
+        <h3 text="18px">Selecting the Number of Failure Modes</h3>
 
         <p>
           The requested number of failure modes is the primary cost and
@@ -325,7 +328,7 @@ const AboutOurProduct = () => {
 
         <p>
           The value is adjustable up to{' '}
-          <span font="bold">200 failure modes</span> and should be selected
+          <span font="semibold">200 failure modes</span> and should be selected
           based on:
         </p>
 
@@ -343,23 +346,25 @@ const AboutOurProduct = () => {
           justified.
         </p>
 
-        <h4 text="18px">Document Format and Token Usage</h4>
+        <h3 text="18px">Document Format and Token Usage</h3>
 
         <p>
-          Whenever possible, <span font="bold">PDF format should be used</span>.
-          PDF files preserve layout, diagrams, tables, and hierarchy, which
-          significantly improves system understanding.
+          Whenever possible,{' '}
+          <span font="semibold">PDF format should be used</span>. PDF files
+          preserve layout, diagrams, tables, and hierarchy, which significantly
+          improves system understanding.
         </p>
 
         <p>
           The application supports up to{' '}
-          <span font="bold">100,000 tokens per analysis run</span>, which is
+          <span font="semibold">100,000 tokens per analysis run</span>, which is
           sufficient for most real-world projects. Token usage per document is
           visible to the user.
         </p>
 
         <p>
-          If the <span font="bold">token</span> limit is approached, users can:
+          If the <span font="semibold">token</span> limit is approached, users
+          can:
         </p>
 
         <ul list="disc" space="y-2">
@@ -375,7 +380,7 @@ const AboutOurProduct = () => {
           essential information.
         </p>
 
-        <h4 text="18px">Analysis Duration</h4>
+        <h3 text="18px">Analysis Duration</h3>
 
         <p>FMEA generation time depends on:</p>
 
@@ -389,21 +394,25 @@ const AboutOurProduct = () => {
 
         <p>
           In large analyses, generation can take{' '}
-          <span font="bold">up to one hour</span>. This reflects the multi-stage
-          reasoning and internal quality review process applied during analysis.
+          <span font="semibold">up to one hour</span>. This reflects the
+          multi-stage reasoning and internal quality review process applied
+          during analysis.
         </p>
 
-        <h4 text="18px">Credit Usage Policy</h4>
+        <h3 text="18px">Credit Usage Policy</h3>
 
         <p>
           Credits are charged only when the delivered Excel file contains{' '}
-          <span font="bold">more than 75% of the requested failure modes</span>.
+          <span font="semibold">
+            more than 75% of the requested failure modes
+          </span>
+          .
         </p>
 
         <p>
           If the system generates{' '}
-          <span font="bold">more complete FMEA entries than requested</span>, no
-          additional credits are charged.
+          <span font="semibold">more complete FMEA entries than requested</span>
+          , no additional credits are charged.
         </p>
 
         <p>
@@ -411,7 +420,7 @@ const AboutOurProduct = () => {
           output.
         </p>
 
-        <h4 text="18px">Importance of Document Quality</h4>
+        <h3 text="18px">Importance of Document Quality</h3>
         <p>
           Document quality is the single most important factor influencing FMEA
           quality.
@@ -435,7 +444,7 @@ const AboutOurProduct = () => {
           quality regardless of AI capability.
         </p>
 
-        <h4 text="18px">Support and Feedback</h4>
+        <h3 text="18px">Support and Feedback</h3>
 
         <p>
           If you have questions, require guidance, or wish to share feedback,

@@ -14,13 +14,13 @@ const WhatIsFmea = () => {
       description="Learn what FMEA is, how it works, and when to use Design FMEA (DFMEA) or Process FMEA (PFMEA) for risk analysis."
       title="What is FMEA? | User Guide">
       <div h="full">
-        <h2
+        <h1
           id="page-top"
           m="b-2"
           scroll-m="lg:t-180px t-120px"
           text="2xl font-semibold">
           What is FMEA?
-        </h2>
+        </h1>
 
         <p>
           Failure Mode and Effects Analysis (FMEA) is a systematic, analytical
@@ -41,20 +41,20 @@ const WhatIsFmea = () => {
           commissioned.
         </p>
 
-        <h3 id="the-core-methodology" scroll-m="lg:t-150px t-120px">
+        <h2 id="the-core-methodology" scroll-m="lg:t-150px t-120px">
           The Core Methodology: The Failure Chain
-        </h3>
+        </h2>
 
         <p>
           The heart of an effective FMEA is the{' '}
-          <span font="bold">Failure Chain.</span> Rather than listing isolated
-          defects, the methodology requires establishing a logical causality
-          link between three distinct technical elements:
+          <span font="semibold">Failure Chain.</span> Rather than listing
+          isolated defects, the methodology requires establishing a logical
+          causality link between three distinct technical elements:
         </p>
 
         <ul list="decimal" space="y-2">
           <li>
-            <span font="bold"> Failure Cause: </span>
+            <span font="semibold"> Failure Cause: </span>
             The underlying physical or chemical mechanism at the component level
             (e.g., dielectric breakdown due to overvoltage, fatigue crack
             initiation, or software integer overflow). A valid cause is rooted
@@ -63,22 +63,22 @@ const WhatIsFmea = () => {
           </li>
 
           <li>
-            <span font="bold">Failure Mode: </span>
+            <span font="semibold">Failure Mode: </span>
             The specific manner in which the item fails to meet its intended
             function or requirement (e.g., solenoid valve fails to open, sensor
             signal drift outside tolerance).
           </li>
           <li>
-            <span font="bold"> Failure Effect: </span>
+            <span font="semibold"> Failure Effect: </span>
             The consequence of that failure mode propagating up to the system
             level, the end-user, or regulatory compliance (e.g., loss of
             steering assist, thermal runaway, or vehicle fails emissions test).
           </li>
         </ul>
 
-        <h3 id="quantifying-risk" scroll-m="lg:t-150px t-120px">
+        <h2 id="quantifying-risk" scroll-m="lg:t-150px t-120px">
           Quantifying Risk: S-O-D and Action Priority
-        </h3>
+        </h2>
 
         <p>
           To transition from qualitative analysis to quantitative risk
@@ -87,22 +87,23 @@ const WhatIsFmea = () => {
 
         <ul list="disc" space="y-2">
           <li>
-            <span font="bold">Severity (S): </span>
+            <span font="semibold">Severity (S): </span>
             The significance of the Failure Effect on the end-user or safety.
             High severity indicates safety hazards or regulatory non-compliance.
           </li>
 
           <li>
-            <span font="bold">Occurrence (O): </span>
+            <span font="semibold">Occurrence (O): </span>
             The likelihood that the Failure Cause will occur. This rating is
-            heavily influenced by <span font="bold">Prevention Controls</span>.
-            Proven design standards, margins of safety, or derating strategies
-            that design the failure out.
+            heavily influenced by{' '}
+            <span font="semibold">Prevention Controls</span>. Proven design
+            standards, margins of safety, or derating strategies that design the
+            failure out.
           </li>
 
           <li>
-            <span font="bold">Detection (D): </span>
-            The ability of <span font="bold">Detection Controls</span>{' '}
+            <span font="semibold">Detection (D): </span>
+            The ability of <span font="semibold">Detection Controls</span>{' '}
             (validation testing, simulation, or inspection) to catch the failure
             before the product leaves the development or manufacturing phase.
           </li>
@@ -110,16 +111,16 @@ const WhatIsFmea = () => {
 
         <p>
           Modern standards, such as the AIAG & VDA harmonization, utilize{' '}
-          <span font="bold">Action Priority (AP)</span> logic. Rather than
+          <span font="semibold">Action Priority (AP)</span> logic. Rather than
           simply multiplying these numbers (RPN), AP logic prioritizes risks
           based on a weighted assessment of Severity first, then Occurrence, and
           finally Detection, ensuring that safety-critical high-severity risks
           are never masked by high detection capabilities.
         </p>
 
-        <h3 id="design-fmea" scroll-m="lg:t-150px t-120px">
+        <h2 id="design-fmea" scroll-m="lg:t-150px t-120px">
           Design FMEA (DFMEA): Robustness in Architecture
-        </h3>
+        </h2>
 
         <p>
           Design FMEA focuses on the product architecture and the physics of the
@@ -136,7 +137,7 @@ const WhatIsFmea = () => {
 
         <ul list="disc" space="y-2">
           <li>
-            <span font="bold">Structure and Interfaces: </span>
+            <span font="semibold">Structure and Interfaces: </span>
             The analysis begins by defining the system boundaries and
             identifying interfaces (Physical, Energy, Information, or Material
             flow). Many failures occur not within a component, but at the
@@ -144,7 +145,7 @@ const WhatIsFmea = () => {
           </li>
 
           <li>
-            <span font="bold">Functional Requirements: </span>
+            <span font="semibold">Functional Requirements: </span>
             Every failure mode is essentially the negation of a specific
             functional requirement. If a requirement states &quot;Housing must
             seal against water ingress at 5 bar,&quot; the failure mode is
@@ -152,23 +153,26 @@ const WhatIsFmea = () => {
           </li>
 
           <li>
-            <span font="bold"> P-Diagram (Parameter Diagram) Thinking: </span>A
-            robust DFMEA considers &quot;Noise Factors&quot;, environmental
+            <span font="semibold">
+              {' '}
+              P-Diagram (Parameter Diagram) Thinking:{' '}
+            </span>
+            A robust DFMEA considers &quot;Noise Factors&quot;, environmental
             conditions (heat, vibration), customer usage profiles, and system
             interactions that might interfere with the intended function.
           </li>
         </ul>
 
         <p>
-          The goal of DFMEA is to drive <span font="bold">Optimization:</span>{' '}
-          implementing tangible design changes (e.g., geometry updates, material
-          changes, redundancy) or enhanced validation plans to mitigate risk
-          before design freeze.
+          The goal of DFMEA is to drive{' '}
+          <span font="semibold">Optimization:</span> implementing tangible
+          design changes (e.g., geometry updates, material changes, redundancy)
+          or enhanced validation plans to mitigate risk before design freeze.
         </p>
 
-        <h3 id="process-fmea" scroll-m="lg:t-150px t-120px">
+        <h2 id="process-fmea" scroll-m="lg:t-150px t-120px">
           Process FMEA (PFMEA): Execution Integrity
-        </h3>
+        </h2>
 
         <p>
           While DFMEA ensures the design is sound, Process FMEA (PFMEA) ensures
@@ -179,7 +183,7 @@ const WhatIsFmea = () => {
 
         <p>
           PFMEA examines the &quot;4M&quot; elements;{' '}
-          <span font="bold">
+          <span font="semibold">
             Man, Machine, Material, and Method/Environment
           </span>
           . It looks at each process step to determine how execution errors

@@ -45,13 +45,15 @@ type SeoHeadProps = {
   description?: string
   ogImage?: string
   canonical?: string
+  robots?: string
 }
 
 const SeoHead = ({
   title = 'Agentic FMEA Generator',
   description = 'AI FMEA tool for automated Failure Mode and Effect Analysis. Create DFMEA (Design) & PFMEA (Process) reports instantly. Export to Excel.',
   ogImage = 'https://fmeatool.ai/1200x630.png',
-  canonical
+  canonical,
+  robots = 'index, follow'
 }: SeoHeadProps) => {
   const fullTitle = `${title} | FMEA Tool`
   const canonicalUrl = canonical ?? `${BASE_URL}`
@@ -64,7 +66,7 @@ const SeoHead = ({
         content="AI FMEA Generator, Automated FMEA Tool, Design FMEA, Process FMEA, AIAG VDA Compliance, Risk Analysis Automation, FMEA Excel Export"
         name="keywords"
       />
-      <meta content="index, follow" name="robots" />
+      <meta content={robots} name="robots" />
 
       <meta content="website" property="og:type" />
       <meta content="en_US" property="og:locale" />
