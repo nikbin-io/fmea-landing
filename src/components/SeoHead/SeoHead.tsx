@@ -19,6 +19,27 @@ const organizationSchema = {
   }
 }
 
+const softwareApplicationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: 'FMEA Tool',
+  url: BASE_URL,
+  applicationCategory: 'BusinessApplication',
+  operatingSystem: 'Web',
+  description:
+    'AI FMEA tool for automated Failure Mode and Effect Analysis. Create DFMEA (Design) & PFMEA (Process) reports instantly. Export to Excel.',
+  offers: {
+    '@type': 'Offer',
+    priceCurrency: 'USD',
+    availability: 'https://schema.org/InStock'
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'FMEA Tool',
+    url: BASE_URL
+  }
+}
+
 type SeoHeadProps = {
   title?: string
   description?: string
@@ -43,8 +64,10 @@ const SeoHead = ({
         content="AI FMEA Generator, Automated FMEA Tool, Design FMEA, Process FMEA, AIAG VDA Compliance, Risk Analysis Automation, FMEA Excel Export"
         name="keywords"
       />
+      <meta content="index, follow" name="robots" />
 
       <meta content="website" property="og:type" />
+      <meta content="en_US" property="og:locale" />
       <meta content={fullTitle} property="og:title" />
       <meta content={description} property="og:description" />
       <meta content={ogImage} property="og:image" />
@@ -54,6 +77,7 @@ const SeoHead = ({
 
       <meta content="summary_large_image" name="twitter:card" />
       <meta content="@FMEAToolAI" name="twitter:site" />
+      <meta content="@FMEAToolAI" name="twitter:creator" />
       <meta content={fullTitle} name="twitter:title" />
       <meta content={description} name="twitter:description" />
       <meta content={ogImage} name="twitter:image" />
@@ -62,6 +86,12 @@ const SeoHead = ({
 
       <script
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        type="application/ld+json"
+      />
+      <script
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(softwareApplicationSchema)
+        }}
         type="application/ld+json"
       />
     </Head>

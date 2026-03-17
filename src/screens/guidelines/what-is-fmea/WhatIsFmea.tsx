@@ -3,6 +3,14 @@ import Wrapper from '../components/Wrapper'
 const WhatIsFmea = () => {
   return (
     <Wrapper
+      breadcrumbs={[
+        { name: 'Home', url: 'https://fmeatool.ai' },
+        { name: 'User Guide', url: 'https://fmeatool.ai/guidelines' },
+        {
+          name: 'What is FMEA?',
+          url: 'https://fmeatool.ai/guidelines/what-is-fmea'
+        }
+      ]}
       description="Learn what FMEA is, how it works, and when to use Design FMEA (DFMEA) or Process FMEA (PFMEA) for risk analysis."
       title="What is FMEA? | User Guide">
       <div h="full">

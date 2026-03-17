@@ -3,6 +3,14 @@ import Wrapper from '../components/Wrapper'
 const AboutOurProduct = () => {
   return (
     <Wrapper
+      breadcrumbs={[
+        { name: 'Home', url: 'https://fmeatool.ai' },
+        { name: 'User Guide', url: 'https://fmeatool.ai/guidelines' },
+        {
+          name: 'About Our Product & Best Practices',
+          url: 'https://fmeatool.ai/guidelines/about-our-product-and-best-practices'
+        }
+      ]}
       canonical="https://fmeatool.ai/guidelines/about-our-product-and-best-practices"
       description="Learn how to use FMEA Tool effectively. Best practices for document upload, failure mode selection, and interpreting AI-generated FMEA outputs."
       title="About Our Product & Best Practices | User Guide">

@@ -1,23 +1,54 @@
+import Head from 'next/head'
 import { ReactNode } from 'react'
 import { Container, SeoHead } from '~/components'
 import Keypoints from '../Keypoints'
+
+type BreadcrumbItem = {
+  name: string
+  url: string
+}
 
 type Props = {
   children: ReactNode
   title?: string
   description?: string
   canonical?: string
+  breadcrumbs?: BreadcrumbItem[]
 }
 
 const Wrapper = ({
   children,
   title = 'User Guide & Best Practices',
   description,
-  canonical = 'https://fmeatool.ai/guidelines'
+  canonical = 'https://fmeatool.ai/guidelines',
+  breadcrumbs
 }: Props) => {
+  const breadcrumbSchema = breadcrumbs
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: breadcrumbs.map((item, index) => ({
+          '@type': 'ListItem',
+          position: index + 1,
+          name: item.name,
+          item: item.url
+        }))
+      }
+    : null
+
   return (
     <>
       <SeoHead canonical={canonical} description={description} title={title} />
+      {breadcrumbSchema && (
+        <Head>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(breadcrumbSchema)
+            }}
+            type="application/ld+json"
+          />
+        </Head>
+      )}
       <div py="20">
         <Container>
           <div
