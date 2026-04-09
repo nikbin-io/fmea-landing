@@ -19,6 +19,13 @@ const organizationSchema = {
   }
 }
 
+const webSiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'FMEA Tool',
+  url: BASE_URL
+}
+
 const softwareApplicationSchema = {
   '@context': 'https://schema.org',
   '@type': 'SoftwareApplication',
@@ -68,6 +75,7 @@ const SeoHead = ({
       />
       <meta content={robots} name="robots" />
 
+      <meta content="FMEA Tool" property="og:site_name" />
       <meta content="website" property="og:type" />
       <meta content="en_US" property="og:locale" />
       <meta content={fullTitle} property="og:title" />
@@ -86,6 +94,10 @@ const SeoHead = ({
 
       <link href={canonicalUrl} key="canonical" rel="canonical" />
 
+      <script
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteSchema) }}
+        type="application/ld+json"
+      />
       <script
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         type="application/ld+json"
